@@ -1,0 +1,22 @@
+<!-- @dsCard group="Colors" viewport="700x120" name="Semantic — 語意色" subtitle="狀態與回饋色" -->
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; padding: 20px 28px; background: var(--color-surface-bg); font-family: var(--font-body); display: flex; align-items: flex-start; gap: 14px; box-sizing: border-box; }
+  .sw { display: flex; flex-direction: column; gap: 7px; flex: 1; }
+  .pair { display: flex; gap: 4px; }
+  .color { height: 42px; border-radius: 8px; flex: 1; }
+  .subtle { height: 42px; border-radius: 8px; flex: 1; }
+  .name { font-size: 11px; color: var(--color-text-secondary); font-weight: 500; }
+</style>
+</head>
+<body>
+  <div class="sw"><div class="pair"><div class="color" style="background:var(--color-success)"></div><div class="subtle" style="background:var(--color-success-subtle)"></div></div><div class="name">success</div></div>
+  <div class="sw"><div class="pair"><div class="color" style="background:var(--color-warning)"></div><div class="subtle" style="background:var(--color-warning-subtle)"></div></div><div class="name">warning</div></div>
+  <div class="sw"><div class="pair"><div class="color" style="background:var(--color-error)"></div><div class="subtle" style="background:var(--color-error-subtle)"></div></div><div class="name">error</div></div>
+  <div class="sw"><div class="pair"><div class="color" style="background:var(--color-info)"></div><div class="subtle" style="background:var(--color-accent-subtle)"></div></div><div class="name">info</div></div>
+</body>
+</html>

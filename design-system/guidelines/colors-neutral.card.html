@@ -1,0 +1,23 @@
+<!-- @dsCard group="Colors" viewport="700x140" name="Neutral — 深色系" subtitle="近黑色側欄、深色卡片色階" -->
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; padding: 24px 28px; background: var(--color-surface-bg); font-family: var(--font-body); display: flex; align-items: flex-start; gap: 14px; box-sizing: border-box; }
+  .sw { display: flex; flex-direction: column; gap: 7px; flex: 1; }
+  .color { height: 58px; border-radius: 10px; }
+  .name { font-size: 11px; color: var(--color-text-secondary); font-weight: 500; }
+  .val  { font-size: 10px; color: var(--color-text-muted); font-family: monospace; }
+</style>
+</head>
+<body>
+  <div class="sw"><div class="color" style="background:var(--color-dark)"></div><div class="name">dark</div><div class="val">#1c1c1c</div></div>
+  <div class="sw"><div class="color" style="background:var(--color-dark-card)"></div><div class="name">dark-card</div><div class="val">#232323</div></div>
+  <div class="sw"><div class="color" style="background:var(--color-dark-hover)"></div><div class="name">dark-hover</div><div class="val">#2e2e2e</div></div>
+  <div class="sw"><div class="color" style="background:var(--color-dark-border)"></div><div class="name">dark-border</div><div class="val">#3a3a3a</div></div>
+  <div class="sw"><div class="color" style="background:var(--color-text-secondary);border-radius:10px"></div><div class="name">text-secondary</div><div class="val">#6e6c69</div></div>
+  <div class="sw"><div class="color" style="background:var(--color-text-muted);border-radius:10px"></div><div class="name">text-muted</div><div class="val">#a8a6a2</div></div>
+</body>
+</html>

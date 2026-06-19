@@ -1,0 +1,22 @@
+<!-- @dsCard group="Spacing" viewport="700x110" name="Radius — 圓角比例尺" subtitle="扁平設計，5 個圓角等級" -->
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; padding: 20px 28px; background: var(--color-surface-bg); font-family: var(--font-body); display: flex; align-items: center; gap: 20px; box-sizing: border-box; }
+  .item { display: flex; flex-direction: column; align-items: center; gap: 8px; flex: 1; }
+  .box { width: 60px; height: 44px; background: var(--color-surface-card); border: 2px solid var(--color-surface-border); }
+  .label { font-size: 10px; color: var(--color-text-secondary); font-weight: 500; }
+  .val   { font-size: 9px; color: var(--color-text-muted); font-family: monospace; }
+</style>
+</head>
+<body>
+  <div class="item"><div class="box" style="border-radius:var(--radius-sm)"></div><div class="label">sm</div><div class="val">6px</div></div>
+  <div class="item"><div class="box" style="border-radius:var(--radius-md)"></div><div class="label">md</div><div class="val">12px</div></div>
+  <div class="item"><div class="box" style="border-radius:var(--radius-lg)"></div><div class="label">lg</div><div class="val">20px</div></div>
+  <div class="item"><div class="box" style="border-radius:var(--radius-xl)"></div><div class="label">xl</div><div class="val">28px</div></div>
+  <div class="item"><div class="box" style="border-radius:var(--radius-pill);width:88px"></div><div class="label">pill</div><div class="val">999px</div></div>
+</body>
+</html>

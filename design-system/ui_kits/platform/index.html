@@ -1,0 +1,327 @@
+<!-- @dsCard group="Platform" viewport="1280x720" name="課程平台 UI Kit" subtitle="社區大學課程整合平台互動原型" -->
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  body { margin: 0; background: var(--color-surface-bg); font-family: var(--font-body); }
+  #root { display: flex; height: 100vh; width: 100vw; overflow: hidden; }
+  input::placeholder { color: var(--color-text-muted); }
+  input:focus { outline: none; border-color: var(--color-accent) !important; }
+  button { font-family: var(--font-body); }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+const { Button, Badge, Card, Tag, Input, StatCard, AppSidebar } = window.DesignSystem_7d1533;
+
+/* ── Data ────────────────────────────────────────── */
+const COURSES = [
+  { id:1, title:'水彩畫入門',     category:'藝術創作', school:'台北市社大', district:'中正區', schedule:'週三 14:00–16:00', instructor:'陳美惠', seats:20, enrolled:15, status:'open',    price:2400, desc:'從基本技法出發，探索水彩的透明特性與色彩混合，適合完全零基礎的學員。' },
+  { id:2, title:'日語基礎班',     category:'語言學習', school:'文山社大',   district:'文山區', schedule:'週二 19:00–21:00', instructor:'山田花子',seats:25, enrolled:23, status:'limited', price:3000, desc:'從五十音開始，建立日語聽說讀寫基礎，適合完全初學者，小班制教學。' },
+  { id:3, title:'城市攝影工作坊', category:'藝術創作', school:'中山社大',   district:'中山區', schedule:'週六 09:00–12:00', instructor:'林志遠',  seats:15, enrolled:15, status:'full',    price:2800, desc:'帶領學員走入城市街頭，用鏡頭記錄台北的生活故事與城市紋理。' },
+  { id:4, title:'社區園藝實作',   category:'生活技能', school:'大安社大',   district:'大安區', schedule:'週日 10:00–12:00', instructor:'王志明',  seats:30, enrolled:8,  status:'open',    price:1800, desc:'從土壤改良到植物養護，打造屬於你的陽台小花園。' },
+  { id:5, title:'創意寫作工坊',   category:'人文藝術', school:'松山社大',   district:'松山區', schedule:'週四 19:00–21:00', instructor:'楊欣儀',  seats:20, enrolled:12, status:'open',    price:2200, desc:'透過散文、詩歌練習，找回文字的溫度與個人聲音。' },
+  { id:6, title:'電腦基礎操作',   category:'數位技能', school:'南港社大',   district:'南港區', schedule:'週二 14:00–16:00', instructor:'蔡宗翰',  seats:15, enrolled:10, status:'open',    price:2000, desc:'讓長輩也能上手的 Word、Excel 與網路安全課程。' },
+  { id:7, title:'太極拳晨練',     category:'健康運動', school:'內湖社大',   district:'內湖區', schedule:'週一三五 07:00',   instructor:'李師傅',  seats:40, enrolled:28, status:'open',    price:1600, desc:'入門楊式太極二十四式，強身健體，適合各年齡層。' },
+  { id:8, title:'烘焙與料理',     category:'生活技能', school:'士林社大',   district:'士林區', schedule:'週六 14:00–17:00', instructor:'謝雅婷',  seats:12, enrolled:11, status:'limited', price:3500, desc:'從法式甜點到台式糕點，學習烘焙基本功與食材搭配原則。' },
+];
+
+const STATUS = {
+  open:    { variant: 'success', label: '可報名' },
+  limited: { variant: 'warning', label: '名額有限' },
+  full:    { variant: 'error',   label: '已截止' },
+};
+
+/* ── Icons ───────────────────────────────────────── */
+const SearchIcon = () => (
+  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+);
+const BackIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12,19 5,12 12,5"/></svg>
+);
+const PlusIcon = () => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+);
+
+/* ── Small components ────────────────────────────── */
+function DotGrid() {
+  const pattern = [0,1,0,1,0,1,0,1, 0,0,1,0,1,0,0,1, 1,0,0,1,0,0,1,0];
+  return (
+    <div>
+      <div style={{fontSize:10,color:'var(--color-text-muted)',marginBottom:10,letterSpacing:'0.06em',textTransform:'uppercase'}}>課程類別分布</div>
+      <div style={{display:'grid',gridTemplateColumns:'repeat(8,1fr)',gap:5}}>
+        {pattern.map((v,i) => (
+          <div key={i} style={{width:14,height:14,borderRadius:'50%',background: v ? 'var(--color-accent)' : 'var(--color-dark)'}} />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function MiniBarChart() {
+  const bars = [{l:'藝術',h:68,hi:false},{l:'語言',h:82,hi:true},{l:'生活',h:45,hi:false},{l:'運動',h:70,hi:false},{l:'數位',h:55,hi:false}];
+  return (
+    <div style={{display:'flex',alignItems:'flex-end',gap:8,height:64}}>
+      {bars.map(b => (
+        <div key={b.l} style={{display:'flex',flexDirection:'column',alignItems:'center',gap:4,flex:1}}>
+          <div style={{fontSize:8,color:'rgba(255,255,255,0.4)'}}>
+            {Math.round(b.h * 0.38)}
+          </div>
+          <div style={{width:'100%',background: b.hi ? 'var(--color-accent-on-dark)' : 'rgba(255,255,255,0.18)',borderRadius:'3px 3px 0 0',height:b.h/100*50}} />
+          <div style={{fontSize:8,color:'rgba(255,255,255,0.38)'}}>{b.l}</div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function CourseCard({ course, onClick }) {
+  const s = STATUS[course.status];
+  const left = course.seats - course.enrolled;
+  return (
+    <div onClick={onClick} style={{background:'var(--color-surface-card)',borderRadius:'var(--radius-xl)',padding:'16px 18px',cursor:'pointer',display:'flex',flexDirection:'column',gap:8,transition:'background var(--dur-fast)'}}>
+      <div style={{display:'flex',justifyContent:'space-between',alignItems:'flex-start'}}>
+        <Tag size="sm">{course.category}</Tag>
+        <Badge variant={s.variant} dot>{s.label}</Badge>
+      </div>
+      <div style={{fontSize:'var(--text-md)',fontWeight:700,color:'var(--color-text-primary)',lineHeight:1.2,flex:1}}>
+        {course.title}
+      </div>
+      <div style={{fontSize:'var(--text-xs)',color:'var(--color-text-secondary)'}}>
+        {course.school} · {course.schedule}
+      </div>
+      <div style={{display:'flex',alignItems:'center',justifyContent:'space-between'}}>
+        <span style={{fontSize:'var(--text-xs)',color: left<=3 ? 'var(--color-warning)' : 'var(--color-text-muted)'}}>剩 {left} 席</span>
+        <span style={{fontSize:'var(--text-sm)',fontWeight:600,color:'var(--color-text-primary)'}}>NT${course.price.toLocaleString()}</span>
+      </div>
+    </div>
+  );
+}
+
+/* ── Views ───────────────────────────────────────── */
+function BrowseView({ onSelectCourse }) {
+  return (
+    <div style={{padding:20,display:'flex',flexDirection:'column',gap:12,height:'100%',overflow:'hidden'}}>
+
+      {/* Row 1: hero stats */}
+      <div style={{display:'grid',gridTemplateColumns:'2fr 1fr 1fr',gap:12,height:148}}>
+        <StatCard label="全部課程" value="142" delta="+8%" deltaLabel="本學期" />
+        <StatCard label="可立即報名" value="67" deltaLabel="門課程" />
+        <div style={{background:'var(--color-surface-card)',borderRadius:'var(--radius-xl)',padding:'14px 20px'}}>
+          <DotGrid />
+        </div>
+      </div>
+
+      {/* Row 2: sub-stats */}
+      <div style={{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:12,height:126}}>
+        <StatCard label="已報名課程" value="8" deltaLabel="進行中" variant="dark" />
+        <StatCard label="本週新增報名" value="27" delta="-3" deltaLabel="相比上週" accentBar />
+        <StatCard label="即將截止" value="23" deltaLabel="14 天內" />
+        <div style={{background:'var(--color-dark)',borderRadius:'var(--radius-xl)',padding:'14px 16px'}}>
+          <div style={{fontSize:10,color:'rgba(255,255,255,0.35)',marginBottom:8}}>報名類別</div>
+          <MiniBarChart />
+        </div>
+      </div>
+
+      {/* Row 3: CTA + course grid */}
+      <div style={{display:'grid',gridTemplateColumns:'1fr 1fr 1fr 1fr',gap:12,flex:1,minHeight:0}}>
+        {/* Accent CTA */}
+        <div style={{background:'var(--color-accent)',borderRadius:'var(--radius-xl)',padding:24,display:'flex',flexDirection:'column',justifyContent:'flex-end',position:'relative',overflow:'hidden'}}>
+          <div style={{position:'absolute',top:-24,right:-24,width:110,height:110,background:'rgba(255,255,255,0.08)',borderRadius:'50%',pointerEvents:'none'}} />
+          <div style={{fontSize:10,color:'rgba(255,255,255,0.55)',marginBottom:10,letterSpacing:'0.07em',textTransform:'uppercase'}}>鄰學 / 課程整合</div>
+          <div style={{fontSize:'var(--text-xl)',fontWeight:700,color:'#fff',lineHeight:1.25,marginBottom:20}}>
+            探索你身邊<br/>的學習機會
+          </div>
+          <Button variant="ghost" size="sm" style={{color:'#fff',border:'1px solid rgba(255,255,255,0.35)',alignSelf:'flex-start'}}>
+            立即瀏覽
+          </Button>
+        </div>
+        {/* 3 course cards */}
+        {COURSES.slice(0,3).map(c => <CourseCard key={c.id} course={c} onClick={() => onSelectCourse(c)} />)}
+      </div>
+    </div>
+  );
+}
+
+function CourseDetailView({ course, onBack }) {
+  const s = STATUS[course.status];
+  const left = course.seats - course.enrolled;
+  const pct = Math.round(course.enrolled / course.seats * 100);
+  const similar = COURSES.filter(c => c.id !== course.id && c.category === course.category).slice(0,2);
+  const infoItems = [
+    {l:'授課老師', v: course.instructor},
+    {l:'開設單位', v: course.school},
+    {l:'上課時間', v: course.schedule},
+    {l:'上課地區', v: course.district},
+    {l:'課程費用', v:`NT$ ${course.price.toLocaleString()}`},
+    {l:'班級人數', v:`${course.seats} 人`},
+  ];
+  return (
+    <div style={{padding:28,height:'100%',overflowY:'auto',display:'flex',flexDirection:'column',gap:20}}>
+      <button onClick={onBack} style={{background:'none',border:'none',cursor:'pointer',display:'flex',alignItems:'center',gap:8,color:'var(--color-text-secondary)',fontSize:'var(--text-sm)',padding:0}}>
+        <BackIcon /> 返回課程列表
+      </button>
+      <div style={{display:'grid',gridTemplateColumns:'1fr 340px',gap:20,flex:1}}>
+        <div style={{display:'flex',flexDirection:'column',gap:16}}>
+          <div style={{display:'flex',gap:10,alignItems:'center'}}>
+            <Tag>{course.category}</Tag>
+            <Badge variant={s.variant} dot>{s.label}</Badge>
+          </div>
+          <h1 style={{margin:0,fontSize:'var(--text-3xl)',fontWeight:700,color:'var(--color-text-primary)',lineHeight:1.15,fontFamily:'var(--font-display)'}}>
+            {course.title}
+          </h1>
+          <p style={{margin:0,fontSize:'var(--text-base)',color:'var(--color-text-secondary)',lineHeight:1.65,maxWidth:520}}>
+            {course.desc}
+          </p>
+          <div style={{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:10}}>
+            {infoItems.map(item => (
+              <div key={item.l} style={{background:'var(--color-surface-card)',borderRadius:'var(--radius-lg)',padding:'12px 16px'}}>
+                <div style={{fontSize:'var(--text-xs)',color:'var(--color-text-muted)',marginBottom:4}}>{item.l}</div>
+                <div style={{fontSize:'var(--text-base)',fontWeight:600,color:'var(--color-text-primary)'}}>{item.v}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div style={{display:'flex',flexDirection:'column',gap:12}}>
+          <div style={{background:'var(--color-dark)',borderRadius:'var(--radius-xl)',padding:24}}>
+            <div style={{fontSize:'var(--text-xs)',color:'rgba(255,255,255,0.4)',marginBottom:8}}>報名狀況</div>
+            <div style={{display:'flex',alignItems:'baseline',gap:8,marginBottom:14}}>
+              <span style={{fontSize:'var(--text-4xl)',fontWeight:700,color:'#fff',fontFamily:'var(--font-display)',letterSpacing:'-0.02em'}}>{course.enrolled}</span>
+              <span style={{fontSize:'var(--text-md)',color:'rgba(255,255,255,0.45)'}}>/ {course.seats} 人</span>
+              <span style={{fontSize:'var(--text-sm)',color:'var(--color-accent-on-dark)',marginLeft:'auto'}}>{pct}%</span>
+            </div>
+            <div style={{height:5,background:'rgba(255,255,255,0.12)',borderRadius:3,marginBottom:20}}>
+              <div style={{height:'100%',width:`${pct}%`,background:'var(--color-accent-on-dark)',borderRadius:3,transition:'width .3s'}} />
+            </div>
+            {left > 0
+              ? <Button variant="primary" style={{width:'100%'}}>立即報名 — 剩 {left} 席</Button>
+              : <Button variant="surface" disabled style={{width:'100%'}}>名額已滿</Button>
+            }
+          </div>
+
+          {similar.length > 0 && (
+            <div style={{background:'var(--color-surface-card)',borderRadius:'var(--radius-xl)',padding:'16px 20px'}}>
+              <div style={{fontSize:'var(--text-xs)',color:'var(--color-text-muted)',marginBottom:12,textTransform:'uppercase',letterSpacing:'0.07em'}}>類似課程</div>
+              {similar.map(c => (
+                <div key={c.id} style={{padding:'10px 0',borderBottom:'1px solid var(--color-surface-border)'}}>
+                  <div style={{fontSize:'var(--text-sm)',fontWeight:600,color:'var(--color-text-primary)'}}>{c.title}</div>
+                  <div style={{fontSize:'var(--text-xs)',color:'var(--color-text-muted)',marginTop:2}}>{c.school} · {c.schedule}</div>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function DashboardView() {
+  const enrolled = COURSES.slice(0,3);
+  const progress = [65, 32, 78];
+  return (
+    <div style={{padding:20,display:'flex',flexDirection:'column',gap:12,height:'100%',overflow:'hidden'}}>
+      <div style={{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:12,height:120}}>
+        <StatCard label="學習中課程" value="3" />
+        <StatCard label="本學期已修" value="8" delta="+2" deltaLabel="相比上學期" variant="dark" />
+        <StatCard label="累計學習時數" value="142" deltaLabel="小時" accentBar />
+        <StatCard label="已完成課程" value="12" deltaLabel="門" />
+      </div>
+      <div style={{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:12,flex:1,minHeight:0}}>
+        {enrolled.map((c,i) => (
+          <div key={c.id} style={{background:'var(--color-surface-card)',borderRadius:'var(--radius-xl)',padding:20,display:'flex',flexDirection:'column',gap:10}}>
+            <div style={{display:'flex',justifyContent:'space-between',alignItems:'center'}}>
+              <Tag size="sm">{c.category}</Tag>
+              <span style={{fontSize:'var(--text-xs)',color:'var(--color-accent)',fontWeight:600}}>{progress[i]}%</span>
+            </div>
+            <div style={{fontSize:'var(--text-lg)',fontWeight:700,color:'var(--color-text-primary)',flex:1,lineHeight:1.2}}>{c.title}</div>
+            <div style={{fontSize:'var(--text-xs)',color:'var(--color-text-secondary)'}}>{c.school}</div>
+            <div style={{fontSize:'var(--text-xs)',color:'var(--color-text-muted)'}}>{c.schedule}</div>
+            <div style={{height:4,background:'var(--color-surface-hover)',borderRadius:2,marginTop:'auto'}}>
+              <div style={{height:'100%',width:`${progress[i]}%`,background:'var(--color-accent)',borderRadius:2}} />
+            </div>
+          </div>
+        ))}
+      </div>
+      <div style={{display:'grid',gridTemplateColumns:'2fr 1fr',gap:12,height:96}}>
+        <div style={{background:'var(--color-dark)',borderRadius:'var(--radius-xl)',padding:'16px 24px',display:'flex',alignItems:'center',justifyContent:'space-between'}}>
+          <div>
+            <div style={{fontSize:'var(--text-md)',fontWeight:700,color:'#fff'}}>建立學習計畫</div>
+            <div style={{fontSize:'var(--text-xs)',color:'rgba(255,255,255,0.38)',marginTop:4}}>規劃下學期的課程目標</div>
+          </div>
+          <div style={{width:40,height:40,borderRadius:'50%',background:'var(--color-accent)',display:'flex',alignItems:'center',justifyContent:'center',cursor:'pointer',flexShrink:0}}>
+            <PlusIcon />
+          </div>
+        </div>
+        <div style={{background:'var(--color-accent-subtle)',borderRadius:'var(--radius-xl)',padding:'16px 20px',display:'flex',flexDirection:'column',justifyContent:'space-between'}}>
+          <div style={{fontSize:'var(--text-xs)',color:'var(--color-accent)',textTransform:'uppercase',letterSpacing:'0.06em'}}>下次上課</div>
+          <div style={{fontSize:'var(--text-lg)',fontWeight:700,color:'var(--color-accent)'}}>明天 14:00</div>
+          <div style={{fontSize:'var(--text-xs)',color:'var(--color-text-secondary)'}}>水彩畫入門 · 台北市社大</div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ── App Shell ───────────────────────────────────── */
+const VIEW_META = {
+  browse:  {title:'課程瀏覽',   sub:'探索附近的社區課程'},
+  courses: {title:'所有課程',   sub:'完整課程列表'},
+  saved:   {title:'已收藏',     sub:'你儲存的課程'},
+  stats:   {title:'學習紀錄',   sub:'我的學習歷程'},
+};
+
+function Header({ title, sub }) {
+  return (
+    <div style={{height:'var(--header-height)',background:'var(--color-white)',borderBottom:'1px solid var(--color-surface-border)',display:'flex',alignItems:'center',justifyContent:'space-between',padding:'0 24px',flexShrink:0}}>
+      <div style={{display:'flex',alignItems:'baseline',gap:12}}>
+        <span style={{fontSize:'var(--text-2xl)',fontWeight:700,color:'var(--color-text-primary)',fontFamily:'var(--font-display)',letterSpacing:'-0.01em'}}>{title}</span>
+        <span style={{fontSize:'var(--text-base)',color:'var(--color-text-muted)'}}>{sub}</span>
+      </div>
+      <div style={{display:'flex',alignItems:'center',gap:14}}>
+        <Input prefix={<SearchIcon />} placeholder="搜尋課程、社大…" style={{width:220}} />
+        <div style={{width:36,height:36,borderRadius:'50%',background:'var(--color-surface-card)',display:'flex',alignItems:'center',justifyContent:'center',fontSize:'var(--text-sm)',fontWeight:700,color:'var(--color-text-secondary)',flexShrink:0}}>
+          王
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function App() {
+  const [nav, setNav] = React.useState('browse');
+  const [course, setCourse] = React.useState(null);
+  const meta = VIEW_META[nav] || VIEW_META.browse;
+  const handleNav = id => { setNav(id); setCourse(null); };
+  return (
+    <div style={{display:'flex',height:'100vh',width:'100vw',overflow:'hidden'}}>
+      <AppSidebar activeItem={nav} onNavigate={handleNav} />
+      <div style={{flex:1,display:'flex',flexDirection:'column',overflow:'hidden'}}>
+        <Header title={course ? course.title : meta.title} sub={course ? course.school : meta.sub} />
+        <div style={{flex:1,overflow:'hidden',background:'var(--color-surface-bg)'}}>
+          {course
+            ? <CourseDetailView course={course} onBack={() => setCourse(null)} />
+            : nav === 'stats'
+              ? <DashboardView />
+              : <BrowseView onSelectCourse={setCourse} />
+          }
+        </div>
+      </div>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
+</html>

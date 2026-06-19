@@ -1,0 +1,38 @@
+:root {
+  /* =============================================
+     SPACING SCALE — 8px base unit
+  ============================================= */
+  --space-1:   4px;
+  --space-2:   8px;
+  --space-3:   12px;
+  --space-4:   16px;
+  --space-5:   24px;
+  --space-6:   32px;
+  --space-7:   48px;
+  --space-8:   64px;
+  --space-9:   96px;
+  --space-10: 128px;
+
+  /* =============================================
+     LAYOUT
+  ============================================= */
+  --sidebar-width:   72px;
+  --header-height:   64px;
+  --content-max:   1400px;
+  --card-gap:        12px;
+  --bento-gap:       12px;
+
+  /* =============================================
+     COMPONENT SIZING
+  ============================================= */
+  --btn-height-sm:   32px;
+  --btn-height-md:   40px;
+  --btn-height-lg:   48px;
+  --input-height:    44px;
+  --icon-sm:         16px;
+  --icon-md:         20px;
+  --icon-lg:         24px;
+  --avatar-sm:       32px;
+  --avatar-md:       40px;
+  --avatar-lg:       48px;
+}

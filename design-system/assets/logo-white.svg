@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 48" fill="none">
+  
+  <circle cx="10" cy="10" r="8" fill="rgba(255,255,255,0.90)"></circle>
+  <circle cx="28" cy="10" r="8" fill="#5ca8a3"></circle>
+  <circle cx="10" cy="28" r="8" fill="#5ca8a3"></circle>
+  <circle cx="28" cy="28" r="8" fill="rgba(255,255,255,0.90)"></circle>
+  
+  <text x="48" y="34" font-family="&#39;Space Grotesk&#39;,&#39;Noto Sans TC&#39;,sans-serif" font-weight="700" font-size="28" fill="#ffffff" letter-spacing="-0.5">鄰學</text>
+</svg>

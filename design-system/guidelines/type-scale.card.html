@@ -1,0 +1,25 @@
+<!-- @dsCard group="Type" viewport="700x220" name="Type Scale — 字級系統" subtitle="11px → 88px，Space Grotesk" -->
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; padding: 20px 28px; background: var(--color-surface-bg); font-family: var(--font-body); display: flex; flex-direction: column; gap: 0; box-sizing: border-box; }
+  .row { display: flex; align-items: baseline; gap: 16px; padding: 3px 0; border-bottom: 1px solid var(--color-surface-border); }
+  .row:last-child { border-bottom: none; }
+  .label { font-size: 10px; color: var(--color-text-muted); font-family: monospace; width: 110px; flex-shrink: 0; }
+  .sample { color: var(--color-text-primary); font-weight: var(--weight-medium); line-height: 1.2; }
+</style>
+</head>
+<body>
+  <div class="row"><div class="label">--text-xs · 11px</div><div class="sample" style="font-size:var(--text-xs)">Aa 課程說明備注文字</div></div>
+  <div class="row"><div class="label">--text-sm · 13px</div><div class="sample" style="font-size:var(--text-sm)">Aa 卡片描述與次要資訊</div></div>
+  <div class="row"><div class="label">--text-base · 15px</div><div class="sample" style="font-size:var(--text-base)">Aa 主要內文段落文字</div></div>
+  <div class="row"><div class="label">--text-lg · 18px</div><div class="sample" style="font-size:var(--text-lg)">Aa 區塊標題</div></div>
+  <div class="row"><div class="label">--text-xl · 22px</div><div class="sample" style="font-size:var(--text-xl)">Aa 頁面副標題</div></div>
+  <div class="row"><div class="label">--text-2xl · 28px</div><div class="sample" style="font-size:var(--text-2xl)">Aa 頁面標題</div></div>
+  <div class="row"><div class="label">--text-3xl · 36px</div><div class="sample" style="font-size:var(--text-3xl)">Aa Hero 標題</div></div>
+  <div class="row"><div class="label">--text-4xl · 48px</div><div class="sample" style="font-size:var(--text-4xl);font-weight:700">42</div></div>
+</body>
+</html>

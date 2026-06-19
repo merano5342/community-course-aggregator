@@ -1,0 +1,75 @@
+<!-- @dsCard group="Components" viewport="700x420" name="Core Components" subtitle="Button · Badge · Tag · StatCard · Input" -->
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>
+  body { margin: 0; padding: 20px 24px; background: var(--color-surface-bg); font-family: var(--font-body); box-sizing: border-box; }
+  .section-label { font-size: 10px; color: var(--color-text-muted); text-transform: uppercase; letter-spacing: .1em; font-weight: 600; margin-bottom: 8px; font-family: var(--font-body); }
+  .section { margin-bottom: 16px; }
+  .row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  .grid3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+const { Button, Badge, Card, Tag, Input, StatCard } = window.DesignSystem_7d1533;
+const SearchIcon = () => (
+  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
+    <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+  </svg>
+);
+function Demo() {
+  return (
+    <div>
+      <div className="section">
+        <div className="section-label">StatCard</div>
+        <div className="grid3">
+          <StatCard label="全部課程" value="142" delta="+8%" deltaLabel="本學期" style={{height:96}} />
+          <StatCard label="進行中課程" value="27" delta="-3" deltaLabel="相比上週" variant="dark" accentBar style={{height:96}} />
+          <StatCard label="已報名" value="8" variant="accent" pill style={{height:96}} />
+        </div>
+      </div>
+      <div className="section">
+        <div className="section-label">Button</div>
+        <div className="row">
+          <Button variant="primary">報名課程</Button>
+          <Button variant="dark">立即瀏覽</Button>
+          <Button variant="ghost">更多篩選</Button>
+          <Button variant="accent" size="sm">收藏</Button>
+          <Button variant="surface" size="sm">週末班</Button>
+          <Button pill size="sm">膠囊形</Button>
+          <Button disabled>已額滿</Button>
+        </div>
+      </div>
+      <div className="section">
+        <div className="section-label">Badge &amp; Tag</div>
+        <div className="row">
+          <Badge variant="accent" dot>進行中</Badge>
+          <Badge variant="success">可報名</Badge>
+          <Badge variant="warning">名額有限</Badge>
+          <Badge variant="error">已截止</Badge>
+          <Badge variant="neutral">預告</Badge>
+          <div style={{width:1,height:16,background:'var(--color-surface-border)'}}/>
+          <Tag>語言學習</Tag>
+          <Tag color="accent">熱門</Tag>
+          <Tag color="dark" size="sm">週末班</Tag>
+        </div>
+      </div>
+      <div className="section" style={{marginBottom:0}}>
+        <div className="section-label">Input</div>
+        <Input prefix={<SearchIcon/>} placeholder="搜尋課程名稱、關鍵字、社大…" />
+      </div>
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo />);
+</script>
+</body>
+</html>

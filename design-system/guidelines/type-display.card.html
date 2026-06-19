@@ -1,0 +1,36 @@
+<!-- @dsCard group="Type" viewport="700x180" name="Display — 大數字展示" subtitle="儀表板英雄數字，Space Grotesk Bold" -->
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; padding: 28px; background: var(--color-surface-bg); font-family: var(--font-display); display: flex; align-items: center; gap: 32px; box-sizing: border-box; }
+  .stat { display: flex; flex-direction: column; gap: 6px; }
+  .num  { font-size: var(--text-5xl); font-weight: var(--weight-bold); color: var(--color-text-primary); letter-spacing: var(--tracking-tight); line-height: var(--leading-tight); }
+  .slash { font-size: var(--text-xl); font-weight: var(--weight-medium); color: var(--color-accent); margin-left: 6px; }
+  .label { font-size: var(--text-sm); color: var(--color-text-secondary); font-weight: var(--weight-medium); }
+  .dark { background: var(--color-dark); padding: 20px 28px; border-radius: 20px; }
+  .dark .num { color: var(--color-text-on-dark); }
+  .dark .slash { color: var(--color-accent-on-dark); }
+  .dark .label { color: rgba(245,243,240,.5); }
+</style>
+</head>
+<body>
+  <div class="stat">
+    <div class="label">全部課程</div>
+    <div><span class="num">142</span></div>
+    <div class="label">本學期開設</div>
+  </div>
+  <div class="stat">
+    <div class="label">本週新增報名</div>
+    <div><span class="num">27</span><span class="slash">/ +8%</span></div>
+    <div class="label">相比上週</div>
+  </div>
+  <div class="stat dark">
+    <div class="label">進行中</div>
+    <div><span class="num">8</span></div>
+    <div class="label">已報名課程</div>
+  </div>
+</body>
+</html>

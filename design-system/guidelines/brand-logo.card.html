@@ -1,0 +1,45 @@
+<!-- @dsCard group="Brand" viewport="700x160" name="Logo — 品牌標誌" subtitle="淺色與深色背景版本" -->
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; padding: 0; background: var(--color-surface-bg); font-family: var(--font-body); display: flex; box-sizing: border-box; height: 160px; }
+  .panel { flex: 1; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; padding: 28px 32px; gap: 12px; }
+  .dark-panel { background: var(--color-dark); }
+  .logo-row { display: flex; align-items: center; gap: 12px; }
+  .mark { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; width: 26px; height: 26px; }
+  .dot { border-radius: 3px; }
+  .wordmark { font-size: 24px; font-weight: 700; letter-spacing: -0.5px; line-height: 1; }
+  .sub { font-size: 11px; color: var(--color-text-muted); }
+  .sub-dark { font-size: 11px; color: rgba(255,255,255,0.35); }
+</style>
+</head>
+<body>
+  <div class="panel">
+    <div class="logo-row">
+      <div class="mark">
+        <div class="dot" style="background:#1c1c1c"></div>
+        <div class="dot" style="background:var(--color-accent)"></div>
+        <div class="dot" style="background:var(--color-accent)"></div>
+        <div class="dot" style="background:#1c1c1c"></div>
+      </div>
+      <span class="wordmark" style="color:#1c1c1c">鄰學</span>
+    </div>
+    <div class="sub">社區大學課程整合平台</div>
+  </div>
+  <div class="panel dark-panel">
+    <div class="logo-row">
+      <div class="mark">
+        <div class="dot" style="background:rgba(255,255,255,0.9)"></div>
+        <div class="dot" style="background:var(--color-accent-on-dark)"></div>
+        <div class="dot" style="background:var(--color-accent-on-dark)"></div>
+        <div class="dot" style="background:rgba(255,255,255,0.9)"></div>
+      </div>
+      <span class="wordmark" style="color:#ffffff">鄰學</span>
+    </div>
+    <div class="sub-dark">社區大學課程整合平台</div>
+  </div>
+</body>
+</html>
