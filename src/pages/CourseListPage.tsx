@@ -220,6 +220,7 @@ export function CourseListPage() {
                 onChange={(f) => { setFilters(f); }}
                 availableSchools={availableSchools}
                 availableCategories={availableCategories}
+                availableSemesters={availableSemesters}
                 embedded
               />
             </div>
