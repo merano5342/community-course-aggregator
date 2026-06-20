@@ -9,7 +9,7 @@ import { CourseCard } from '@/components/courses/CourseCard';
 import { CourseDetailModal } from '@/components/courses/CourseDetailModal';
 import { FilterSidebar, DEFAULT_FILTERS } from '@/components/courses/FilterSidebar';
 import type { FilterState } from '@/components/courses/FilterSidebar';
-import { getUniqueCategories, getUniqueSchools } from '@/lib/courseUtils';
+import { getUniqueCategories, getUniqueSchools, getUniqueSemesters } from '@/lib/courseUtils';
 
 export function CourseListPage() {
   const { courses, isLoading } = useCourses();
@@ -22,6 +22,7 @@ export function CourseListPage() {
 
   const availableSchools = useMemo(() => getUniqueSchools(courses), [courses]);
   const availableCategories = useMemo(() => getUniqueCategories(courses), [courses]);
+  const availableSemesters = useMemo(() => getUniqueSemesters(courses), [courses]);
 
   const filtered = useMemo(() => {
     let result = [...courses];
@@ -32,6 +33,7 @@ export function CourseListPage() {
         (c) => c.name.toLowerCase().includes(q) || c.teacher.some((t) => t.toLowerCase().includes(q))
       );
     }
+    if (filters.semesters.length > 0) result = result.filter((c) => c.semester != null && filters.semesters.includes(c.semester));
     if (filters.schools.length > 0) result = result.filter((c) => filters.schools.includes(c.school));
     if (filters.days.length > 0) result = result.filter((c) => filters.days.includes(c.dayOfWeek));
     if (filters.timeSlots.length > 0) result = result.filter((c) => filters.timeSlots.includes(c.timeSlot));
@@ -53,6 +55,7 @@ export function CourseListPage() {
   };
 
   const activeFilterCount = [
+    filters.semesters.length > 0,
     filters.schools.length > 0,
     filters.days.length > 0,
     filters.timeSlots.length > 0,
@@ -126,6 +129,7 @@ export function CourseListPage() {
             onChange={setFilters}
             availableSchools={availableSchools}
             availableCategories={availableCategories}
+            availableSemesters={availableSemesters}
           />
         )}
 

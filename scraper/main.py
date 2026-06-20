@@ -24,7 +24,7 @@ import aiohttp
 
 from config import FROG_SCHOOLS, SCHOOL_LIST, DATA_DIR, DELAY
 from fetcher import fetch, make_session
-from parser.frog import get_latest_semester, parse_list_page, parse_detail_page
+from parser.frog import get_semester_options, parse_list_page, parse_detail_page
 from output import load_existing, find_new_hashes, merge, save
 
 
@@ -40,23 +40,26 @@ async def scrape_school(session: aiohttp.ClientSession, school: str) -> None:
         print(f'  [error] cannot reach list page: {exc}')
         return
 
-    semester = get_latest_semester(index_html)
-    if not semester:
+    semesters = get_semester_options(index_html)
+    if not semesters:
         print(f'  [error] no semester found on {list_base_url}')
         return
-    sem_hash, sem_label = semester
-    print(f'  semester: {sem_label} ({sem_hash[:8]}…)')
+    print(f'  semesters: {[label for _, label in semesters]}')
 
-    # ── 2. Fetch full course list for the semester ───────────────────────────
-    list_url = f'{list_base_url}?s={sem_hash}'
-    try:
-        list_html = await fetch(session, list_url)
-    except RuntimeError as exc:
-        print(f'  [error] cannot fetch course list: {exc}')
-        return
+    # ── 2. Fetch all semesters' course lists ─────────────────────────────────
+    all_list_items: list[dict] = []
+    for i, (sem_hash, sem_label) in enumerate(semesters):
+        list_url = f'{list_base_url}?s={sem_hash}'
+        try:
+            list_html = await fetch(session, list_url, delay=DELAY if i > 0 else 0)
+            items = parse_list_page(list_html, school, sem_label)
+            print(f'  [{sem_label}] {len(items)} courses')
+            all_list_items.extend(items)
+        except RuntimeError as exc:
+            print(f'  [error] cannot fetch semester {sem_label}: {exc}')
 
-    list_items = parse_list_page(list_html, school, sem_label)
-    print(f'  list page: {len(list_items)} courses found')
+    list_items = all_list_items
+    print(f'  total: {len(list_items)} courses across {len(semesters)} semesters')
     if not list_items:
         return
 

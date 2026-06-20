@@ -3,6 +3,7 @@ import { getSchoolInfo, DAY_LABELS, TIME_SLOT_LABELS, STATUS_INFO } from '@/lib/
 
 export interface FilterState {
   search: string;
+  semesters: string[];
   schools: string[];
   days: number[];
   timeSlots: TimeSlot[];
@@ -14,7 +15,7 @@ export interface FilterState {
 }
 
 export const DEFAULT_FILTERS: FilterState = {
-  search: '', schools: [], days: [], timeSlots: [],
+  search: '', semesters: [], schools: [], days: [], timeSlots: [],
   categories: [], statuses: [], onlyNew: false, onlyMixed: false, sortBy: 'date',
 };
 
@@ -23,6 +24,7 @@ interface FilterSidebarProps {
   onChange: (f: FilterState) => void;
   availableSchools: string[];
   availableCategories: string[];
+  availableSemesters: string[];
   embedded?: boolean;
 }
 
@@ -93,12 +95,12 @@ function toggle<T>(arr: T[], val: T): T[] {
 const ALL_STATUSES: CourseStatus[] = ['open', 'full', 'cancelled', 'delayed'];
 const ALL_TIME_SLOTS: TimeSlot[] = ['morning', 'afternoon', 'evening'];
 
-export function FilterSidebar({ filters, onChange, availableSchools, availableCategories, embedded }: FilterSidebarProps) {
+export function FilterSidebar({ filters, onChange, availableSchools, availableCategories, availableSemesters, embedded }: FilterSidebarProps) {
   const f = filters;
   const set = (partial: Partial<FilterState>) => onChange({ ...f, ...partial });
 
   const activeCount = [
-    f.schools.length, f.days.length, f.timeSlots.length, f.categories.length,
+    f.semesters.length, f.schools.length, f.days.length, f.timeSlots.length, f.categories.length,
     f.statuses.length, f.onlyNew ? 1 : 0, f.onlyMixed ? 1 : 0,
   ].reduce((a, b) => a + b, 0);
 
@@ -153,6 +155,24 @@ export function FilterSidebar({ filters, onChange, availableSchools, availableCa
           <option value="school">學校</option>
         </select>
       </div>
+
+      {/* 學期 */}
+      {availableSemesters.length > 0 && (
+        <div>
+          <SectionTitle>學期</SectionTitle>
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
+            {availableSemesters.map((sem) => (
+              <CheckItem
+                key={sem}
+                checked={f.semesters.includes(sem)}
+                onClick={() => set({ semesters: toggle(f.semesters, sem) })}
+              >
+                {sem}
+              </CheckItem>
+            ))}
+          </div>
+        </div>
+      )}
 
       {/* 學校 */}
       {availableSchools.length > 0 && (

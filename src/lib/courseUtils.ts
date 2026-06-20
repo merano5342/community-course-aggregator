@@ -77,6 +77,18 @@ export function getUniqueSchools(courses: Course[]): string[] {
   return [...new Set(courses.map((c) => c.school))];
 }
 
+export function getUniqueSemesters(courses: Course[]): string[] {
+  const seen = new Set<string>();
+  const result: string[] = [];
+  for (const c of courses) {
+    if (c.semester && !seen.has(c.semester)) {
+      seen.add(c.semester);
+      result.push(c.semester);
+    }
+  }
+  return result;
+}
+
 /** Returns set of course IDs that have a time conflict (same dayOfWeek + timeSlot as another). */
 export function detectConflicts(courses: Course[]): Set<string> {
   const slotMap = new Map<string, string[]>();

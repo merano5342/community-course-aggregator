@@ -269,14 +269,28 @@ def parse_detail_page(html: str) -> dict:
         outline_table = city.find('table')
         if outline_table:
             rows: list[dict] = []
+            last_week = ''
             for tr in outline_table.find_all('tr'):
+                # Skip header rows (th only)
                 tds = tr.find_all('td')
-                if len(tds) >= 2:
-                    week = tds[0].get_text(strip=True)
-                    topic = tds[1].get_text(strip=True) if len(tds) > 1 else ''
-                    content = tds[2].get_text(strip=True) if len(tds) > 2 else ''
-                    if topic:
-                        rows.append({'week': week, 'topic': topic, 'content': content})
+                if not tds:
+                    continue
+                if len(tds) >= 3:
+                    # Normal row: week | topic | content
+                    week = tds[0].get_text(strip=True) or last_week
+                    topic = tds[1].get_text(strip=True)
+                    content = tds[2].get_text(strip=True)
+                    if week:
+                        last_week = week
+                elif len(tds) == 2:
+                    # Continuation row: week cell has rowspan, only topic | content
+                    week = last_week
+                    topic = tds[0].get_text(strip=True)
+                    content = tds[1].get_text(strip=True)
+                else:
+                    continue
+                if topic:
+                    rows.append({'week': week, 'topic': topic, 'content': content})
             if rows:
                 out['outline'] = rows
 

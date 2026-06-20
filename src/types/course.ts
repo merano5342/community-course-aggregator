@@ -31,4 +31,5 @@ export interface Course {
   notes?: string;
   quota?: number;
   enrolled?: number;
+  semester?: string;
 }

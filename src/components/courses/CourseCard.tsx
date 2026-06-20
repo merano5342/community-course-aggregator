@@ -63,6 +63,18 @@ export function CourseCard({
         <Badge variant={status.variant} dot>{status.label}</Badge>
         {course.isNew && <Badge variant="accent">NEW</Badge>}
         {course.isMixed && <Badge variant="neutral">混成</Badge>}
+        {course.semester && (
+          <span style={{
+            display: 'inline-flex', alignItems: 'center',
+            padding: '3px 8px', borderRadius: 'var(--radius-pill)',
+            fontSize: 11, fontWeight: 'var(--weight-medium)',
+            background: 'var(--color-surface-card)',
+            color: 'var(--color-text-muted)',
+            border: 'var(--border-subtle)',
+          }}>
+            {course.semester}
+          </span>
+        )}
       </div>
 
       {/* Course name */}

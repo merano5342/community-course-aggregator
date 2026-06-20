@@ -62,6 +62,7 @@ function normalizeScrapedCourse(raw: any, school: string): Course {
     targetAudience: raw.targetAudience ?? undefined,
     teacherBio: raw.teacherBio ?? undefined,
     notes: raw.notes ?? undefined,
+    semester: raw.semester ?? undefined,
   };
 }
 
