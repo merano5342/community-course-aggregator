@@ -16,7 +16,7 @@ FROG_SCHOOLS: dict[str, str] = {
 _school_env = os.getenv("SCHOOL_LIST", ",".join(FROG_SCHOOLS.keys()))
 SCHOOL_LIST: list[str] = [s.strip() for s in _school_env.split(",") if s.strip()]
 
-DATA_DIR = "data/courses"
+DATA_DIR = "public/data/courses"
 
 CONCURRENCY = 8   # max simultaneous HTTP requests
 DELAY = 0.5       # seconds between detail-page fetches (per school)
