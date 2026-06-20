@@ -5,6 +5,8 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
+  // GitHub Pages 部署路徑（repo 名稱），本機開發時為 '/'
+  base: process.env.GITHUB_ACTIONS ? '/community-course-aggregator/' : '/',
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {

@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <title>鄰學</title>
+    <script>
+      // GitHub Pages SPA routing trick:
+      // Encode the path as a query param and redirect to index.html.
+      // index.html decodes it back so React Router can take over.
+      var l = window.location;
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        l.pathname.split('/').slice(0, 1 + 1).join('/') +
+        '/?p=' + encodeURIComponent(l.pathname.slice(1) + (l.search ? '&q=' + l.search.slice(1) : '') + l.hash)
+      );
+    </script>
+  </head>
+  <body></body>
+</html>

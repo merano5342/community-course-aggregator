@@ -5,6 +5,16 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>鄰學 — 社大課程整合平台</title>
+    <script>
+      // GitHub Pages SPA routing: decode the path encoded by 404.html
+      (function () {
+        var p = new URLSearchParams(window.location.search).get('p');
+        if (p) {
+          var decoded = decodeURIComponent(p).replace(/&q=/, '?');
+          window.history.replaceState(null, '', '/' + decoded);
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

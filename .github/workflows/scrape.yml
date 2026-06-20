@@ -1,0 +1,38 @@
+name: Scrape Courses
+
+on:
+  schedule:
+    - cron: '0 16 * * 0'   # 每週日 UTC 16:00 = 台灣時間週一 00:00
+  workflow_dispatch:         # 允許手動觸發
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r scraper/requirements.txt
+
+      - name: Run scraper
+        run: python scraper/main.py
+        env:
+          SCHOOL_LIST: nangang,songshan,wenshan,beitou,wanhua,xinyi,zhongzheng,zhongshan
+
+      - name: Commit and push if data changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git diff --quiet data/ || (
+            git add data/ &&
+            git commit -m "chore(data): weekly update $(date -u +%Y-%m-%d)" &&
+            git push
+          )

@@ -2,11 +2,20 @@ import type { Course, CourseStatus, TimeSlot } from '@/types/course';
 import type { BadgeProps } from '@/components/core/Badge';
 
 export const SCHOOL_INFO: Record<string, { name: string; short: string; color: string; bg: string }> = {
-  nangang:  { name: '南港社大', short: '南港', color: '#3e8a84', bg: '#c8e0de' },
-  wenshan:  { name: '文山社大', short: '文山', color: '#5a9a6b', bg: '#cce5d4' },
-  songshan: { name: '松山社大', short: '松山', color: '#9b7040', bg: '#edd9c0' },
-  shilin:   { name: '士林社大', short: '士林', color: '#7b6ea6', bg: '#dddaf0' },
-  beitou:   { name: '北投社大', short: '北投', color: '#c47a5a', bg: '#f5ddd0' },
+  // 共同 CMS（m_course_list.php + select#q_semester）
+  nangang:     { name: '南港社大', short: '南港', color: '#3e8a84', bg: '#c8e0de' },
+  wenshan:     { name: '文山社大', short: '文山', color: '#5a9a6b', bg: '#cce5d4' },
+  songshan:    { name: '松山社大', short: '松山', color: '#9b7040', bg: '#edd9c0' },
+  beitou:      { name: '北投社大', short: '北投', color: '#c47a5a', bg: '#f5ddd0' },
+  wanhua:      { name: '萬華社大', short: '萬華', color: '#8a6a7e', bg: '#e8d8e4' },
+  xinyi:       { name: '信義社大', short: '信義', color: '#6a7a9a', bg: '#d8dcea' },
+  zhongzheng:  { name: '中正社大', short: '中正', color: '#7a9060', bg: '#dce8cc' },
+  zhongshan:   { name: '中山社大', short: '中山', color: '#6090a0', bg: '#c8dce8' },
+  // 不同系統（需獨立 parser）
+  datong:      { name: '大同社大', short: '大同', color: '#a06870', bg: '#eadada' },
+  daan:        { name: '大安社大', short: '大安', color: '#608050', bg: '#d0e4c8' },
+  shilin:      { name: '士林社大', short: '士林', color: '#7b6ea6', bg: '#dddaf0' },
+  neihu:       { name: '內湖社大', short: '內湖', color: '#7068a0', bg: '#d8d8ee' },
 };
 
 export const DAY_LABELS = ['日', '一', '二', '三', '四', '五', '六'];
