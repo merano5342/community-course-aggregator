@@ -1,0 +1,41 @@
+:root {
+  /* =============================================
+     BORDER RADIUS
+     Flat design — no shadows, shapes define depth
+  ============================================= */
+  --radius-sm:    6px;   /* @kind radius */
+  --radius-md:   12px;   /* @kind radius */
+  --radius-lg:   14px;   /* @kind radius */
+  --radius-xl:   18px;   /* @kind radius */
+  --radius-pill: 999px;  /* @kind radius */
+
+  /* =============================================
+     SHADOWS — minimal, flat-first
+  ============================================= */
+  --shadow-none:   none;                           /* @kind shadow */
+  --shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.06); /* @kind shadow */
+
+  /* =============================================
+     BORDERS
+  ============================================= */
+  --border-subtle:  1px solid rgba(0, 0, 0, 0.07);       /* @kind other */
+  --border-medium:  1px solid rgba(0, 0, 0, 0.12);       /* @kind other */
+  --border-strong:  1px solid rgba(0, 0, 0, 0.20);       /* @kind other */
+  --border-on-dark: 1px solid rgba(255, 255, 255, 0.10); /* @kind other */
+
+  /* =============================================
+     TRANSITIONS — fast, functional
+  ============================================= */
+  --ease-std:  cubic-bezier(0.4, 0, 0.2, 1);  /* @kind other */
+  --ease-out:  cubic-bezier(0.16, 1, 0.3, 1); /* @kind other */
+  --dur-fast:  120ms;                          /* @kind other */
+  --dur-std:   200ms;                          /* @kind other */
+  --dur-slow:  350ms;                          /* @kind other */
+
+  /* =============================================
+     OPACITY
+  ============================================= */
+  --opacity-hover:    0.85; /* @kind other */
+  --opacity-disabled: 0.45; /* @kind other */
+  --opacity-muted:    0.55; /* @kind other */
+}

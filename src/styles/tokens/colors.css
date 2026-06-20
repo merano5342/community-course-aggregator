@@ -1,0 +1,54 @@
+:root {
+  /* =============================================
+     ACCENT — Morandi Blue-Green 莫蘭迪藍綠
+     Replaces orange from reference UI
+  ============================================= */
+  --color-accent:         #3e8a84;
+  --color-accent-hover:   #2d6f6a;
+  --color-accent-active:  #235a56;
+  --color-accent-light:   #76b3ae;
+  --color-accent-subtle:  #c8e0de;
+  --color-accent-on-dark: #5ca8a3;
+
+  /* =============================================
+     DARK SURFACES
+  ============================================= */
+  --color-dark:           #1c1c1c;
+  --color-dark-card:      #232323;
+  --color-dark-hover:     #2e2e2e;
+  --color-dark-border:    #3a3a3a;
+
+  /* =============================================
+     NEUTRAL SURFACES — warm gray
+  ============================================= */
+  --color-surface-bg:     #f0eeeb;
+  --color-surface-card:   #e6e4e1;
+  --color-surface-hover:  #dedad6;
+  --color-surface-border: #d0cec9;
+
+  /* =============================================
+     WHITE
+  ============================================= */
+  --color-white:          #ffffff;
+  --color-white-muted:    #f8f7f5;
+
+  /* =============================================
+     TEXT
+  ============================================= */
+  --color-text-primary:   #1c1c1c;
+  --color-text-secondary: #6e6c69;
+  --color-text-muted:     #a8a6a2;
+  --color-text-on-dark:   #f5f3f0;
+  --color-text-on-accent: #ffffff;
+
+  /* =============================================
+     SEMANTIC
+  ============================================= */
+  --color-success:        #4caf89;
+  --color-success-subtle: #d4f0e5;
+  --color-warning:        #e8a73a;
+  --color-warning-subtle: #fdf0d5;
+  --color-error:          #d94f3d;
+  --color-error-subtle:   #fde8e5;
+  --color-info:           #3e8a84;
+}
