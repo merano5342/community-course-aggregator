@@ -20,18 +20,29 @@ INDENT = 2
 
 
 def load_existing(school: str, data_dir: str) -> dict[str, dict]:
-    """Load existing JSON for a school. Returns dict keyed by u_hash."""
+    """Load existing JSON for a school. Returns dict keyed by u_hash (snake_case)."""
     path = os.path.join(data_dir, f"{school}.json")
     if not os.path.exists(path):
         return {}
     with open(path, encoding="utf-8") as f:
         raw: list[dict] = json.load(f)
-    return {c["uHash"]: c for c in raw}
+    # JSON keys are camelCase (from model alias); convert back to snake_case for lookup
+    result = {}
+    for c in raw:
+        converted = _camel_to_snake(c)
+        u = converted.get("u_hash", "")
+        if u:
+            result[u] = converted
+    return result
 
 
 def find_new_hashes(list_items: list[dict], existing: dict[str, dict]) -> list[str]:
-    """Return u_hashes that are not in existing JSON (need detail scraping)."""
-    return [item["u_hash"] for item in list_items if item["u_hash"] not in existing]
+    """Return u_hashes not yet in JSON (no detail data scraped for them yet)."""
+    return [
+        item["u_hash"] for item in list_items
+        if item["u_hash"] not in existing
+        or existing[item["u_hash"]].get("code") is None  # detail not yet scraped
+    ]
 
 
 def merge(
@@ -51,10 +62,8 @@ def merge(
     for item in list_items:
         u = item["u_hash"]
         # Start from existing record (has detail fields) or bare list data
+        # existing is already snake_case (converted in load_existing)
         base = dict(existing.get(u, {}))
-        # Overlay fresh list data (converts camelCase JSON keys back)
-        if base:
-            base = _camel_to_snake(base)
 
         record = {**base, **item}
 

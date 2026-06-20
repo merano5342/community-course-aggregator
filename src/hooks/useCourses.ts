@@ -1,9 +1,8 @@
 import { useQuery } from '@tanstack/react-query';
-import type { Course, TimeSlot } from '@/types/course';
+import type { Course } from '@/types/course';
 import { SCHOOL_INFO } from '@/lib/courseUtils';
 import { MOCK_COURSES } from '@/data/mockCourses';
 
-// frog.tw base URLs — needed to construct detailUrl
 const FROG_BASE: Record<string, string> = {
   nangang:    'https://nangang.frog.tw',
   songshan:   'https://ss.twcc.org.tw',
@@ -15,32 +14,29 @@ const FROG_BASE: Record<string, string> = {
   zhongshan:  'https://zscc.twcu.org.tw',
 };
 
-const DAY_MAP: Record<string, number> = { 日: 0, 一: 1, 二: 2, 三: 3, 四: 4, 五: 5, 六: 6 };
-
-function parseSchedule(schedule: string): { dayOfWeek: number; timeSlot: TimeSlot } {
-  const dayMatch = schedule.match(/[（(]([日一二三四五六])[）)]/);
-  const dayOfWeek = dayMatch ? (DAY_MAP[dayMatch[1]] ?? 0) : 0;
-  const timeMatch = schedule.match(/(\d{1,2}):\d{2}/);
-  const hour = timeMatch ? parseInt(timeMatch[1], 10) : 0;
-  const timeSlot: TimeSlot = hour < 12 ? 'morning' : hour < 17 ? 'afternoon' : 'evening';
-  return { dayOfWeek, timeSlot };
-}
-
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function normalizeScrapedCourse(raw: any, school: string): Course {
-  const schedule: string = raw.schedule ?? '';
-  const { dayOfWeek, timeSlot } = parseSchedule(schedule);
-  const quota: number | undefined = raw.quota ?? undefined;
-  const enrolled: number | undefined = raw.enrolled ?? undefined;
-  const uHash: string = raw.uHash ?? '';
   const base = FROG_BASE[school] ?? '';
+  const uHash: string = raw.uHash ?? '';
 
-  // WeeklyTopic[] → string[]
-  const outline: string[] | undefined = Array.isArray(raw.outline)
-    ? raw.outline.map((t: { week: string; topic: string; content?: string }) =>
-        t.content ? `${t.week}｜${t.topic}｜${t.content}` : `${t.week}｜${t.topic}`,
-      )
-    : undefined;
+  // Scraper already provides dayOfWeek and timeSlot directly
+  const dayOfWeek: number = raw.dayOfWeek ?? 0;
+  const timeSlot = (raw.timeSlot ?? 'evening') as Course['timeSlot'];
+
+  // imageUrl: prepend school base URL if it's a relative path
+  let imageUrl: string | undefined = raw.imageUrl ?? undefined;
+  if (imageUrl && !imageUrl.startsWith('http')) {
+    imageUrl = `${base}/course/${imageUrl}`;
+  }
+
+  // outline: scraper returns {week, topic, content}[] → flatten to string[]
+  const rawOutline = raw.outline as Array<{ week: string; topic: string; content?: string }> | undefined;
+  const outline: string[] | undefined = rawOutline?.map((t) =>
+    t.content ? `${t.week}｜${t.topic}｜${t.content}` : `${t.week}｜${t.topic}`,
+  );
+
+  // location: use specific location if available, fall back to area
+  const location: string = raw.location ?? raw.area ?? '';
 
   return {
     id: raw.id ?? `${school}_${uHash}`,
@@ -51,14 +47,16 @@ function normalizeScrapedCourse(raw: any, school: string): Course {
     dayOfWeek,
     timeSlot,
     startDate: raw.startDate ?? '',
-    location: raw.location ?? '',
-    fee: 0,
-    status: quota != null && enrolled != null && enrolled >= quota ? 'full' : 'open',
+    location,
+    fee: raw.fee ?? 0,
+    status: (raw.status ?? 'open') as Course['status'],
+    weeks: raw.weeks ?? undefined,
     isNew: false,
-    isMixed: false,
+    isMixed: raw.isMixed ?? false,
     detailUrl: uHash ? `${base}/course/m_course_detail.php?u=${uHash}` : base,
-    quota,
-    enrolled,
+    imageUrl,
+    quota: raw.quota ?? undefined,
+    enrolled: raw.enrolled ?? undefined,
     description: raw.description ?? undefined,
     outline,
     targetAudience: raw.targetAudience ?? undefined,
@@ -92,11 +90,11 @@ export function useCourses(schools?: string[]): {
   const query = useQuery<Course[], Error>({
     queryKey: ['courses', schoolList],
     queryFn: () => fetchAllCourses(schoolList),
-    staleTime: 1000 * 60 * 60,   // treat as fresh for 1 hour
+    staleTime: 1000 * 60 * 60,
     retry: 1,
   });
 
-  // Fall back to mock data when no real data is available (dev / first deploy)
+  // Fall back to mock data in dev when no JSON files exist yet
   const courses = query.data && query.data.length > 0 ? query.data : MOCK_COURSES;
 
   return {

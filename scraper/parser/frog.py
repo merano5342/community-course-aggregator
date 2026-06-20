@@ -1,294 +1,301 @@
 """
 Parser for schools using the frog.tw CMS.
 
-List page:  /course/m_index.php
-Detail page: /course/m_course_detail.php?u={32-char-hash}
+Correct URLs (verified against live pages):
+  List:   /course/m_course_list.php                   → semester <select name="q_semester">
+  List:   /course/m_course_list.php?s={hash}          → course cards in div.content_box
+  Detail: /course/m_course_detail.php?u={32-char-hash}
 
-Key HTML patterns confirmed from live pages:
-  - Semester select: <select id="q_semester"> → <option value="{hash}">{label}</option>
-  - Course cell: <td class="fixedcell_135"><a class="course_info_link" href="...?u={hash}" onmouseover='tooltip.show("...")'>
-  - Tooltip text: "名稱<br>備注<br>開課日期：YYYY-MM-DD(週)<br>招生人數：N人<br>報名人數：N人<br>繳費人數：N人<br>地點..."
-  - Credits + counts: <div style="font-size:10px">3學分。招生20，報名5，繳費5</div>
+List page course structure (per course):
+  <a href='m_course_detail.php?u={hash}'
+     onmouseover='tooltip.show("{full_name}<br>開課日期：YYYY-MM-DD(星期X)<br>")' />
+  <div class="content_box">
+    <img src="images_course/.../thumb/{hash}.jpeg" />
+    <h1><b>{truncated_name}</b> [icon_video] [span.icon_course_status 滿]</h1>
+    <div class="w3-text-red">混成課程。</div>   ← only if mixed
+    <h2>開課日期：YYYY-MM-DD&nbsp;(X)上午/下午/晚上</h2>
+    <h2>{area}&nbsp;{semester}&nbsp;<img src=".../girl.png"/>老師名</h2>
+  </div>
+
+Detail page key elements:
+  <title>115-秋季班 1152A1001-課程名-校名</title>
+  <div class="w3-card-2 w3-row ...">
+    招生人數：N人 / 報名人數：N人 / 繳費人數：N人
+    上課日期：YYYY-MM-DD (第一週)，(共N週)
+    上課時間：每星期X 上午/下午/晚上 Hh~Hh
+    上課地點：地點
+  </div>
+  <div class="city">
+    課前資訊 / 這門課適合誰? / 需要準備... / 課程大綱 table / 講師介紹 / 學分費...
+  </div>
 """
 from __future__ import annotations
 
 import re
 from typing import Optional
-from bs4 import BeautifulSoup, Tag
+from bs4 import BeautifulSoup, Tag, NavigableString
 
-from models import Course, WeeklyTopic
+# ── day-of-week mapping ──────────────────────────────────────────────────────
+_DAY_MAP = {'日': 0, '一': 1, '二': 2, '三': 3, '四': 4, '五': 5, '六': 6}
+
+# ── regex helpers ────────────────────────────────────────────────────────────
+_HASH_RE    = re.compile(r'\?u=([a-f0-9]{32})', re.I)
+_NUMBER_RE  = re.compile(r'(\d+)')
+_DATE_RE    = re.compile(r'(\d{4}-\d{2}-\d{2})')
+_WEEKS_RE   = re.compile(r'共(\d+)週')
+_FEE_RE     = re.compile(r'(\d[\d,]+)\s*元')
 
 
-# ---------------------------------------------------------------------------
-# Semester
-# ---------------------------------------------------------------------------
+# ── semester ─────────────────────────────────────────────────────────────────
 
 def get_semester_options(html: str) -> list[tuple[str, str]]:
-    """Return [(hash, label), ...] from the semester <select>."""
-    soup = BeautifulSoup(html, "lxml")
-    sel = soup.find("select", id="q_semester")
+    """Return [(hash, label), …] from the semester <select> on m_course_list.php."""
+    soup = BeautifulSoup(html, 'lxml')
+    # m_course_list.php uses id="q_semester"; m_index.php uses name="q_semester"
+    sel = soup.find('select', id='q_semester') or soup.find('select', attrs={'name': 'q_semester'})
     if not sel:
         return []
     return [
-        (opt["value"], opt.get_text(strip=True))
-        for opt in sel.find_all("option")
-        if opt.get("value")
+        (opt['value'], opt.get_text(strip=True))
+        for opt in sel.find_all('option')
+        if opt.get('value')
     ]
 
 
 def get_latest_semester(html: str) -> Optional[tuple[str, str]]:
-    """Return the first (i.e. latest) (hash, label) pair."""
     opts = get_semester_options(html)
     return opts[0] if opts else None
 
 
-# ---------------------------------------------------------------------------
-# List page
-# ---------------------------------------------------------------------------
+# ── list page ─────────────────────────────────────────────────────────────────
 
-_CREDITS_RE = re.compile(r"(\d+)學分")
-_QUOTA_RE   = re.compile(r"招生(\d+)")
-_ENROLL_RE  = re.compile(r"報名(\d+)")
-_PAID_RE    = re.compile(r"繳費(\d+)")
-_DATE_RE    = re.compile(r"開課日期：(\d{4}-\d{2}-\d{2})")
-_HASH_RE    = re.compile(r"[?&]u=([a-f0-9]{32})", re.I)
-
-
-def _parse_tooltip(tooltip: str) -> dict:
-    """Extract structured fields from the onmouseover tooltip string."""
-    parts = [p.strip() for p in re.split(r"<br\s*/?>", tooltip, flags=re.I)]
-    out: dict = {}
-    for part in parts:
-        if m := _DATE_RE.search(part):
-            out["start_date"] = m.group(1)
-        elif "招生人數" in part:
-            if m := re.search(r"(\d+)", part):
-                out["quota"] = int(m.group(1))
-        elif "報名人數" in part:
-            if m := re.search(r"(\d+)", part):
-                out["enrolled"] = int(m.group(1))
-        elif "繳費人數" in part:
-            if m := re.search(r"(\d+)", part):
-                out["paid"] = int(m.group(1))
-        elif part and "地點" not in part:
-            # First two non-meta parts are course name and notes
-            if "name" not in out and not any(c in part for c in ["日期", "人數"]):
-                out.setdefault("tooltip_name", part)
-    return out
+def _parse_day_slot(text: str) -> tuple[int, str]:
+    """'(一)下午' → (1, 'afternoon');  '(六)早上' → (6, 'morning')."""
+    m = re.search(r'[（(]([日一二三四五六])[）)]', text)
+    day = _DAY_MAP.get(m.group(1), 0) if m else 0
+    if any(k in text for k in ('早上', '上午')):
+        slot = 'morning'
+    elif '下午' in text:
+        slot = 'afternoon'
+    else:
+        slot = 'evening'
+    return day, slot
 
 
 def parse_list_page(html: str, school: str, semester_label: str) -> list[dict]:
     """
-    Parse a frog.tw list page.
-    Returns list of dicts with keys matching Course fields.
-    Only quota/enrolled are guaranteed accurate here; detail fields are absent.
+    Parse m_course_list.php?s={hash}.
+    Returns one dict per course with fields that can be filled from the list page.
+    Heavier fields (quota, schedule_time, fee, description…) come from the detail page.
     """
-    soup = BeautifulSoup(html, "lxml")
+    soup = BeautifulSoup(html, 'lxml')
     results: list[dict] = []
 
-    for cell in soup.find_all("td", class_="fixedcell_135"):
-        link = cell.find("a", class_="course_info_link")
-        if not link:
-            continue
-
-        href = link.get("href", "")
+    for link in soup.find_all('a', href=_HASH_RE):
+        href = link.get('href', '')
         m = _HASH_RE.search(href)
         if not m:
             continue
         u_hash = m.group(1)
 
-        # --- course code and name from link text ---
-        raw_text = link.get_text(separator="\n", strip=True)
-        lines = [l for l in raw_text.splitlines() if l]
-        code = lines[0] if lines else ""
-        name = lines[1] if len(lines) > 1 else ""
+        # content_box is a sibling immediately after the <a/>
+        box: Optional[Tag] = None
+        nxt = link.next_sibling
+        while nxt and not isinstance(nxt, Tag):
+            nxt = nxt.next_sibling
+        if isinstance(nxt, Tag) and 'content_box' in (nxt.get('class') or []):
+            box = nxt
 
-        # --- teacher: text after girl.png img ---
-        teacher = ""
-        imgs = link.find_all("img")
-        for img in imgs:
-            src = img.get("src", "")
-            if "girl" in src or "boy" in src or "person" in src.lower():
-                # text node immediately after
-                nxt = img.next_sibling
-                if nxt and isinstance(nxt, str):
-                    teacher = nxt.strip()
-                break
-        if not teacher:
-            # fallback: last non-empty text node
-            for nxt in reversed(list(link.strings)):
-                s = nxt.strip()
-                if s and not s.startswith("(") and s != code and s != name:
-                    teacher = s
-                    break
+        if not box:
+            continue
 
-        # --- schedule and location ---
-        schedule = ""
-        location = ""
-        br = link.find("br")
-        if br:
-            after_br = br.next_sibling
-            if after_br:
-                raw_sched = str(after_br).strip()
-                # "(一)18:00~20:30 "
-                sched_span = link.find("span", class_=lambda c: c != "week_memo" if c else True)
-                if sched_span:
-                    location = sched_span.get_text(strip=True)
-                    raw_sched = raw_sched.replace(location, "").strip()
-                schedule = raw_sched
+        # ── name from tooltip (full) or h1 (truncated) ──────────────────────
+        tip_raw = link.get('onmouseover', '')
+        tip_m = re.search(r'tooltip\.show\("(.+?)"\)', tip_raw, re.DOTALL)
+        name = ''
+        if tip_m:
+            tip_parts = re.split(r'<br\s*/?>', tip_m.group(1), flags=re.I)
+            name = tip_parts[0].strip()
+        if not name:
+            h1 = box.find('h1')
+            name = h1.get_text(strip=True) if h1 else ''
 
-        # --- credits, quota, enrolled from footer div ---
-        footer = cell.find("div", style=re.compile(r"font-size"))
-        credits = 0
-        quota: Optional[int] = None
-        enrolled: Optional[int] = None
-        paid: Optional[int] = None
-        if footer:
-            ft = footer.get_text()
-            if m2 := _CREDITS_RE.search(ft):
-                credits = int(m2.group(1))
-            if m2 := _QUOTA_RE.search(ft):
-                quota = int(m2.group(1))
-            if m2 := _ENROLL_RE.search(ft):
-                enrolled = int(m2.group(1))
-            if m2 := _PAID_RE.search(ft):
-                paid = int(m2.group(1))
+        # ── flags from h1 ────────────────────────────────────────────────────
+        h1 = box.find('h1')
+        has_video = bool(h1 and h1.find('img', attrs={'alt': re.compile(r'影音')}))
+        status_span = h1.find('span', class_='icon_course_status') if h1 else None
+        is_full = bool(status_span and '滿' in status_span.get_text())
 
-        # --- tooltip for start_date ---
-        tip_attr = link.get("onmouseover", "")
-        tip_match = re.search(r'tooltip\.show\("(.+?)"\)', tip_attr, re.DOTALL)
-        tip_data = _parse_tooltip(tip_match.group(1)) if tip_match else {}
+        # ── mixed course flag ─────────────────────────────────────────────────
+        red_div = box.find('div', class_='w3-text-red')
+        is_mixed = bool(red_div and '混成' in red_div.get_text())
 
-        # --- has_video flag ---
-        has_video = any(
-            "影音" in (img.get("alt") or "") for img in link.find_all("img")
-        )
+        # ── h2 rows ───────────────────────────────────────────────────────────
+        h2s = box.find_all('h2')
+        day_of_week, time_slot, start_date = 0, 'evening', ''
+        area, teacher, semester = '', '', semester_label
+
+        if h2s:
+            h2a = h2s[0].get_text(strip=True)
+            # "開課日期：2026-08-31 (一)下午"
+            dm = _DATE_RE.search(h2a)
+            if dm:
+                start_date = dm.group(1)
+            day_of_week, time_slot = _parse_day_slot(h2a)
+
+        if len(h2s) >= 2:
+            h2b = h2s[1]
+            # Collect text nodes (area + semester) and teacher after img
+            parts: list[str] = []
+            after_img = False
+            for child in h2b.children:
+                if isinstance(child, NavigableString):
+                    text = child.strip()
+                    if text:
+                        if after_img:
+                            teacher = text
+                        else:
+                            parts.extend(t.strip() for t in text.split('\xa0') if t.strip())
+                elif isinstance(child, Tag) and child.name == 'img':
+                    after_img = True
+            # parts might be ["成德", "115-秋季班"]
+            for p in parts:
+                if re.search(r'\d+-', p):
+                    semester = p
+                else:
+                    area = p
+
+        # ── image url ────────────────────────────────────────────────────────
+        img = box.find('img')
+        image_url = img.get('src', '') if img else ''
 
         results.append({
-            "id": f"{school}_{u_hash}",
-            "school": school,
-            "u_hash": u_hash,
-            "code": code,
-            "name": name,
-            "teacher": teacher,
-            "credits": credits,
-            "schedule": schedule,
-            "location": location,
-            "semester": semester_label,
-            "quota": quota,
-            "enrolled": enrolled,
-            "paid": paid,
-            "has_video": has_video,
-            "start_date": tip_data.get("start_date"),
+            'id': f'{school}_{u_hash}',
+            'school': school,
+            'u_hash': u_hash,
+            'name': name,
+            'semester': semester,
+            'area': area,
+            'teacher': teacher,
+            'start_date': start_date,
+            'day_of_week': day_of_week,
+            'time_slot': time_slot,
+            'has_video': has_video,
+            'is_mixed': is_mixed,
+            'status': 'full' if is_full else 'open',
+            'image_url': image_url,
         })
 
     return results
 
 
-# ---------------------------------------------------------------------------
-# Detail page
-# ---------------------------------------------------------------------------
+# ── detail page ───────────────────────────────────────────────────────────────
+
+def _int_after_label(text: str, label: str) -> Optional[int]:
+    pattern = re.escape(label) + r'[^\d]*(\d+)'
+    m = re.search(pattern, text)
+    return int(m.group(1)) if m else None
+
 
 def parse_detail_page(html: str) -> dict:
     """
-    Parse a frog.tw course detail page.
-    Returns dict with optional fields: description, target_audience,
-    outline (list of WeeklyTopic dicts), teacher_bio, notes, category.
+    Parse m_course_detail.php?u={hash}.
+    Returns dict with all available fields; caller merges into the list-page dict.
     """
-    soup = BeautifulSoup(html, "lxml")
+    soup = BeautifulSoup(html, 'lxml')
     out: dict = {}
 
-    def _text_after_header(header_text: str) -> Optional[str]:
-        """Find a section div by its text content, return the next gray text div."""
-        for div in soup.find_all("div", class_="w3-margin-top"):
-            if div.get_text(strip=True) == header_text:
-                # Walk siblings until we find the content div
-                for sib in div.next_siblings:
-                    if not isinstance(sib, Tag):
-                        continue
-                    classes = sib.get("class") or []
-                    if "w3-text-gray" in classes or "word-wrap" in classes:
-                        return sib.get_text(strip=True) or None
-                    # Stop at next section header
-                    if "w3-margin-top" in classes and sib.get_text(strip=True):
-                        break
-        return None
+    # ── title: "115-秋季班 1152A1001-課程名-校名" ────────────────────────────
+    title_tag = soup.find('title')
+    if title_tag:
+        title_text = title_tag.get_text(strip=True)
+        # Extract code + name: "1152A1001-用畫筆走讀城市風景"
+        m = re.search(r'(\d+[A-Za-z]\d+)-([^-]+)', title_text)
+        if m:
+            out['code'] = m.group(1)
+            out['name'] = m.group(2).strip()
 
-    # --- 課前資訊 section ---
-    pre_info_div = None
-    for div in soup.find_all("div", class_="w3-margin-top"):
-        if div.get_text(strip=True) == "課前資訊":
-            pre_info_div = div
-            break
+    # ── w3-card-2: quota, schedule, location ─────────────────────────────────
+    card = soup.find('div', class_=lambda c: c and 'w3-card-2' in c)
+    if card:
+        card_text = card.get_text(separator='\n', strip=True)
+        q  = _int_after_label(card_text, '招生人數：')
+        en = _int_after_label(card_text, '報名人數：')
+        pa = _int_after_label(card_text, '繳費人數：')
+        if q  is not None: out['quota']    = q
+        if en is not None: out['enrolled'] = en
+        if pa is not None: out['paid']     = pa
 
-    if pre_info_div:
-        for sib in pre_info_div.next_siblings:
-            if not isinstance(sib, Tag):
-                continue
-            text = sib.get_text(strip=True)
-            # "這門課適合誰?" icon
-            if sib.name == "i" and "適合誰" in text:
-                content_div = sib.find_next_sibling("div")
-                if content_div:
-                    out["target_audience"] = content_div.get_text(strip=True) or None
-            # generic gray div = course description (before outline section)
-            elif "w3-text-gray" in (sib.get("class") or []) and "target_audience" not in out:
-                out["description"] = text or None
-            # stop at next section
-            elif "w3-margin-top" in (sib.get("class") or []) and text in ("課程大綱", "講師介紹"):
-                break
+        dm = _DATE_RE.search(card_text)
+        if dm: out['start_date'] = dm.group(1)
 
-    # --- 課程大綱 section ---
-    outline_div = None
-    for div in soup.find_all("div", class_="w3-margin-top"):
-        if div.get_text(strip=True) == "課程大綱":
-            outline_div = div
-            break
+        wm = _WEEKS_RE.search(card_text)
+        if wm: out['weeks'] = int(wm.group(1))
 
-    if outline_div:
-        table = None
-        for sib in outline_div.next_siblings:
-            if isinstance(sib, Tag):
-                table = sib.find("table")
-                if table:
-                    break
-        if table:
-            topics: list[WeeklyTopic] = []
-            for row in table.find_all("tr"):
-                tds = row.find_all("td")
-                if len(tds) >= 3:
-                    # td[0] = "第N週" (hidden on mobile), td[1] = "N" (mobile), td[2] = topic, td[3] = content
-                    week = tds[0].get_text(strip=True) or tds[1].get_text(strip=True)
-                    topic = tds[2].get_text(strip=True)
-                    content = tds[3].get_text(strip=True) if len(tds) > 3 else ""
+        # 上課時間：每星期一 下午 2點0分~5點0分
+        time_m = re.search(r'上課時間：(.+?)(?:\n|上課地點)', card_text, re.DOTALL)
+        if time_m:
+            schedule_raw = time_m.group(1).strip()
+            out['schedule'] = schedule_raw
+            # Derive day_of_week from 星期X
+            dm2 = re.search(r'星期([日一二三四五六])', schedule_raw)
+            if dm2:
+                out['day_of_week'] = _DAY_MAP.get(dm2.group(1), 0)
+            out['time_slot'] = _parse_day_slot(schedule_raw)[1]
+
+        loc_m = re.search(r'上課地點：(.+?)(?:\n|$)', card_text)
+        if loc_m: out['location'] = loc_m.group(1).strip()
+
+    # ── city div: description, fee, outline, teacher bio ─────────────────────
+    city = soup.find('div', class_='city')
+    if city:
+        city_text = city.get_text(separator='\n', strip=True)
+
+        # Fee: "學分費 N 學分，XXXX元"
+        fee_m = re.search(r'學分費[^\n]*\n([^\n]+)', city_text)
+        if fee_m:
+            fee_line = fee_m.group(1)
+            credits_m = re.search(r'(\d+)\s*學分', fee_line)
+            fee_val_m = _FEE_RE.search(fee_line.replace(',', ''))
+            if credits_m: out['credits'] = int(credits_m.group(1))
+            if fee_val_m: out['fee'] = int(fee_val_m.group(1).replace(',', ''))
+
+        # 這門課適合誰?
+        ta_m = re.search(r'這門課適合誰\??\n(.+?)(?:\n[^\n]*\?|\n課程)', city_text, re.DOTALL)
+        if ta_m:
+            out['target_audience'] = ta_m.group(1).strip()
+
+        # 課程大綱 (if table exists)
+        outline_table = city.find('table')
+        if outline_table:
+            rows: list[dict] = []
+            for tr in outline_table.find_all('tr'):
+                tds = tr.find_all('td')
+                if len(tds) >= 2:
+                    week = tds[0].get_text(strip=True)
+                    topic = tds[1].get_text(strip=True) if len(tds) > 1 else ''
+                    content = tds[2].get_text(strip=True) if len(tds) > 2 else ''
                     if topic:
-                        topics.append(WeeklyTopic(week=week, topic=topic, content=content))
-            if topics:
-                out["outline"] = [t.model_dump() for t in topics]
+                        rows.append({'week': week, 'topic': topic, 'content': content})
+            if rows:
+                out['outline'] = rows
 
-    # --- 講師介紹 section ---
-    teacher_div = None
-    for div in soup.find_all("div", class_="w3-margin-top"):
-        if div.get_text(strip=True) == "講師介紹":
-            teacher_div = div
-            break
+        # 講師介紹
+        teacher_m = re.search(r'講師介紹\n(.+?)(?:\n課程|\Z)', city_text, re.DOTALL)
+        if teacher_m:
+            bio = teacher_m.group(1).strip()
+            if bio and '圖片' not in bio:
+                out['teacher_bio'] = bio[:500]
 
-    if teacher_div:
-        for sib in teacher_div.next_siblings:
-            if not isinstance(sib, Tag):
-                continue
-            classes = sib.get("class") or []
-            if "w3-text-gray" in classes and "w3-margin-bottom" in classes:
-                bio = sib.get_text(strip=True)
-                if bio:
-                    out["teacher_bio"] = bio
-                break
-
-    # --- category from breadcrumb / page title ---
-    breadcrumb = soup.find("div", class_="w3-breadcrumb") or soup.find("nav")
-    if breadcrumb:
-        items = [a.get_text(strip=True) for a in breadcrumb.find_all("a")]
-        if len(items) >= 2:
-            out["category"] = items[-2]  # typically the department/category
+        # 課程理念 / 課程目標 → description
+        desc_parts = []
+        for label in ('課程理念', '課程目標', '課程簡介'):
+            dm = re.search(re.escape(label) + r'\n(.+?)(?:\n[^\n]{0,20}\n|\Z)', city_text, re.DOTALL)
+            if dm:
+                text = dm.group(1).strip()
+                if text and len(text) > 10:
+                    desc_parts.append(text[:300])
+        if desc_parts:
+            out['description'] = '\n'.join(desc_parts)
 
     return out

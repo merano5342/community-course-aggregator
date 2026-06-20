@@ -6,38 +6,45 @@ from pydantic.alias_generators import to_camel
 
 class WeeklyTopic(BaseModel):
     model_config = ConfigDict(alias_generator=to_camel, populate_by_name=True)
-
     week: str
     topic: str
-    content: str = ""
+    content: str = ''
 
 
 class Course(BaseModel):
     model_config = ConfigDict(alias_generator=to_camel, populate_by_name=True)
 
-    # Required fields (present on list page)
-    id: str                       # "{school}_{u_hash}"
-    school: str                   # e.g. "nangang"
-    code: str                     # e.g. "1152C2311"
-    name: str
-    teacher: str
-    credits: int
-    schedule: str                 # e.g. "(一)18:00~20:30"
-    location: str
-    semester: str                 # e.g. "115-秋季班"
-    u_hash: str                   # 32-char hash from m_course_detail.php?u=
+    # Core identity
+    id: str                              # "{school}_{u_hash}"
+    school: str
+    u_hash: str
 
-    # Updated on every run from list page tooltip
+    # From list page (always present)
+    name: str
+    teacher: str = ''
+    semester: str                        # e.g. "115-秋季班"
+    area: str = ''                       # general location area e.g. "成德"
+    start_date: Optional[str] = None
+    day_of_week: int = 0                 # 0=Sun 1=Mon … 6=Sat
+    time_slot: str = 'evening'           # 'morning' | 'afternoon' | 'evening'
+    has_video: bool = False
+    is_mixed: bool = False
+    status: str = 'open'                 # 'open' | 'full'
+    image_url: str = ''
+
+    # From detail page (after first scrape)
+    code: Optional[str] = None           # course code e.g. "1152A1001"
+    credits: Optional[int] = None
+    fee: Optional[int] = None            # tuition fee in NTD
+    weeks: Optional[int] = None
     quota: Optional[int] = None
     enrolled: Optional[int] = None
     paid: Optional[int] = None
+    schedule: Optional[str] = None      # "每星期一 下午 2點0分~5點0分"
+    location: Optional[str] = None      # specific location
 
-    # Fetched once from detail page (only for new courses)
+    # Rich content (from detail page, scraped once)
     description: Optional[str] = None
     target_audience: Optional[str] = None
     outline: Optional[list[WeeklyTopic]] = None
     teacher_bio: Optional[str] = None
-    notes: Optional[str] = None
-    has_video: bool = False
-    category: Optional[str] = None
-    start_date: Optional[str] = None  # "2026-08-31"
