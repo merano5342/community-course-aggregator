@@ -24,4 +24,11 @@ export interface Course {
   isMixed: boolean;
   detailUrl: string;
   imageUrl?: string;
+  description?: string;
+  outline?: string[];
+  targetAudience?: string;
+  teacherBio?: string;
+  notes?: string;
+  quota?: number;
+  enrolled?: number;
 }

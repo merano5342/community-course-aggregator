@@ -1,28 +1,26 @@
 import type { ReactNode } from 'react';
 
+export type SidebarItemId = 'home' | 'courses' | 'saved' | 'schedule' | 'compare';
+
 export interface AppSidebarProps {
-  /** 目前活躍的導航項目 ID */
-  activeItem?: 'browse' | 'courses' | 'saved' | 'stats';
-  /** 點擊導航項目的 callback */
-  onNavigate?: (id: string) => void;
+  activeItem?: SidebarItemId;
+  onNavigate?: (id: SidebarItemId) => void;
 }
 
 interface NavItem {
-  id: NonNullable<AppSidebarProps['activeItem']>;
+  id: SidebarItemId;
   label: string;
   icon: ReactNode;
 }
 
 const NAV_ITEMS: NavItem[] = [
   {
-    id: 'browse',
-    label: '瀏覽課程',
+    id: 'home',
+    label: '首頁',
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="3" y="3" width="7" height="7" rx="1" />
-        <rect x="14" y="3" width="7" height="7" rx="1" />
-        <rect x="3" y="14" width="7" height="7" rx="1" />
-        <rect x="14" y="14" width="7" height="7" rx="1" />
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+        <polyline points="9 22 9 12 15 12 15 22"/>
       </svg>
     ),
   },
@@ -47,19 +45,31 @@ const NAV_ITEMS: NavItem[] = [
     ),
   },
   {
-    id: 'stats',
-    label: '學習紀錄',
+    id: 'schedule',
+    label: '時間表',
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <line x1="18" y1="20" x2="18" y2="10" />
-        <line x1="12" y1="20" x2="12" y2="4" />
-        <line x1="6" y1="20" x2="6" y2="14" />
+        <rect x="3" y="4" width="18" height="18" rx="2"/>
+        <line x1="16" y1="2" x2="16" y2="6"/>
+        <line x1="8" y1="2" x2="8" y2="6"/>
+        <line x1="3" y1="10" x2="21" y2="10"/>
+      </svg>
+    ),
+  },
+  {
+    id: 'compare',
+    label: '跨校比較',
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <line x1="18" y1="20" x2="18" y2="10"/>
+        <line x1="12" y1="20" x2="12" y2="4"/>
+        <line x1="6" y1="20" x2="6" y2="14"/>
       </svg>
     ),
   },
 ];
 
-export function AppSidebar({ activeItem = 'browse', onNavigate }: AppSidebarProps) {
+export function AppSidebar({ activeItem = 'home', onNavigate }: AppSidebarProps) {
   return (
     <nav
       style={{
@@ -73,6 +83,7 @@ export function AppSidebar({ activeItem = 'browse', onNavigate }: AppSidebarProp
         flexShrink: 0,
       }}
     >
+      {/* Logo */}
       <div
         style={{
           display: 'grid',
@@ -94,6 +105,7 @@ export function AppSidebar({ activeItem = 'browse', onNavigate }: AppSidebarProp
         ))}
       </div>
 
+      {/* Nav items */}
       <div
         style={{
           display: 'flex',
@@ -128,7 +140,8 @@ export function AppSidebar({ activeItem = 'browse', onNavigate }: AppSidebarProp
       </div>
 
       <button
-        title="登出"
+        title="關於"
+        onClick={() => onNavigate?.('home')}
         style={{
           marginTop: 'auto',
           width: 44,
@@ -144,9 +157,9 @@ export function AppSidebar({ activeItem = 'browse', onNavigate }: AppSidebarProp
         }}
       >
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
-          <polyline points="16,17 21,12 16,7" />
-          <line x1="21" y1="12" x2="9" y2="12" />
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="12" y1="8" x2="12" y2="12"/>
+          <line x1="12" y1="16" x2="12.01" y2="16"/>
         </svg>
       </button>
     </nav>

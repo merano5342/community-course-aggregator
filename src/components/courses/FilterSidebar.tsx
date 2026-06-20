@@ -23,6 +23,7 @@ interface FilterSidebarProps {
   onChange: (f: FilterState) => void;
   availableSchools: string[];
   availableCategories: string[];
+  embedded?: boolean;
 }
 
 function SectionTitle({ children }: { children: React.ReactNode }) {
@@ -92,7 +93,7 @@ function toggle<T>(arr: T[], val: T): T[] {
 const ALL_STATUSES: CourseStatus[] = ['open', 'full', 'cancelled', 'delayed'];
 const ALL_TIME_SLOTS: TimeSlot[] = ['morning', 'afternoon', 'evening'];
 
-export function FilterSidebar({ filters, onChange, availableSchools, availableCategories }: FilterSidebarProps) {
+export function FilterSidebar({ filters, onChange, availableSchools, availableCategories, embedded }: FilterSidebarProps) {
   const f = filters;
   const set = (partial: Partial<FilterState>) => onChange({ ...f, ...partial });
 
@@ -103,8 +104,9 @@ export function FilterSidebar({ filters, onChange, availableSchools, availableCa
 
   return (
     <div style={{
-      width: 220, flexShrink: 0,
+      width: embedded ? '100%' : 220, flexShrink: 0,
       display: 'flex', flexDirection: 'column', gap: 'var(--space-5)',
+      padding: embedded ? 'var(--space-4)' : undefined,
     }}>
       {/* Header */}
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>

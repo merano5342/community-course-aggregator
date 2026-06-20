@@ -3,6 +3,7 @@ import type { Course } from '@/types/course';
 import { useCourses } from '@/hooks/useCourses';
 import { useFavoritesStore } from '@/stores/useFavoritesStore';
 import { useCompareStore } from '@/stores/useCompareStore';
+import { useIsMobile } from '@/hooks/useIsMobile';
 import { Input } from '@/components/core/Input';
 import { CourseCard } from '@/components/courses/CourseCard';
 import { CourseDetailModal } from '@/components/courses/CourseDetailModal';
@@ -14,8 +15,10 @@ export function CourseListPage() {
   const { courses, isLoading } = useCourses();
   const favorites = useFavoritesStore();
   const compare = useCompareStore();
+  const isMobile = useIsMobile();
   const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
   const [filters, setFilters] = useState<FilterState>(DEFAULT_FILTERS);
+  const [showMobileFilter, setShowMobileFilter] = useState(false);
 
   const availableSchools = useMemo(() => getUniqueSchools(courses), [courses]);
   const availableCategories = useMemo(() => getUniqueCategories(courses), [courses]);
@@ -46,39 +49,67 @@ export function CourseListPage() {
   }, [courses, filters]);
 
   const handleToggleCompare = (id: string) => {
-    const ok = compare.toggle(id);
-    if (!ok) {
-      // could show a toast here; for now the button is disabled
-    }
-    return ok;
+    return compare.toggle(id);
   };
+
+  const activeFilterCount = [
+    filters.schools.length > 0,
+    filters.days.length > 0,
+    filters.timeSlots.length > 0,
+    filters.categories.length > 0,
+    filters.statuses.length > 0,
+    filters.onlyNew,
+    filters.onlyMixed,
+    filters.search.trim() !== '',
+  ].filter(Boolean).length;
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-4)', paddingBottom: 80 }}>
-      {/* Search bar */}
-      <div style={{ maxWidth: 560 }}>
-        <Input
-          placeholder="搜尋課程名稱或老師…"
-          value={filters.search}
-          onChange={(e) => setFilters((f) => ({ ...f, search: e.target.value }))}
-          prefix={
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-              <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+      {/* Search bar + mobile filter toggle */}
+      <div style={{ display: 'flex', gap: 'var(--space-3)', alignItems: 'center' }}>
+        <div style={{ flex: 1, maxWidth: isMobile ? '100%' : 560 }}>
+          <Input
+            placeholder="搜尋課程名稱或老師…"
+            value={filters.search}
+            onChange={(e) => setFilters((f) => ({ ...f, search: e.target.value }))}
+            prefix={
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+              </svg>
+            }
+            suffix={
+              filters.search ? (
+                <button
+                  onClick={() => setFilters((f) => ({ ...f, search: '' }))}
+                  style={{ background: 'none', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', color: 'var(--color-text-muted)' }}
+                >
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                    <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+                  </svg>
+                </button>
+              ) : undefined
+            }
+          />
+        </div>
+        {isMobile && (
+          <button
+            onClick={() => setShowMobileFilter(true)}
+            style={{
+              display: 'flex', alignItems: 'center', gap: 6,
+              padding: '0 14px', height: 40, flexShrink: 0,
+              border: activeFilterCount > 0 ? '1.5px solid var(--color-accent)' : 'var(--border-medium)',
+              borderRadius: 'var(--radius-md)', background: activeFilterCount > 0 ? 'var(--color-accent-subtle)' : 'var(--color-white)',
+              cursor: 'pointer', fontSize: 'var(--text-sm)',
+              color: activeFilterCount > 0 ? 'var(--color-accent)' : 'var(--color-text-secondary)',
+              fontWeight: 'var(--weight-medium)',
+            }}
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+              <line x1="4" y1="6" x2="20" y2="6"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="11" y1="18" x2="13" y2="18"/>
             </svg>
-          }
-          suffix={
-            filters.search ? (
-              <button
-                onClick={() => setFilters((f) => ({ ...f, search: '' }))}
-                style={{ background: 'none', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', color: 'var(--color-text-muted)' }}
-              >
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-                  <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
-                </svg>
-              </button>
-            ) : undefined
-          }
-        />
+            篩選{activeFilterCount > 0 ? ` (${activeFilterCount})` : ''}
+          </button>
+        )}
       </div>
 
       {/* Result count */}
@@ -88,16 +119,18 @@ export function CourseListPage() {
 
       {/* Main content */}
       <div style={{ display: 'flex', gap: 'var(--space-6)', alignItems: 'flex-start' }}>
-        {/* Filter sidebar */}
-        <FilterSidebar
-          filters={filters}
-          onChange={setFilters}
-          availableSchools={availableSchools}
-          availableCategories={availableCategories}
-        />
+        {/* Desktop filter sidebar */}
+        {!isMobile && (
+          <FilterSidebar
+            filters={filters}
+            onChange={setFilters}
+            availableSchools={availableSchools}
+            availableCategories={availableCategories}
+          />
+        )}
 
         {/* Course grid */}
-        <div style={{ flex: 1 }}>
+        <div style={{ flex: 1, minWidth: 0 }}>
           {isLoading ? (
             <div style={{ color: 'var(--color-text-muted)', padding: 'var(--space-7) 0', textAlign: 'center' }}>
               載入中…
@@ -128,7 +161,7 @@ export function CourseListPage() {
           ) : (
             <div style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))',
+              gridTemplateColumns: isMobile ? '1fr' : 'repeat(auto-fill, minmax(260px, 1fr))',
               gap: 'var(--card-gap)',
             }}>
               {filtered.map((course) => (
@@ -147,6 +180,60 @@ export function CourseListPage() {
           )}
         </div>
       </div>
+
+      {/* Mobile filter drawer */}
+      {isMobile && showMobileFilter && (
+        <div
+          style={{ position: 'fixed', inset: 0, zIndex: 500 }}
+          onClick={() => setShowMobileFilter(false)}
+        >
+          <div style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.4)' }} />
+          <div
+            style={{
+              position: 'absolute', left: 0, top: 0, bottom: 0, width: '85%', maxWidth: 320,
+              background: 'var(--color-surface-bg)',
+              overflowY: 'auto',
+            }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div style={{
+              display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+              padding: 'var(--space-4)', borderBottom: 'var(--border-subtle)',
+            }}>
+              <span style={{ fontWeight: 'var(--weight-semibold)', fontSize: 'var(--text-base)' }}>篩選</span>
+              <button
+                onClick={() => setShowMobileFilter(false)}
+                style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--color-text-muted)' }}
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                  <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+              </button>
+            </div>
+            <div style={{ padding: 'var(--space-2) 0' }}>
+              <FilterSidebar
+                filters={filters}
+                onChange={(f) => { setFilters(f); }}
+                availableSchools={availableSchools}
+                availableCategories={availableCategories}
+                embedded
+              />
+            </div>
+            <div style={{ padding: 'var(--space-4)', borderTop: 'var(--border-subtle)' }}>
+              <button
+                onClick={() => setShowMobileFilter(false)}
+                style={{
+                  width: '100%', padding: '10px', background: 'var(--color-accent)',
+                  color: 'white', border: 'none', borderRadius: 'var(--radius-md)',
+                  fontWeight: 'var(--weight-semibold)', fontSize: 'var(--text-base)', cursor: 'pointer',
+                }}
+              >
+                套用篩選（{filtered.length} 門）
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Course Detail Modal */}
       {selectedCourse && (

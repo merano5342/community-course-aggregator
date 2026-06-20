@@ -70,7 +70,7 @@ export function ComparePage() {
         <div style={{ fontSize: 'var(--text-xl)', fontWeight: 'var(--weight-semibold)' }}>比較清單是空的</div>
         <div style={{ color: 'var(--color-text-muted)' }}>在課程列表頁點擊「比較」按鈕即可加入</div>
         <Link
-          to="/"
+          to="/courses"
           style={{
             padding: '10px 24px', background: 'var(--color-accent)', color: 'white',
             borderRadius: 'var(--radius-pill)', textDecoration: 'none',
@@ -167,7 +167,7 @@ export function ComparePage() {
               padding: 'var(--space-5)',
             }}>
               <Link
-                to="/"
+                to="/courses"
                 style={{
                   display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8,
                   color: 'var(--color-text-muted)', textDecoration: 'none',

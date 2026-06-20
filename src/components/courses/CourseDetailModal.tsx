@@ -1,8 +1,9 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 import type { Course } from '@/types/course';
 import { Badge } from '@/components/core/Badge';
 import { Button } from '@/components/core/Button';
+import { useIsMobile } from '@/hooks/useIsMobile';
 import {
   getSchoolInfo, STATUS_INFO, DAY_LABELS, TIME_SLOT_LABELS,
   DISCOUNT_MAP, formatFee, formatOriginalFee,
@@ -18,10 +19,12 @@ interface Props {
   onToggleCompare: (id: string) => boolean;
 }
 
+type Tab = 'info' | 'outline';
+
 function InfoRow({ icon, children }: { icon: React.ReactNode; children: React.ReactNode }) {
   return (
     <div style={{ display: 'flex', gap: 'var(--space-3)', alignItems: 'flex-start' }}>
-      <span style={{ color: 'var(--color-text-muted)', flexShrink: 0, marginTop: 1 }}>{icon}</span>
+      <span style={{ color: 'var(--color-text-muted)', flexShrink: 0, marginTop: 2 }}>{icon}</span>
       <span style={{ fontSize: 'var(--text-base)', color: 'var(--color-text-primary)', lineHeight: 'var(--leading-normal)' }}>
         {children}
       </span>
@@ -33,9 +36,12 @@ export function CourseDetailModal({
   course, isFavorite, isInCompare, isCompareFull,
   onClose, onToggleFavorite, onToggleCompare,
 }: Props) {
+  const [activeTab, setActiveTab] = useState<Tab>('info');
+  const isMobile = useIsMobile();
   const school = getSchoolInfo(course.school);
   const status = STATUS_INFO[course.status];
   const hasDiscount = !!course.discount && !!DISCOUNT_MAP[course.discount];
+  const hasRichContent = !!(course.description || course.outline?.length || course.targetAudience || course.teacherBio || course.notes);
 
   useEffect(() => {
     const prev = document.body.style.overflow;
@@ -48,12 +54,27 @@ export function CourseDetailModal({
     };
   }, [onClose]);
 
+  const dialogStyle: React.CSSProperties = isMobile
+    ? {
+        position: 'fixed', left: 0, right: 0, bottom: 0, top: 'auto',
+        width: '100%', maxWidth: '100%', maxHeight: '92vh',
+        borderRadius: 'var(--radius-xl) var(--radius-xl) 0 0',
+      }
+    : {
+        position: 'relative', zIndex: 1,
+        width: '100%', maxWidth: 600,
+        maxHeight: '90vh',
+        borderRadius: 'var(--radius-xl)',
+      };
+
   return createPortal(
     <div
       style={{
         position: 'fixed', inset: 0, zIndex: 1000,
-        display: 'flex', alignItems: 'center', justifyContent: 'center',
-        padding: 'var(--space-4)',
+        display: 'flex',
+        alignItems: isMobile ? 'flex-end' : 'center',
+        justifyContent: 'center',
+        padding: isMobile ? 0 : 'var(--space-4)',
       }}
     >
       {/* Backdrop */}
@@ -71,19 +92,27 @@ export function CourseDetailModal({
         role="dialog"
         aria-modal
         style={{
-          position: 'relative', zIndex: 1,
+          zIndex: 1,
           background: 'var(--color-white)',
-          borderRadius: 'var(--radius-xl)',
-          width: '100%', maxWidth: 560,
-          maxHeight: '90vh', overflowY: 'auto',
-          display: 'flex', flexDirection: 'column',
+          overflowY: 'auto',
+          display: 'flex',
+          flexDirection: 'column',
+          ...dialogStyle,
         }}
       >
+        {/* Drag handle on mobile */}
+        {isMobile && (
+          <div style={{ display: 'flex', justifyContent: 'center', padding: '12px 0 4px' }}>
+            <div style={{ width: 36, height: 4, borderRadius: 2, background: 'var(--color-surface-border)' }} />
+          </div>
+        )}
+
         {/* Header */}
         <div style={{
-          padding: 'var(--space-5)',
+          padding: isMobile ? 'var(--space-3) var(--space-4)' : 'var(--space-5)',
           borderBottom: 'var(--border-subtle)',
           display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 'var(--space-3)',
+          flexShrink: 0,
         }}>
           <div style={{ flex: 1 }}>
             <div style={{ display: 'flex', gap: 'var(--space-1)', flexWrap: 'wrap', marginBottom: 'var(--space-2)' }}>
@@ -91,7 +120,6 @@ export function CourseDetailModal({
                 display: 'inline-flex', alignItems: 'center',
                 padding: '3px 10px', borderRadius: 'var(--radius-pill)',
                 fontSize: 'var(--text-xs)', fontWeight: 'var(--weight-semibold)',
-                letterSpacing: 'var(--tracking-wide)',
                 background: school.bg, color: school.color,
               }}>
                 {school.name}
@@ -101,7 +129,9 @@ export function CourseDetailModal({
               {course.isMixed && <Badge variant="neutral">線上+實體</Badge>}
             </div>
             <h2 style={{
-              margin: 0, fontSize: 'var(--text-xl)', fontWeight: 'var(--weight-bold)',
+              margin: 0,
+              fontSize: isMobile ? 'var(--text-lg)' : 'var(--text-xl)',
+              fontWeight: 'var(--weight-bold)',
               lineHeight: 'var(--leading-snug)', color: 'var(--color-text-primary)',
             }}>
               {course.name}
@@ -127,64 +157,251 @@ export function CourseDetailModal({
           </button>
         </div>
 
-        {/* Body */}
-        <div style={{ padding: 'var(--space-5)', display: 'flex', flexDirection: 'column', gap: 'var(--space-3)' }}>
+        {/* Tabs */}
+        {hasRichContent && (
           <div style={{
-            display: 'grid', gridTemplateColumns: '1fr 1fr',
-            gap: 'var(--space-3)',
+            display: 'flex', borderBottom: 'var(--border-subtle)',
+            padding: '0 var(--space-4)',
+            flexShrink: 0,
           }}>
-            <InfoRow icon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>}>
-              <span style={{ color: 'var(--color-text-muted)', fontSize: 'var(--text-sm)' }}>授課老師</span><br/>
-              {course.teacher.length > 0 ? course.teacher.join('、') : '—'}
-            </InfoRow>
-
-            <InfoRow icon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>}>
-              <span style={{ color: 'var(--color-text-muted)', fontSize: 'var(--text-sm)' }}>上課時間</span><br/>
-              每週{DAY_LABELS[course.dayOfWeek]}・{TIME_SLOT_LABELS[course.timeSlot]}
-            </InfoRow>
-
-            <InfoRow icon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>}>
-              <span style={{ color: 'var(--color-text-muted)', fontSize: 'var(--text-sm)' }}>學分費</span><br/>
-              {hasDiscount
-                ? <><s style={{ opacity: 0.5 }}>{formatOriginalFee(course.fee)}</s>{' '}
-                    <strong style={{ color: 'var(--color-accent)' }}>{formatFee(course.fee, course.discount)}</strong>
-                    {' '}<span style={{ color: 'var(--color-error)', fontSize: 'var(--text-sm)' }}>{course.discount}</span>
-                  </>
-                : formatFee(course.fee)
-              }
-            </InfoRow>
-
-            <InfoRow icon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>}>
-              <span style={{ color: 'var(--color-text-muted)', fontSize: 'var(--text-sm)' }}>開課日期</span><br/>
-              {new Date(course.startDate).toLocaleDateString('zh-TW', { year: 'numeric', month: 'long', day: 'numeric' })}
-              {course.weeks ? `・共 ${course.weeks} 週` : ''}
-            </InfoRow>
-
-            <InfoRow icon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>}>
-              <span style={{ color: 'var(--color-text-muted)', fontSize: 'var(--text-sm)' }}>上課地點</span><br/>
-              {course.location}
-            </InfoRow>
-
-            <InfoRow icon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>}>
-              <span style={{ color: 'var(--color-text-muted)', fontSize: 'var(--text-sm)' }}>名額狀態</span><br/>
-              <span style={{ color: status.variant === 'error' ? 'var(--color-error)' : 'var(--color-text-primary)' }}>
-                {status.label}
-              </span>
-            </InfoRow>
+            {(['info', 'outline'] as Tab[]).map((tab) => {
+              const label = tab === 'info' ? '課程資訊' : '課程大綱';
+              return (
+                <button
+                  key={tab}
+                  onClick={() => setActiveTab(tab)}
+                  style={{
+                    padding: 'var(--space-3) var(--space-4)',
+                    background: 'none', border: 'none', cursor: 'pointer',
+                    fontSize: 'var(--text-sm)', fontWeight: activeTab === tab ? 'var(--weight-semibold)' : 'var(--weight-regular)',
+                    color: activeTab === tab ? 'var(--color-accent)' : 'var(--color-text-muted)',
+                    borderBottom: activeTab === tab ? '2px solid var(--color-accent)' : '2px solid transparent',
+                    marginBottom: -1,
+                    transition: 'color var(--dur-fast)',
+                  }}
+                >
+                  {label}
+                </button>
+              );
+            })}
           </div>
+        )}
+
+        {/* Body */}
+        <div style={{ padding: isMobile ? 'var(--space-4)' : 'var(--space-5)', overflowY: 'auto', flex: 1 }}>
+
+          {/* ── Tab: 課程資訊 ── */}
+          {activeTab === 'info' && (
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-3)' }}>
+              {/* Quota bar */}
+              {course.quota != null && course.enrolled != null && (
+                <div style={{
+                  background: 'var(--color-surface-card)',
+                  borderRadius: 'var(--radius-lg)',
+                  padding: 'var(--space-3) var(--space-4)',
+                }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 'var(--text-sm)', marginBottom: 8 }}>
+                    <span style={{ color: 'var(--color-text-secondary)' }}>報名進度</span>
+                    <span style={{ fontWeight: 'var(--weight-semibold)' }}>
+                      {course.enrolled} / {course.quota} 人
+                    </span>
+                  </div>
+                  <div style={{ height: 6, background: 'var(--color-surface-border)', borderRadius: 3, overflow: 'hidden' }}>
+                    <div style={{
+                      height: '100%',
+                      width: `${Math.min(100, (course.enrolled / course.quota) * 100)}%`,
+                      background: course.enrolled >= course.quota ? 'var(--color-error)' : 'var(--color-accent)',
+                      borderRadius: 3,
+                      transition: 'width 0.4s ease',
+                    }} />
+                  </div>
+                </div>
+              )}
+
+              <div style={{
+                display: 'grid',
+                gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr',
+                gap: 'var(--space-3)',
+              }}>
+                <InfoRow icon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>}>
+                  <span style={{ color: 'var(--color-text-muted)', fontSize: 'var(--text-sm)' }}>授課老師</span><br/>
+                  {course.teacher.length > 0 ? course.teacher.join('、') : '—'}
+                </InfoRow>
+
+                <InfoRow icon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>}>
+                  <span style={{ color: 'var(--color-text-muted)', fontSize: 'var(--text-sm)' }}>上課時間</span><br/>
+                  每週{DAY_LABELS[course.dayOfWeek]}・{TIME_SLOT_LABELS[course.timeSlot]}
+                </InfoRow>
+
+                <InfoRow icon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>}>
+                  <span style={{ color: 'var(--color-text-muted)', fontSize: 'var(--text-sm)' }}>學分費</span><br/>
+                  {hasDiscount
+                    ? <><s style={{ opacity: 0.5 }}>{formatOriginalFee(course.fee)}</s>{' '}
+                        <strong style={{ color: 'var(--color-accent)' }}>{formatFee(course.fee, course.discount)}</strong>
+                        {' '}<span style={{ color: 'var(--color-error)', fontSize: 'var(--text-sm)' }}>{course.discount}</span>
+                      </>
+                    : formatFee(course.fee)
+                  }
+                </InfoRow>
+
+                <InfoRow icon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>}>
+                  <span style={{ color: 'var(--color-text-muted)', fontSize: 'var(--text-sm)' }}>開課日期</span><br/>
+                  {new Date(course.startDate).toLocaleDateString('zh-TW', { year: 'numeric', month: 'long', day: 'numeric' })}
+                  {course.weeks ? `・共 ${course.weeks} 週` : ''}
+                </InfoRow>
+
+                <InfoRow icon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>}>
+                  <span style={{ color: 'var(--color-text-muted)', fontSize: 'var(--text-sm)' }}>上課地點</span><br/>
+                  {course.location}
+                </InfoRow>
+
+                <InfoRow icon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>}>
+                  <span style={{ color: 'var(--color-text-muted)', fontSize: 'var(--text-sm)' }}>名額狀態</span><br/>
+                  <span style={{ color: status.variant === 'error' ? 'var(--color-error)' : 'var(--color-text-primary)' }}>
+                    {status.label}
+                  </span>
+                </InfoRow>
+              </div>
+
+              {/* Notes */}
+              {course.notes && (
+                <div style={{
+                  background: 'var(--color-warning-subtle)',
+                  borderRadius: 'var(--radius-lg)',
+                  padding: 'var(--space-3) var(--space-4)',
+                  fontSize: 'var(--text-sm)',
+                  color: 'var(--color-text-secondary)',
+                  lineHeight: 'var(--leading-normal)',
+                }}>
+                  <div style={{ fontWeight: 'var(--weight-semibold)', marginBottom: 4, color: 'var(--color-text-primary)' }}>
+                    注意事項
+                  </div>
+                  {course.notes}
+                </div>
+              )}
+            </div>
+          )}
+
+          {/* ── Tab: 課程大綱 ── */}
+          {activeTab === 'outline' && (
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-5)' }}>
+              {course.description && (
+                <div>
+                  <div style={{ fontSize: 'var(--text-sm)', fontWeight: 'var(--weight-semibold)', color: 'var(--color-text-secondary)', marginBottom: 'var(--space-2)' }}>
+                    課程介紹
+                  </div>
+                  <p style={{ margin: 0, fontSize: 'var(--text-base)', lineHeight: 'var(--leading-normal)', color: 'var(--color-text-primary)' }}>
+                    {course.description}
+                  </p>
+                </div>
+              )}
+
+              {course.targetAudience && (
+                <div>
+                  <div style={{ fontSize: 'var(--text-sm)', fontWeight: 'var(--weight-semibold)', color: 'var(--color-text-secondary)', marginBottom: 'var(--space-2)' }}>
+                    適合對象
+                  </div>
+                  <p style={{ margin: 0, fontSize: 'var(--text-base)', lineHeight: 'var(--leading-normal)', color: 'var(--color-text-primary)' }}>
+                    {course.targetAudience}
+                  </p>
+                </div>
+              )}
+
+              {course.outline && course.outline.length > 0 && (
+                <div>
+                  <div style={{ fontSize: 'var(--text-sm)', fontWeight: 'var(--weight-semibold)', color: 'var(--color-text-secondary)', marginBottom: 'var(--space-2)' }}>
+                    課程大綱
+                  </div>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-1)' }}>
+                    {course.outline.map((item, i) => (
+                      <div
+                        key={i}
+                        style={{
+                          display: 'flex', gap: 'var(--space-3)', alignItems: 'flex-start',
+                          padding: 'var(--space-2) var(--space-3)',
+                          borderRadius: 'var(--radius-md)',
+                          background: i % 2 === 0 ? 'var(--color-surface-bg)' : 'transparent',
+                          fontSize: 'var(--text-sm)', lineHeight: 'var(--leading-normal)',
+                          color: 'var(--color-text-primary)',
+                        }}
+                      >
+                        <span style={{
+                          flexShrink: 0,
+                          width: 20, height: 20,
+                          display: 'flex', alignItems: 'center', justifyContent: 'center',
+                          borderRadius: '50%',
+                          background: 'var(--color-accent-subtle)', color: 'var(--color-accent)',
+                          fontSize: 10, fontWeight: 'var(--weight-semibold)',
+                        }}>
+                          {i + 1}
+                        </span>
+                        {item}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {course.teacherBio && (
+                <div>
+                  <div style={{ fontSize: 'var(--text-sm)', fontWeight: 'var(--weight-semibold)', color: 'var(--color-text-secondary)', marginBottom: 'var(--space-2)' }}>
+                    老師簡介
+                  </div>
+                  <div style={{
+                    display: 'flex', gap: 'var(--space-3)', alignItems: 'flex-start',
+                    padding: 'var(--space-3) var(--space-4)',
+                    background: 'var(--color-surface-card)',
+                    borderRadius: 'var(--radius-lg)',
+                  }}>
+                    <div style={{
+                      width: 36, height: 36, borderRadius: '50%', flexShrink: 0,
+                      background: school.bg, color: school.color,
+                      display: 'flex', alignItems: 'center', justifyContent: 'center',
+                      fontSize: 'var(--text-base)', fontWeight: 'var(--weight-bold)',
+                    }}>
+                      {course.teacher[0]?.[0] ?? '師'}
+                    </div>
+                    <p style={{ margin: 0, fontSize: 'var(--text-sm)', lineHeight: 'var(--leading-normal)', color: 'var(--color-text-primary)' }}>
+                      {course.teacherBio}
+                    </p>
+                  </div>
+                </div>
+              )}
+
+              {course.notes && (
+                <div>
+                  <div style={{ fontSize: 'var(--text-sm)', fontWeight: 'var(--weight-semibold)', color: 'var(--color-text-secondary)', marginBottom: 'var(--space-2)' }}>
+                    注意事項
+                  </div>
+                  <div style={{
+                    padding: 'var(--space-3) var(--space-4)',
+                    background: 'var(--color-warning-subtle)',
+                    borderRadius: 'var(--radius-lg)',
+                    fontSize: 'var(--text-sm)', lineHeight: 'var(--leading-normal)',
+                    color: 'var(--color-text-secondary)',
+                    whiteSpace: 'pre-line',
+                  }}>
+                    {course.notes}
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
         </div>
 
         {/* Footer actions */}
         <div style={{
-          padding: 'var(--space-4) var(--space-5)',
+          padding: isMobile ? 'var(--space-3) var(--space-4)' : 'var(--space-4) var(--space-5)',
           borderTop: 'var(--border-subtle)',
           display: 'flex', gap: 'var(--space-2)', flexWrap: 'wrap',
+          flexShrink: 0,
+          paddingBottom: isMobile ? 'max(var(--space-3), env(safe-area-inset-bottom))' : undefined,
         }}>
           <Button
             variant={isFavorite ? 'accent' : 'surface'}
             size="md"
             onClick={() => onToggleFavorite(course.id)}
-            style={{ flex: 1, minWidth: 120 }}
+            style={{ flex: 1, minWidth: 100 }}
           >
             <svg width="14" height="14" viewBox="0 0 24 24" fill={isFavorite ? 'currentColor' : 'none'} stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
@@ -197,7 +414,7 @@ export function CourseDetailModal({
             size="md"
             disabled={!isInCompare && isCompareFull}
             onClick={() => onToggleCompare(course.id)}
-            style={{ flex: 1, minWidth: 120 }}
+            style={{ flex: 1, minWidth: 100 }}
           >
             {isInCompare ? '比較中' : '加入比較'}
           </Button>
@@ -208,7 +425,7 @@ export function CourseDetailModal({
             rel="noopener noreferrer"
             onClick={(e) => course.status === 'cancelled' && e.preventDefault()}
             style={{
-              flex: 2, minWidth: 140,
+              flex: 2, minWidth: 120,
               height: 'var(--btn-height-md)',
               display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
               gap: 'var(--space-2)',

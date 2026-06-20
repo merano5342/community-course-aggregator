@@ -1,9 +1,15 @@
 import { useNavigate } from 'react-router-dom';
 import { useCompareStore } from '@/stores/useCompareStore';
 import { useCourses } from '@/hooks/useCourses';
+import { useIsMobile } from '@/hooks/useIsMobile';
 
-export function CompareBar() {
+interface CompareBarProps {
+  bottomOffset?: number;
+}
+
+export function CompareBar({ bottomOffset = 0 }: CompareBarProps) {
   const navigate = useNavigate();
+  const isMobile = useIsMobile();
   const { ids, clear } = useCompareStore();
   const { courses } = useCourses();
 
@@ -13,7 +19,7 @@ export function CompareBar() {
 
   return (
     <div style={{
-      position: 'fixed', bottom: 0, left: 'var(--sidebar-width)', right: 0,
+      position: 'fixed', bottom: bottomOffset, left: isMobile ? 0 : 'var(--sidebar-width)', right: 0,
       zIndex: 200,
       background: 'var(--color-dark)',
       borderTop: 'var(--border-on-dark)',

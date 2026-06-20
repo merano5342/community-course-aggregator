@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Layout } from '@/components/layout/Layout';
+import { HomePage } from '@/pages/HomePage';
 import { CourseListPage } from '@/pages/CourseListPage';
 import { ComparePage } from '@/pages/ComparePage';
 import { FavoritesPage } from '@/pages/FavoritesPage';
@@ -11,7 +12,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route element={<Layout />}>
-          <Route index element={<CourseListPage />} />
+          <Route index element={<HomePage />} />
+          <Route path="courses" element={<CourseListPage />} />
           <Route path="compare" element={<ComparePage />} />
           <Route path="favorites" element={<FavoritesPage />} />
           <Route path="schedule" element={<SchedulePage />} />

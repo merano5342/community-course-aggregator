@@ -33,7 +33,7 @@ export function FavoritesPage() {
         <div style={{ fontSize: 'var(--text-xl)', fontWeight: 'var(--weight-semibold)' }}>還沒有收藏課程</div>
         <div style={{ color: 'var(--color-text-muted)' }}>在課程列表頁點擊愛心圖示即可加入最愛</div>
         <Link
-          to="/"
+          to="/courses"
           style={{
             padding: '10px 24px', background: 'var(--color-accent)', color: 'white',
             borderRadius: 'var(--radius-pill)', textDecoration: 'none',
