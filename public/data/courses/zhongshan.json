@@ -363,7 +363,7 @@
     "timeSlot": "morning",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/zscc/thumb/",
     "code": "1152C1001",
     "credits": 2,
@@ -450,7 +450,7 @@
     "timeSlot": "morning",
     "hasVideo": true,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/zscc/thumb/69b173429a232.jpg",
     "code": "1152C6001",
     "credits": 3,
@@ -1138,125 +1138,6 @@
       }
     ],
     "teacherBio": "潘慶忠 講師\n現職：\n中華書法傳承學會理事長\n簡介：\n審計部書法社指導教授、臺北市士林/中山/大安社區大學書法教師。21世紀書畫作家協會台灣代表、越南河內國家大學榮譽書法教授、德國海德堡大學漢學系榮譽書法教授、佛光山台北人間學書法教師、台北市松山慈祐宮書法教師，書法教學經驗40年。\n專長：\n書法教學研究， 書法藝術 (入門班), 書法藝術(進階班), 書法藝術概論(入門班)\n得獎/擔任評審：\n西元1998年     教育部87年度推展社教有功個人獎章\n西元2008年     \t全國社大資深優良教師獎\n西元2009年     \t全國社大資深優良教師獎\n西元2009年     台北市政府頒發傑出市民獎章\n部落格(Blog)：\nhttps://www.facebook.com/fbcalligraphy/photos_stream?ref=page_internal\n臉書(Facebook)：\nhttps://www.facebook.com/pan.teacher"
-  },
-  {
-    "id": "zhongshan_ec515305d8d02a514ed1dc2a4fb5926b",
-    "school": "zhongshan",
-    "uHash": "ec515305d8d02a514ed1dc2a4fb5926b",
-    "name": "魅力泰國：美食文化輕旅行",
-    "teacher": "陳怡瑄",
-    "semester": "115-秋季班",
-    "area": "稻江",
-    "startDate": "2026-08-31",
-    "dayOfWeek": 1,
-    "timeSlot": "evening",
-    "hasVideo": false,
-    "isMixed": false,
-    "status": "open",
-    "imageUrl": "images_course/zscc/thumb/",
-    "code": "1152A1008",
-    "credits": 3,
-    "fee": 3000,
-    "weeks": 18,
-    "quota": 35,
-    "enrolled": 0,
-    "paid": 0,
-    "schedule": "每星期一 晚上 7點0分~10點0分",
-    "description": "本課程以「聽得懂、敢開口、能互動」的實用泰語為核心，採用 主題式教學與任務導向學習法，透過一問一答訓練、情境對話演練與迷你聽力挑戰，逐步引導學員培養泰語溝通能力與語言應用力。\n除了語言能力，本課程亦強調 語言與文化的雙向養成。從日常習慣到社會脈絡，從生活細節到文化象徵，學員將逐步認識泰國的多元樣貌，並在任務挑戰中活用所學，累積表達自信。整體設計希望帶領大家走進一場結合 「語言 × 任務 × 文化 × 旅行」 的完整學習旅程，讓泰語成為打開文化視野與跨國交流的鑰匙。\n1.提升口說能力：透過一問一答、情境演練等活動，以泰語進行日常對話與互動表達。\n2.拓展文化視野：透過旅遊、飲食文化、歷史等主題活動，增進跨文化理解與應用能力。\n3.發展實用技能：結合任務導向學習，讓學員能在購物、交通等情境中使用。\n課程QR CODE網址",
-    "targetAudience": "歡迎對泰國語言、文化、美食、藝術、教育有興趣的學員，一起來體驗Amazing Thailand !",
-    "outline": [
-      {
-        "week": "第一週",
-        "topic": "1",
-        "content": "香辣經濟：泰臺美食與成長的秘密"
-      },
-      {
-        "week": "第二週",
-        "topic": "2",
-        "content": "沙爹對決沙茶：跨海的醬香傳奇"
-      },
-      {
-        "week": "第三週",
-        "topic": "3",
-        "content": "味覺泰國：解鎖泰國料理"
-      },
-      {
-        "week": "第四週",
-        "topic": "4",
-        "content": "草藥影院：從《皇家醫師》解剖泰藥文化"
-      },
-      {
-        "week": "第五週",
-        "topic": "5",
-        "content": "字型之美：泰國設計美學探索"
-      },
-      {
-        "week": "第六週",
-        "topic": "6",
-        "content": "音樂萬花筒：泰國多元音樂風格全觀之旅"
-      },
-      {
-        "week": "第七週",
-        "topic": "7",
-        "content": "皇家傳奇：拉達那哥欣王國的歷史"
-      },
-      {
-        "week": "第八週",
-        "topic": "8",
-        "content": "古城記憶：泰國老城區的興衰軌跡"
-      },
-      {
-        "week": "第九週",
-        "topic": "9",
-        "content": "公民素養週"
-      },
-      {
-        "week": "第十週",
-        "topic": "10",
-        "content": "異國交融：泰國荷蘭村的多元風情"
-      },
-      {
-        "week": "第十一週",
-        "topic": "11",
-        "content": "都市秘境：曼谷小緬甸區"
-      },
-      {
-        "week": "第十二週",
-        "topic": "12",
-        "content": "歷史風華：帕府的古韻故事"
-      },
-      {
-        "week": "第十三週",
-        "topic": "13",
-        "content": "毗濕奴的天堂：彭世洛府"
-      },
-      {
-        "week": "第十四週",
-        "topic": "14",
-        "content": "不甚安寧的王國：也拉府"
-      },
-      {
-        "week": "第十五週",
-        "topic": "15",
-        "content": "碼頭貿易：龍仔厝府"
-      },
-      {
-        "week": "第十六週",
-        "topic": "16",
-        "content": "泰國軟實力：泰國影視劇背後的文化經濟"
-      },
-      {
-        "week": "第十七週",
-        "topic": "17",
-        "content": "賭場風暴：泰國賭博發展與政府對策"
-      },
-      {
-        "week": "第十八週",
-        "topic": "18",
-        "content": "權力旋律：泰國總理與國家新動態"
-      }
-    ],
-    "teacherBio": "陳怡瑄 講師\n現職：\n臺北市松山社區大學「泰國文化面面觀」課程講師（2018.9至今）\n臺北市中山社區大學「繽紛泰國」課程講師（2019.9至今）\n臺北市文山社區大學「樂遊泰國」課程講師（2019.9至今）\n臺北市內湖社區大學「泰國瘋旅行」課程講師（2020.9至今）\n簡介：\n－2025全新出版《認識泰文·玩轉ประเทศไทย》、《泰語กจด：掌握泰語，這本就夠》作者\n－勞動部產業人才投資，開設〈2024 泰語會話初級班〉，培力多語人才\n－與緯育雲端教育平臺合作，開發〈2024 商務泰語線上影音課程〉，提升科技公司外派人員語言能力\n－味全文教基金會泰式料理課程講師\n專長：\n東南亞研究、語言教學研究、教材研發設計、多元文化活動設計與規劃、平面與出版設計\n部落格(Blog)：\nhttps://medium.com/@wandee.life8\n臉書(Facebook)：\nhttps://www.facebook.com/profile.php?id=61565342364739"
   },
   {
     "id": "zhongshan_21f5ba162dd79e52bb19b632361b4442",
@@ -5834,7 +5715,7 @@
     "hasVideo": false,
     "isMixed": false,
     "status": "open",
-    "imageUrl": "images_course/zscc/thumb/69bc06d2cbf64.jpg",
+    "imageUrl": "images_course/zscc/thumb/6a37ff30ae738.jpg",
     "code": "1152C3009",
     "credits": 3,
     "fee": 3000,
@@ -7471,7 +7352,7 @@
     "timeSlot": "afternoon",
     "hasVideo": true,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/zscc/thumb/6607c8c6a8fb5.jpeg",
     "code": "1152C7005",
     "credits": 3,
@@ -7939,7 +7820,7 @@
     "timeSlot": "morning",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/zscc/thumb/5abba3ca801ab.jpg",
     "code": "1152C1003",
     "credits": 3,
@@ -8056,7 +7937,7 @@
     "timeSlot": "morning",
     "hasVideo": true,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/zscc/thumb/694d38442b6a4.jpg",
     "code": "1152C4005",
     "credits": 3,
@@ -8173,7 +8054,7 @@
     "timeSlot": "morning",
     "hasVideo": true,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/zscc/thumb/641d1a0156753.jpeg",
     "code": "1152C6003",
     "credits": 3,
@@ -9109,7 +8990,7 @@
     "timeSlot": "evening",
     "hasVideo": true,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/zscc/thumb/5abba3ca801ab.jpg",
     "code": "1152C1004",
     "credits": 3,
@@ -11800,7 +11681,7 @@
     "timeSlot": "morning",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/zscc/thumb/6512a1321c4e4.jpg",
     "code": "1152A3009",
     "credits": 3,
@@ -12004,7 +11885,7 @@
     "timeSlot": "morning",
     "hasVideo": true,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/zscc/thumb/69b172a255fd7.jpg",
     "code": "1152C6009",
     "credits": 3,
@@ -14518,7 +14399,7 @@
     "timeSlot": "morning",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/zscc/thumb/68da4441c15b3.jpg",
     "code": "1152A3005",
     "credits": 3,
@@ -17766,7 +17647,7 @@
     "timeSlot": "morning",
     "hasVideo": true,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/zscc/thumb/548878b663bb9.png",
     "code": "1152A1026",
     "credits": 3,
@@ -18893,7 +18774,7 @@
     "id": "zhongshan_9e47e2b172612f299bb490324b263310",
     "school": "zhongshan",
     "uHash": "9e47e2b172612f299bb490324b263310",
-    "name": "八段錦",
+    "name": "八段錦-內修好氣色、外煉筋骨肉",
     "teacher": "杜宏益",
     "semester": "115-暑期班",
     "area": "稻江",
@@ -19121,7 +19002,7 @@
     "id": "zhongshan_bf6447f660e4098288172da565240245",
     "school": "zhongshan",
     "uHash": "bf6447f660e4098288172da565240245",
-    "name": "水晶樹脂花卉",
+    "name": "水晶樹脂花卉-夏暑飄花",
     "teacher": "黃心怡",
     "semester": "115-暑期班",
     "area": "稻江",
@@ -19690,7 +19571,7 @@
     "id": "zhongshan_5f22c4f03a32dc065ddca608140d59b4",
     "school": "zhongshan",
     "uHash": "5f22c4f03a32dc065ddca608140d59b4",
-    "name": "珠落玉盤",
+    "name": "珠落玉盤-琵琶演奏美學",
     "teacher": "張聿甄",
     "semester": "115-暑期班",
     "area": "稻江",
@@ -19918,7 +19799,7 @@
     "id": "zhongshan_3ff07235dcbe1373292ce9de889d4830",
     "school": "zhongshan",
     "uHash": "3ff07235dcbe1373292ce9de889d4830",
-    "name": "精品咖啡的迷人世界",
+    "name": "精品咖啡的迷人世界-手沖咖啡好好玩",
     "teacher": "黃建華",
     "semester": "115-暑期班",
     "area": "稻江",
@@ -20431,7 +20312,7 @@
     "id": "zhongshan_e04022d6fa0fd4f36031588271d5204e",
     "school": "zhongshan",
     "uHash": "e04022d6fa0fd4f36031588271d5204e",
-    "name": "中山琴音",
+    "name": "中山琴音-二胡初進階",
     "teacher": "林雨涵",
     "semester": "115-暑期班",
     "area": "稻江",
@@ -21229,7 +21110,7 @@
     "id": "zhongshan_728ff942199d3c15aac1720c1adae89b",
     "school": "zhongshan",
     "uHash": "728ff942199d3c15aac1720c1adae89b",
-    "name": "學會自己穿和服",
+    "name": "學會自己穿和服-振袖篇",
     "teacher": "宋小琴",
     "semester": "115-暑期班",
     "area": "稻江",
@@ -21286,7 +21167,7 @@
     "id": "zhongshan_9e6dd9108d51dbd5a82b39a177555f04",
     "school": "zhongshan",
     "uHash": "9e6dd9108d51dbd5a82b39a177555f04",
-    "name": "快樂學韓語",
+    "name": "快樂學韓語-入門發音",
     "teacher": "吳京燕",
     "semester": "115-暑期班",
     "area": "稻江",
@@ -21343,7 +21224,7 @@
     "id": "zhongshan_15ed044b77ce3ba9ba796b8d531de1d4",
     "school": "zhongshan",
     "uHash": "15ed044b77ce3ba9ba796b8d531de1d4",
-    "name": "免看盤",
+    "name": "免看盤-供應鏈關係",
     "teacher": "林志榮",
     "semester": "115-暑期班",
     "area": "稻江",
@@ -22481,7 +22362,7 @@
     "id": "zhongshan_b55241d7026b4e1783d3b2f2fab8227d",
     "school": "zhongshan",
     "uHash": "b55241d7026b4e1783d3b2f2fab8227d",
-    "name": "美術館走讀",
+    "name": "美術館走讀-看展趣（A）",
     "teacher": "賴淑華",
     "semester": "115-暑期班",
     "area": "稻江",
@@ -22709,7 +22590,7 @@
     "id": "zhongshan_25c195573d9568e5f9ff20e930a74d83",
     "school": "zhongshan",
     "uHash": "25c195573d9568e5f9ff20e930a74d83",
-    "name": "增肌",
+    "name": "增肌-八段錦、強筋-太極防身術",
     "teacher": "范成謙",
     "semester": "115-暑期班",
     "area": "稻江",
