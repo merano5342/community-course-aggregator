@@ -21,7 +21,7 @@ INDENT = 2
 
 def load_existing(school: str, data_dir: str) -> dict[str, dict]:
     """Load existing JSON for a school. Returns dict keyed by u_hash (snake_case)."""
-    path = os.path.join(data_dir, f"{school}.json")
+    path = os.path.join(data_dir, "detail", f"{school}.json")
     if not os.path.exists(path):
         return {}
     with open(path, encoding="utf-8") as f:
@@ -67,9 +67,15 @@ def merge(
 
         record = {**base, **item}
 
-        # Overlay freshly scraped detail (only for new courses)
+        # Overlay freshly scraped detail (only for new courses).
+        # Never let the detail page overwrite `name`: the list page tooltip always
+        # provides the full name, while some schools embed a sequential counter in
+        # the detail page title (e.g. "CODE-1-NAME-SCHOOL") that the title regex
+        # would mistakenly extract as the name.
         if u in detail_map:
-            record.update(detail_map[u])
+            detail = dict(detail_map[u])
+            detail.pop('name', None)
+            record.update(detail)
 
         try:
             merged.append(Course(**record))
@@ -79,9 +85,13 @@ def merge(
     return merged
 
 
+_DETAIL_FIELDS = {'description', 'targetAudience', 'outline', 'teacherBio'}
+
+
 def save(courses: list[Course], school: str, data_dir: str) -> None:
-    os.makedirs(data_dir, exist_ok=True)
-    path = os.path.join(data_dir, f"{school}.json")
+    detail_dir = os.path.join(data_dir, "detail")
+    os.makedirs(detail_dir, exist_ok=True)
+    path = os.path.join(detail_dir, f"{school}.json")
     data = [
         c.model_dump(by_alias=True, exclude_none=True)
         for c in courses
@@ -89,6 +99,22 @@ def save(courses: list[Course], school: str, data_dir: str) -> None:
     with open(path, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=INDENT)
     print(f"  saved {len(data)} courses → {path}")
+
+
+def save_list(courses: list[Course], school: str, data_dir: str) -> None:
+    """Write a stripped-down JSON for the list view, omitting heavy detail fields."""
+    list_dir = os.path.join(data_dir, "list")
+    os.makedirs(list_dir, exist_ok=True)
+    path = os.path.join(list_dir, f"{school}.json")
+    data = []
+    for c in courses:
+        d = c.model_dump(by_alias=True, exclude_none=True)
+        for field in _DETAIL_FIELDS:
+            d.pop(field, None)
+        data.append(d)
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=INDENT)
+    print(f"  saved {len(data)} list entries → {path}")
 
 
 # ---------------------------------------------------------------------------

@@ -25,7 +25,7 @@ import aiohttp
 from config import FROG_SCHOOLS, SCHOOL_LIST, DATA_DIR, DELAY
 from fetcher import fetch, make_session
 from parser.frog import get_semester_options, parse_list_page, parse_detail_page
-from output import load_existing, find_new_hashes, merge, save
+from output import load_existing, find_new_hashes, merge, save, save_list
 
 
 async def scrape_school(session: aiohttp.ClientSession, school: str) -> None:
@@ -81,6 +81,7 @@ async def scrape_school(session: aiohttp.ClientSession, school: str) -> None:
     # ── 5. Merge and save ────────────────────────────────────────────────────
     courses = merge(list_items, existing, detail_map)
     save(courses, school, DATA_DIR)
+    save_list(courses, school, DATA_DIR)
 
 
 async def main() -> None:

@@ -3,10 +3,10 @@ Parser for schools using the frog.tw CMS.
 
 Correct URLs (verified against live pages):
   List:   /course/m_course_list.php                   → semester <select name="q_semester">
-  List:   /course/m_course_list.php?s={hash}          → course cards in div.content_box
+  List:   /course/m_course_list.php?s={hash}          → courses in one of two layouts (below)
   Detail: /course/m_course_detail.php?u={32-char-hash}
 
-List page course structure (per course):
+Layout A — card view (nangang, wenshan, xinyi, zhongshan):
   <a href='m_course_detail.php?u={hash}'
      onmouseover='tooltip.show("{full_name}<br>開課日期：YYYY-MM-DD(星期X)<br>")' />
   <div class="content_box">
@@ -16,6 +16,22 @@ List page course structure (per course):
     <h2>開課日期：YYYY-MM-DD&nbsp;(X)上午/下午/晚上</h2>
     <h2>{area}&nbsp;{semester}&nbsp;<img src=".../girl.png"/>老師名</h2>
   </div>
+
+Layout B — week-table view (songshan, beitou, wanhua, zhongzheng):
+  <td class="fixedcell_135">
+    [<span class="icon_discount">...</span>]  ← optional discount badge
+    [<img alt="額滿"/>]                        ← optional full indicator
+    <a class="course_info_link" target="_blank"
+       href="https://{school}/course/m_course_detail.php?u={hash}"
+       onmouseover='tooltip.show("{full_name}&lt;br&gt;開課日期：YYYY-MM-DD(星期X)&lt;br&gt;招生人數：N人&lt;br&gt;招生狀態：STATUS&lt;br&gt;...")'>
+      {code}<br/>
+      <b>{truncated_name}</b><br/>
+      <img src="images/boy.png" or "images/girl.png"/>
+      {teacher}<br/>
+      ({day})HH:mm~HH:mm <span style="...">{area}</span>
+    </a>
+    <div>N學分。招生N，STATUS</div>
+  </td>
 
 Detail page key elements:
   <title>115-秋季班 1152A1001-課程名-校名</title>
@@ -39,11 +55,12 @@ from bs4 import BeautifulSoup, Tag, NavigableString
 _DAY_MAP = {'日': 0, '一': 1, '二': 2, '三': 3, '四': 4, '五': 5, '六': 6}
 
 # ── regex helpers ────────────────────────────────────────────────────────────
-_HASH_RE    = re.compile(r'\?u=([a-f0-9]{32})', re.I)
-_NUMBER_RE  = re.compile(r'(\d+)')
-_DATE_RE    = re.compile(r'(\d{4}-\d{2}-\d{2})')
-_WEEKS_RE   = re.compile(r'共(\d+)週')
-_FEE_RE     = re.compile(r'(\d[\d,]+)\s*元')
+_HASH_RE          = re.compile(r'\?u=([a-f0-9]{32})', re.I)
+_NUMBER_RE        = re.compile(r'(\d+)')
+_DATE_RE          = re.compile(r'(\d{4}-\d{2}-\d{2})')
+_WEEKS_RE         = re.compile(r'共(\d+)週')
+_FEE_RE           = re.compile(r'(\d[\d,]+)\s*元')
+_TIME_IN_CELL_RE  = re.compile(r'\([日一二三四五六]\)(\d{2}):(\d{2})~')
 
 
 # ── semester ─────────────────────────────────────────────────────────────────
@@ -82,6 +99,82 @@ def _parse_day_slot(text: str) -> tuple[int, str]:
     return day, slot
 
 
+def _parse_week_table_link(
+    link: Tag,
+    td: Optional[Tag],
+    u_hash: str,
+    school: str,
+    semester_label: str,
+) -> Optional[dict]:
+    """Parse one course from Layout B (week-table view)."""
+    # Full name + start_date + day from tooltip
+    tip_raw = link.get('onmouseover', '')
+    tip_m = re.search(r'tooltip\.show\("(.+?)"\)', tip_raw, re.DOTALL)
+    name, start_date, day_of_week = '', '', 0
+    if tip_m:
+        tip_html = tip_m.group(1)
+        tip_parts = re.split(r'<br\s*/?>', tip_html, flags=re.I)
+        name = tip_parts[0].strip()
+        for part in tip_parts[1:]:
+            part = part.strip()
+            if '開課日期' in part:
+                dm = _DATE_RE.search(part)
+                if dm:
+                    start_date = dm.group(1)
+                day_m = re.search(r'星期([日一二三四五六])', part)
+                if day_m:
+                    day_of_week = _DAY_MAP.get(day_m.group(1), 0)
+
+    # Teacher, time, area from <a> text nodes
+    # Expected: [code, truncated_name, teacher, (day)HH:mm~HH:mm, area]
+    parts = [t.strip() for t in link.strings if t.strip()]
+    teacher, area, time_slot = '', '', 'evening'
+    time_idx: Optional[int] = None
+    for i, part in enumerate(parts):
+        if _TIME_IN_CELL_RE.search(part):
+            time_idx = i
+            break
+
+    if time_idx is not None:
+        teacher = parts[time_idx - 1] if time_idx >= 1 else ''
+        time_part = parts[time_idx]
+        area = parts[time_idx + 1] if time_idx + 1 < len(parts) else ''
+        tm = _TIME_IN_CELL_RE.search(time_part)
+        if tm:
+            hour = int(tm.group(1))
+            time_slot = 'morning' if hour < 12 else ('afternoon' if hour < 18 else 'evening')
+
+    # is_full from <td>: either an img[alt=額滿] or the credits <div> text
+    is_full = False
+    if td:
+        if td.find('img', attrs={'alt': re.compile(r'額滿')}):
+            is_full = True
+        else:
+            info_div = td.find('div')
+            if info_div and '額滿' in info_div.get_text():
+                is_full = True
+
+    if not name:
+        return None
+
+    return {
+        'id': f'{school}_{u_hash}',
+        'school': school,
+        'u_hash': u_hash,
+        'name': name,
+        'semester': semester_label,
+        'area': area,
+        'teacher': teacher,
+        'start_date': start_date,
+        'day_of_week': day_of_week,
+        'time_slot': time_slot,
+        'has_video': False,
+        'is_mixed': False,
+        'status': 'full' if is_full else 'open',
+        'image_url': '',
+    }
+
+
 def parse_list_page(html: str, school: str, semester_label: str) -> list[dict]:
     """
     Parse m_course_list.php?s={hash}.
@@ -107,6 +200,11 @@ def parse_list_page(html: str, school: str, semester_label: str) -> list[dict]:
             box = nxt
 
         if not box:
+            # Layout B: week-table — data is inside the <a> itself
+            td = link.find_parent('td')
+            course = _parse_week_table_link(link, td, u_hash, school, semester_label)
+            if course:
+                results.append(course)
             continue
 
         # ── name from tooltip (full) or h1 (truncated) ──────────────────────
