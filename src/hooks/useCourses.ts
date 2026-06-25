@@ -67,7 +67,7 @@ function normalizeScrapedCourse(raw: any, school: string): Course {
 }
 
 async function fetchSchoolCourses(school: string): Promise<Course[]> {
-  const url = `${import.meta.env.BASE_URL}data/courses/${school}.json`;
+  const url = `${import.meta.env.BASE_URL}data/courses/list/${school}.json`;
   const res = await fetch(url);
   if (!res.ok) throw new Error(`${school}: HTTP ${res.status}`);
   const raw = await res.json();
@@ -84,6 +84,7 @@ async function fetchAllCourses(schools: string[]): Promise<Course[]> {
 export function useCourses(schools?: string[]): {
   courses: Course[];
   isLoading: boolean;
+  isRealData: boolean;
   error: Error | null;
 } {
   const schoolList = schools ?? Object.keys(SCHOOL_INFO);
@@ -101,6 +102,31 @@ export function useCourses(schools?: string[]): {
   return {
     courses,
     isLoading: query.isLoading,
+    isRealData: !!query.data && query.data.length > 0,
     error: query.error,
   };
+}
+
+async function fetchFullSchoolCourses(school: string): Promise<Course[]> {
+  const url = `${import.meta.env.BASE_URL}data/courses/detail/${school}.json`;
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`${school}: HTTP ${res.status}`);
+  const raw = await res.json();
+  return (raw as unknown[]).map((c) => normalizeScrapedCourse(c, school));
+}
+
+export function useCourseDetail(school: string, id: string): {
+  course: Course | null;
+  isLoading: boolean;
+} {
+  const query = useQuery<Course[], Error>({
+    queryKey: ['courses-full', school],
+    queryFn: () => fetchFullSchoolCourses(school),
+    staleTime: 1000 * 60 * 60,
+    retry: 1,
+    enabled: !!school && !!id,
+  });
+
+  const course = query.data?.find((c) => c.id === id) ?? null;
+  return { course, isLoading: query.isLoading };
 }

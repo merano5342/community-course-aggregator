@@ -64,7 +64,7 @@ export function Layout() {
       : 'var(--space-6)';
 
   return (
-    <div style={{ display: 'flex', minHeight: '100vh' }}>
+    <div style={{ display: 'flex', height: '100vh', overflow: 'hidden' }}>
       {/* Desktop sidebar */}
       {!isMobile && (
         <AppSidebar
@@ -73,10 +73,10 @@ export function Layout() {
         />
       )}
 
-      <div style={{ flex: 1, display: 'flex', flexDirection: 'column', minWidth: 0 }}>
+      <div style={{ flex: 1, display: 'flex', flexDirection: 'column', minWidth: 0, height: '100vh', overflowY: 'auto' }}>
         <Header favoritesCount={favCount} compareCount={compareCount} />
         <main style={{
-          flex: 1,
+          minHeight: 'calc(100vh - var(--header-height))',
           padding: isMobile ? 'var(--space-4)' : 'var(--space-6)',
           paddingBottom: mainPaddingBottom,
         }}>

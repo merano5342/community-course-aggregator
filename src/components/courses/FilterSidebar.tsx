@@ -1,23 +1,16 @@
 import type { CourseStatus, TimeSlot } from '@/types/course';
-import { getSchoolInfo, DAY_LABELS, TIME_SLOT_LABELS, STATUS_INFO } from '@/lib/courseUtils';
+import { getSchoolInfo, DAY_LABELS, TIME_SLOT_LABELS, TIME_SLOT_ICON, STATUS_INFO } from '@/lib/courseUtils';
+import { type FilterState, DEFAULT_FILTERS } from './filterState';
 
-export interface FilterState {
-  search: string;
-  semesters: string[];
-  schools: string[];
-  days: number[];
-  timeSlots: TimeSlot[];
-  categories: string[];
-  statuses: CourseStatus[];
-  onlyNew: boolean;
-  onlyMixed: boolean;
-  sortBy: 'date' | 'fee-asc' | 'fee-desc' | 'school';
+function TimeSlotIcon({ slot, size = 14 }: { slot: TimeSlot; size?: number }) {
+  const icon = TIME_SLOT_ICON[slot];
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+      {icon.circle && <circle cx={icon.circle[0]} cy={icon.circle[1]} r={icon.circle[2]}/>}
+      <path d={icon.path}/>
+    </svg>
+  );
 }
-
-export const DEFAULT_FILTERS: FilterState = {
-  search: '', semesters: [], schools: [], days: [], timeSlots: [],
-  categories: [], statuses: [], onlyNew: false, onlyMixed: false, sortBy: 'date',
-};
 
 interface FilterSidebarProps {
   filters: FilterState;
@@ -52,6 +45,7 @@ function ToggleChip({
         transition: 'background var(--dur-fast)',
         background: active ? 'var(--color-accent)' : 'var(--color-surface-card)',
         color: active ? 'white' : 'var(--color-text-secondary)',
+        display: 'flex', alignItems: 'center', gap: 4,
       }}
     >
       {children}
@@ -99,10 +93,13 @@ export function FilterSidebar({ filters, onChange, availableSchools, availableCa
   const f = filters;
   const set = (partial: Partial<FilterState>) => onChange({ ...f, ...partial });
 
+  const timeSlotsChanged = JSON.stringify([...f.timeSlots].sort()) !== JSON.stringify([...DEFAULT_FILTERS.timeSlots].sort());
   const activeCount = [
-    f.semesters.length, f.schools.length, f.days.length, f.timeSlots.length, f.categories.length,
-    f.statuses.length, f.onlyNew ? 1 : 0, f.onlyMixed ? 1 : 0,
+    f.semesters.length, f.schools.length, f.days.length, timeSlotsChanged ? 1 : 0, f.categories.length,
+    f.statuses.length, f.onlyNew ? 1 : 0, !f.excludeSpring ? 1 : 0,
   ].reduce((a, b) => a + b, 0);
+
+  const displayedSemesters = availableSemesters.filter((s) => !f.excludeSpring || !s.includes('春'));
 
   return (
     <div style={{
@@ -160,16 +157,27 @@ export function FilterSidebar({ filters, onChange, availableSchools, availableCa
       {availableSemesters.length > 0 && (
         <div>
           <SectionTitle>學期</SectionTitle>
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            {availableSemesters.map((sem) => (
-              <CheckItem
-                key={sem}
-                checked={f.semesters.includes(sem)}
-                onClick={() => set({ semesters: toggle(f.semesters, sem) })}
-              >
-                {sem}
-              </CheckItem>
-            ))}
+          <div style={{ display: 'flex', gap: 4, flexWrap: 'wrap' }}>
+            {displayedSemesters.map((sem) => {
+              const isActive = f.semesters.includes(sem);
+              const bg = sem.includes('暑') ? '#fde8c4' : sem.includes('春') ? '#d4e8cc' : '#f0d8c8';
+              const color = sem.includes('暑') ? '#9a6020' : sem.includes('春') ? '#407840' : '#8a4830';
+              return (
+                <button
+                  key={sem}
+                  onClick={() => set({ semesters: toggle(f.semesters, sem) })}
+                  style={{
+                    padding: '5px 12px', border: 'none', borderRadius: 'var(--radius-pill)',
+                    cursor: 'pointer', fontSize: 'var(--text-sm)', fontWeight: 'var(--weight-medium)',
+                    transition: 'background var(--dur-fast)',
+                    background: isActive ? bg : 'var(--color-surface-card)',
+                    color: isActive ? color : 'var(--color-text-secondary)',
+                  }}
+                >
+                  {sem}
+                </button>
+              );
+            })}
           </div>
         </div>
       )}
@@ -178,21 +186,26 @@ export function FilterSidebar({ filters, onChange, availableSchools, availableCa
       {availableSchools.length > 0 && (
         <div>
           <SectionTitle>學校</SectionTitle>
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
+          <div style={{ display: 'flex', gap: 4, flexWrap: 'wrap' }}>
             {availableSchools.map((school) => {
               const info = getSchoolInfo(school);
+              const isActive = f.schools.includes(school);
               return (
-                <CheckItem
+                <button
                   key={school}
-                  checked={f.schools.includes(school)}
                   onClick={() => set({ schools: toggle(f.schools, school) })}
+                  style={{
+                    padding: '5px 10px', border: 'none', borderRadius: 'var(--radius-pill)',
+                    cursor: 'pointer', fontSize: 'var(--text-sm)', fontWeight: 'var(--weight-medium)',
+                    transition: 'background var(--dur-fast)',
+                    background: isActive ? info.bg : 'var(--color-surface-card)',
+                    color: isActive ? info.color : 'var(--color-text-secondary)',
+                    display: 'flex', alignItems: 'center', gap: 4,
+                  }}
                 >
-                  <span style={{
-                    display: 'inline-block', width: 8, height: 8, borderRadius: '50%',
-                    background: info.color, marginRight: 2,
-                  }} />
-                  {info.name}
-                </CheckItem>
+                  <span style={{ width: 7, height: 7, borderRadius: '50%', background: info.color, flexShrink: 0 }}/>
+                  {info.short}
+                </button>
               );
             })}
           </div>
@@ -221,6 +234,7 @@ export function FilterSidebar({ filters, onChange, availableSchools, availableCa
               active={f.timeSlots.includes(slot)}
               onClick={() => set({ timeSlots: toggle(f.timeSlots, slot) })}
             >
+              <TimeSlotIcon slot={slot} size={12} />
               {TIME_SLOT_LABELS[slot]}
             </ToggleChip>
           ))}
@@ -265,11 +279,21 @@ export function FilterSidebar({ filters, onChange, availableSchools, availableCa
       <div>
         <SectionTitle>特殊標記</SectionTitle>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
-          {([['onlyNew', '僅顯示新課程'], ['onlyMixed', '僅顯示混成課程']] as const).map(([key, label]) => (
-            <CheckItem key={key} checked={f[key]} onClick={() => set({ [key]: !f[key] })}>
-              {label}
-            </CheckItem>
-          ))}
+          <CheckItem checked={f.onlyNew} onClick={() => set({ onlyNew: !f.onlyNew })}>
+            僅顯示新課程
+          </CheckItem>
+          <CheckItem
+            checked={!f.excludeSpring}
+            onClick={() => {
+              const next = !f.excludeSpring;
+              set({
+                excludeSpring: !next,
+                semesters: !next ? f.semesters.filter((s) => !s.includes('春')) : f.semesters,
+              });
+            }}
+          >
+            顯示春季班
+          </CheckItem>
         </div>
       </div>
     </div>

@@ -26,6 +26,19 @@ export const TIME_SLOT_LABELS: Record<TimeSlot, string> = {
   evening: '晚上',
 };
 
+export const TIME_SLOT_ICON: Record<TimeSlot, { circle?: [number, number, number]; path: string }> = {
+  morning: {
+    path: 'M7 17A5 5 0 0 1 17 17M3 17h18M12 4v3M5.64 6.5l2.12 2.12M18.36 6.5l-2.12 2.12',
+  },
+  afternoon: {
+    circle: [12, 12, 4],
+    path: 'M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41',
+  },
+  evening: {
+    path: 'M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z',
+  },
+};
+
 export const STATUS_INFO: Record<CourseStatus, { label: string; variant: BadgeProps['variant'] }> = {
   open:      { label: '開放報名', variant: 'success' },
   full:      { label: '名額已滿', variant: 'error' },
@@ -87,6 +100,24 @@ export function getUniqueSemesters(courses: Course[]): string[] {
     }
   }
   return result;
+}
+
+/** Returns a merged school order: stored keys first (filtered to known schools), then any new schools appended. */
+export function normalizeSchoolOrder(stored: string[]): string[] {
+  const all = Object.keys(SCHOOL_INFO);
+  return [
+    ...stored.filter((s) => all.includes(s)),
+    ...all.filter((s) => !stored.includes(s)),
+  ];
+}
+
+/** Sorts an array of school keys by the given order (unknown schools go to the end). */
+export function applySchoolOrder(schools: string[], order: string[]): string[] {
+  return [...schools].sort((a, b) => {
+    const ai = order.indexOf(a);
+    const bi = order.indexOf(b);
+    return (ai === -1 ? 9999 : ai) - (bi === -1 ? 9999 : bi);
+  });
 }
 
 /** Returns set of course IDs that have a time conflict (same dayOfWeek + timeSlot as another). */

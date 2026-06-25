@@ -4,6 +4,7 @@ import type { Course } from '@/types/course';
 import { Badge } from '@/components/core/Badge';
 import { Button } from '@/components/core/Button';
 import { useIsMobile } from '@/hooks/useIsMobile';
+import { useCourseDetail } from '@/hooks/useCourses';
 import {
   getSchoolInfo, STATUS_INFO, DAY_LABELS, TIME_SLOT_LABELS,
   DISCOUNT_MAP, formatFee, formatOriginalFee,
@@ -20,6 +21,12 @@ interface Props {
 }
 
 type Tab = 'info' | 'outline';
+
+function getSemesterStyle(semester: string): { bg: string; color: string } {
+  if (semester.includes('暑')) return { bg: '#fde8c4', color: '#9a6020' };
+  if (semester.includes('春')) return { bg: '#d4e8cc', color: '#407840' };
+  return { bg: '#f0d8c8', color: '#8a4830' };
+}
 
 function InfoRow({ icon, children }: { icon: React.ReactNode; children: React.ReactNode }) {
   return (
@@ -49,10 +56,19 @@ export function CourseDetailModal({
 }: Props) {
   const [activeTab, setActiveTab] = useState<Tab>('info');
   const isMobile = useIsMobile();
+  const { course: detail, isLoading: detailLoading } = useCourseDetail(course.school, course.id);
+  const full: Course = { ...course, ...(detail ?? {}) };
   const school = getSchoolInfo(course.school);
   const status = STATUS_INFO[course.status];
+  const semesterStyle = course.semester ? getSemesterStyle(course.semester) : null;
   const hasDiscount = !!course.discount && !!DISCOUNT_MAP[course.discount];
-  const hasRichContent = !!(course.description || course.outline?.length || course.targetAudience || course.teacherBio || course.notes);
+  const hasRichContent = detailLoading || !!(full.description || full.outline?.length || full.targetAudience || full.teacherBio || full.notes);
+  const hasOutline = !!(full.outline && full.outline.length > 0);
+
+  // Desktop: two columns only when there's an outline (or still loading)
+  const showTwoColumns = !isMobile && (detailLoading || hasOutline);
+  // Mobile: show tabs only when there's rich content
+  const showMobileTabs = isMobile && hasRichContent;
 
   useEffect(() => {
     const prev = document.body.style.overflow;
@@ -73,7 +89,7 @@ export function CourseDetailModal({
       }
     : {
         position: 'relative', zIndex: 1,
-        width: '100%', maxWidth: hasRichContent ? 960 : 600,
+        width: '100%', maxWidth: showTwoColumns ? 960 : 600,
         maxHeight: '90vh',
         borderRadius: 'var(--radius-xl)',
       };
@@ -168,9 +184,19 @@ export function CourseDetailModal({
     </div>
   ) : null;
 
-  const richContent = (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-5)' }}>
-      {course.description && (
+  // ── Left-column text blocks: description · targetAudience · teacherBio ───
+
+  const leftRichContent = detailLoading ? (
+    <div style={{
+      display: 'flex', alignItems: 'center', justifyContent: 'center',
+      padding: 'var(--space-6) 0', color: 'var(--color-text-muted)',
+      fontSize: 'var(--text-sm)',
+    }}>
+      載入詳細資料中…
+    </div>
+  ) : (
+    <>
+      {full.description && (
         <div>
           <SectionLabel>課程介紹</SectionLabel>
           <p style={{
@@ -179,12 +205,12 @@ export function CourseDetailModal({
             color: 'var(--color-text-primary)',
             whiteSpace: 'pre-line',
           }}>
-            {course.description}
+            {full.description}
           </p>
         </div>
       )}
 
-      {course.targetAudience && (
+      {full.targetAudience && (
         <div>
           <SectionLabel>適合對象</SectionLabel>
           <p style={{
@@ -193,45 +219,12 @@ export function CourseDetailModal({
             color: 'var(--color-text-primary)',
             whiteSpace: 'pre-line',
           }}>
-            {course.targetAudience}
+            {full.targetAudience}
           </p>
         </div>
       )}
 
-      {course.outline && course.outline.length > 0 && (
-        <div>
-          <SectionLabel>課程大綱</SectionLabel>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-1)' }}>
-            {course.outline.map((item, i) => (
-              <div
-                key={i}
-                style={{
-                  display: 'flex', gap: 'var(--space-3)', alignItems: 'flex-start',
-                  padding: 'var(--space-2) var(--space-3)',
-                  borderRadius: 'var(--radius-md)',
-                  background: i % 2 === 0 ? 'var(--color-surface-bg)' : 'transparent',
-                  fontSize: 'var(--text-sm)', lineHeight: 'var(--leading-normal)',
-                  color: 'var(--color-text-primary)',
-                }}
-              >
-                <span style={{
-                  flexShrink: 0,
-                  width: 20, height: 20,
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  borderRadius: '50%',
-                  background: 'var(--color-accent-subtle)', color: 'var(--color-accent)',
-                  fontSize: 10, fontWeight: 'var(--weight-semibold)',
-                }}>
-                  {i + 1}
-                </span>
-                {item}
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
-
-      {course.teacherBio && (
+      {full.teacherBio && (
         <div>
           <SectionLabel>老師簡介</SectionLabel>
           <div style={{
@@ -254,27 +247,57 @@ export function CourseDetailModal({
               color: 'var(--color-text-primary)',
               whiteSpace: 'pre-line',
             }}>
-              {course.teacherBio}
+              {full.teacherBio}
             </p>
           </div>
         </div>
       )}
+    </>
+  );
 
-      {course.notes && (
-        <div>
-          <SectionLabel>注意事項</SectionLabel>
-          <div style={{
-            padding: 'var(--space-3) var(--space-4)',
-            background: 'var(--color-warning-subtle)',
-            borderRadius: 'var(--radius-lg)',
-            fontSize: 'var(--text-sm)', lineHeight: 'var(--leading-normal)',
-            color: 'var(--color-text-secondary)',
-            whiteSpace: 'pre-line',
-          }}>
-            {course.notes}
+  // ── Right-column block: outline only ────────────────────────────────────
+
+  const outlineBlock = hasOutline ? (
+    <div>
+      <SectionLabel>課程大綱</SectionLabel>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-1)' }}>
+        {full.outline!.map((item, i) => (
+          <div
+            key={i}
+            style={{
+              display: 'flex', gap: 'var(--space-3)', alignItems: 'flex-start',
+              padding: 'var(--space-2) var(--space-3)',
+              borderRadius: 'var(--radius-md)',
+              background: i % 2 === 0 ? 'var(--color-surface-bg)' : 'transparent',
+              fontSize: 'var(--text-sm)', lineHeight: 'var(--leading-normal)',
+              color: 'var(--color-text-primary)',
+            }}
+          >
+            <span style={{
+              flexShrink: 0,
+              width: 20, height: 20,
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              borderRadius: '50%',
+              background: 'var(--color-accent-subtle)', color: 'var(--color-accent)',
+              fontSize: 10, fontWeight: 'var(--weight-semibold)',
+            }}>
+              {i + 1}
+            </span>
+            {item}
           </div>
-        </div>
-      )}
+        ))}
+      </div>
+    </div>
+  ) : null;
+
+  // ── Left column content (shared between desktop left and mobile info tab) ─
+
+  const leftColumnContent = (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-4)' }}>
+      {quotaBar}
+      {infoGrid}
+      {leftRichContent}
+      {notesBlock}
     </div>
   );
 
@@ -337,7 +360,16 @@ export function CourseDetailModal({
               </span>
               <Badge variant={status.variant} dot>{status.label}</Badge>
               {course.isNew && <Badge variant="accent">NEW</Badge>}
-              {course.isMixed && <Badge variant="neutral">線上+實體</Badge>}
+              {semesterStyle && (
+                <span style={{
+                  display: 'inline-flex', alignItems: 'center',
+                  padding: '3px 10px', borderRadius: 'var(--radius-pill)',
+                  fontSize: 'var(--text-xs)', fontWeight: 'var(--weight-medium)',
+                  background: semesterStyle.bg, color: semesterStyle.color,
+                }}>
+                  {course.semester}
+                </span>
+              )}
             </div>
             <h2 style={{
               margin: 0,
@@ -369,7 +401,7 @@ export function CourseDetailModal({
         </div>
 
         {/* Mobile: tabs */}
-        {isMobile && hasRichContent && (
+        {showMobileTabs && (
           <div style={{
             display: 'flex', borderBottom: 'var(--border-subtle)',
             padding: '0 var(--space-4)',
@@ -405,46 +437,49 @@ export function CourseDetailModal({
           flex: 1,
         }}>
           {isMobile ? (
-            /* ── Mobile: tabbed ── */
-            activeTab === 'info' ? (
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-3)' }}>
-                {quotaBar}
-                {infoGrid}
-                {notesBlock}
-              </div>
-            ) : (
-              richContent
-            )
+            /* ── Mobile: tabbed or single column ── */
+            showMobileTabs ? (
+              activeTab === 'info' ? leftColumnContent : (
+                detailLoading ? (
+                  <div style={{
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    padding: 'var(--space-8)', color: 'var(--color-text-muted)',
+                    fontSize: 'var(--text-sm)',
+                  }}>
+                    載入詳細資料中…
+                  </div>
+                ) : outlineBlock
+              )
+            ) : leftColumnContent
           ) : (
-            /* ── Desktop: two columns ── */
-            hasRichContent ? (
+            /* ── Desktop ── */
+            showTwoColumns ? (
+              /* Two columns: left = info + text, right = outline */
               <div style={{
                 display: 'grid',
                 gridTemplateColumns: '1fr 1fr',
                 gap: 'var(--space-8)',
                 alignItems: 'start',
               }}>
-                {/* Left: course info */}
-                <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-4)' }}>
-                  {quotaBar}
-                  {infoGrid}
-                  {notesBlock}
-                </div>
-                {/* Right: description / outline / teacher bio */}
+                {leftColumnContent}
                 <div style={{
                   borderLeft: 'var(--border-subtle)',
                   paddingLeft: 'var(--space-8)',
                 }}>
-                  {richContent}
+                  {detailLoading ? (
+                    <div style={{
+                      display: 'flex', alignItems: 'center', justifyContent: 'center',
+                      padding: 'var(--space-8)', color: 'var(--color-text-muted)',
+                      fontSize: 'var(--text-sm)',
+                    }}>
+                      載入詳細資料中…
+                    </div>
+                  ) : outlineBlock}
                 </div>
               </div>
             ) : (
-              /* No rich content: single column */
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-3)' }}>
-                {quotaBar}
-                {infoGrid}
-                {notesBlock}
-              </div>
+              /* Single column: info + text only, no outline */
+              leftColumnContent
             )
           )}
         </div>
@@ -455,7 +490,9 @@ export function CourseDetailModal({
           borderTop: 'var(--border-subtle)',
           display: 'flex', gap: 'var(--space-2)', flexWrap: 'wrap',
           flexShrink: 0,
-          paddingBottom: isMobile ? 'max(var(--space-3), env(safe-area-inset-bottom))' : undefined,
+          paddingBottom: isMobile
+            ? 'max(var(--space-6), env(safe-area-inset-bottom))'
+            : 'var(--space-5)',
         }}>
           <Button
             variant={isFavorite ? 'accent' : 'surface'}
