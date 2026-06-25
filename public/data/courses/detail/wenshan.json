@@ -244,7 +244,7 @@
     "timeSlot": "morning",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/wenshan/thumb/67e2b16578c78.jpg",
     "credits": 3,
     "fee": 3000,
@@ -1520,7 +1520,7 @@
     "timeSlot": "evening",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/wenshan/thumb/5e81048b8bd2f.jpg",
     "credits": 3,
     "fee": 3000,
@@ -2680,7 +2680,7 @@
     "timeSlot": "evening",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/wenshan/thumb/6978c540ae61c.jpg",
     "credits": 3,
     "fee": 3000,
@@ -3099,7 +3099,7 @@
         "content": "在外國觀光、旅遊、行動時之英語的總整理"
       }
     ],
-    "teacherBio": "蕭如晞 講師\n現職：\n●臺北市文山、信義、松山社區大學，英語教師。\n●新店區文山國中，外聘英語教師。\n●地球村美日韓語，美語教師。\n●巨匠美語，美語教師。\n●徐薇美語新店區炫豐分校、蘆洲區卓昇文理補習班，美語教師。\n簡介：\n美國西佛羅里達州立大學[電機工程學系]畢業、美國西佛羅里達州立大學[音樂學系][音樂演奏組]畢業，國立臺北教育大學[英語教育學系]日間部研究所、國立政治大學[英國語文學系][文學組]日間部研究所就讀中。現任臺北市松山、信義、文山社區大學英語教師。現任新店區文山國中外聘英語教師。自100年起在地球村美日韓語教學，長期教授觀光英語、各級會話、托福、雅思、多益、全民英檢、商業與新聞英語、教學雜誌等相關課程，教授實體與線上教學。現任巨匠美語美語教師，教授各級會話、考試與證照課程。現任徐薇美語、蘆洲卓昇文理班教師。\n專長：\n英語教學。擅長教導從英語基礎非常基本的學生們，到可以使用英文寫作、英語對話都非常流利的學生們。\n擁有證照：\n西元2021年     通過英國劍橋大學英語檢定考試 [Cambridge Linguaskill 劍橋領司]，達到此測驗的滿分分數 (C1 and"
+    "teacherBio": "蕭如晞 講師\n現職：\n●臺北市文山、信義、松山社區大學，英語教師。\n●新店區文山國中，外聘英語教師。\n●地球村美日韓語，美語教師。\n●巨匠美語，美語教師。\n●徐薇美語新店區炫豐分校、蘆洲區卓昇文理補習班，美語教師。\n簡介：\n美國西佛羅里達州立大學[電機工程學系]畢業、美國西佛羅里達州立大學[音樂學系][音樂演奏組]畢業。就讀國立臺北教育大學[英語教育學系]日間部研究所、國立政治大學[英國語文學系][文學組]日間部研究所。現任臺北市文山、大安、信義、松山社區大學英語教師。現任新店區文山國中外聘英語教師。自100年起在地球村美日韓語教學，長期教授觀光英語、各級會話、托福、雅思、多益、全民英檢、商業與新聞英語、教學雜誌等相關課程，教授實體與線上教學。現任巨匠美語美語教師，教授各級會話、考試與證照課程。現任徐薇美語、卓昇文理班教師。\n專長：\n英語教學。擅長教導從英語基礎非常基本的學生們，到可以使用英文寫作、英語對話都非常流利的學生們。\n擁有證照：\n西元1988年     \t通過托福 TOEFL 考試。\n西元2021年     通過英國劍橋大學英語檢定考試 [Cambridge Linguask"
   },
   {
     "id": "wenshan_2704dfdf74b809c05fc3f076b8d5add5",
@@ -4622,7 +4622,7 @@
     "timeSlot": "morning",
     "hasVideo": true,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/wenshan/thumb/67ea71ac2ff4d.jpeg",
     "credits": 3,
     "fee": 3000,
@@ -7119,7 +7119,7 @@
     "timeSlot": "evening",
     "hasVideo": true,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/wenshan/thumb/6607b4ba861db.png",
     "credits": 3,
     "fee": 3000,
@@ -7581,7 +7581,7 @@
     "startDate": "2026-09-01",
     "dayOfWeek": 2,
     "timeSlot": "evening",
-    "hasVideo": false,
+    "hasVideo": true,
     "isMixed": false,
     "status": "open",
     "imageUrl": "images_course/wenshan/thumb/69bbe92564d60.jpg",
@@ -8713,7 +8713,7 @@
     "timeSlot": "morning",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/wenshan/thumb/5e7b0b1e1f918.jpg",
     "credits": 3,
     "fee": 3000,
@@ -8945,7 +8945,7 @@
     "timeSlot": "morning",
     "hasVideo": true,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/wenshan/thumb/67ea71ac2ff4d.jpeg",
     "credits": 3,
     "fee": 3000,
@@ -12712,7 +12712,7 @@
     "timeSlot": "evening",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/wenshan/thumb/5c89737ab4e25.jpg",
     "credits": 2,
     "fee": 2000,
@@ -13842,7 +13842,7 @@
     "timeSlot": "morning",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/wenshan/thumb/623ab03ac5c3f.jpg",
     "credits": 3,
     "fee": 3000,
@@ -14074,7 +14074,7 @@
     "timeSlot": "morning",
     "hasVideo": true,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/wenshan/thumb/66d7ec8e7292d.jpg",
     "credits": 3,
     "fee": 3000,
@@ -16016,7 +16016,7 @@
     "timeSlot": "evening",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/wenshan/thumb/69c8a740c594b.jpg",
     "credits": 3,
     "fee": 3000,
@@ -16117,7 +16117,7 @@
         "content": "作品分享與討論"
       }
     ],
-    "teacherBio": "楊心美 講師\n簡介：\n心心陶陶藝教室負責人\n專長：\n陶藝創作擬真壺製作,花藝創作,創意植物盆栽設計"
+    "teacherBio": "楊心美 講師\n現職：\n志玄社大，伊旬基金會，中正社大陶藝老師\n簡介：\n心心陶陶藝工作室\n專長：\n陶藝創作擬真壺製作,花藝創作,創意植物盆栽設計，陶偶設計製作\n部落格(Blog)：\nhttps://www.instagram.com/clay_heart_studio?igsh=MXRxbWlibDZkeXhkcA%3D%3D&utm_source=qr"
   },
   {
     "id": "wenshan_973cb31ccff0fff2fd3d1e3d499b22a4",
@@ -16364,7 +16364,7 @@
     "timeSlot": "evening",
     "hasVideo": true,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/wenshan/thumb/66f820c99d982.png",
     "credits": 3,
     "fee": 3000,
@@ -16596,7 +16596,7 @@
     "timeSlot": "evening",
     "hasVideo": true,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/wenshan/thumb/6155e5dd90da2.jpg",
     "credits": 3,
     "fee": 3000,
@@ -19462,7 +19462,7 @@
     "timeSlot": "evening",
     "hasVideo": true,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/wenshan/thumb/633154f87abdb.jpeg",
     "credits": 3,
     "fee": 3000,
@@ -19694,12 +19694,12 @@
     "timeSlot": "evening",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/wenshan/thumb/5e6dfdfdc30af.jpg",
     "credits": 3,
     "fee": 3000,
     "weeks": 18,
-    "quota": 25,
+    "quota": 28,
     "schedule": "每星期五 晚上 7點0分~9點30分",
     "description": "提升大眾對流行音樂產業的了解及歌唱實力、拓展交際領域\n​提升民眾對台灣流行音樂的認識及唱歌技能\n課程QR CODE網址",
     "targetAudience": "喜歡聽唱華語流行音樂、想多了解歌曲製作、或是相關手機運用等民眾皆可參加",
@@ -20704,7 +20704,7 @@
     "timeSlot": "afternoon",
     "hasVideo": true,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/wenshan/thumb/",
     "credits": 3,
     "weeks": 18,
@@ -20819,7 +20819,7 @@
     "timeSlot": "afternoon",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/wenshan/thumb/624127eb85414.JPG",
     "credits": 2,
     "fee": 2000,
@@ -20910,7 +20910,7 @@
     "credits": 2,
     "fee": 2000,
     "weeks": 12,
-    "quota": 25,
+    "quota": 28,
     "schedule": "每星期六 下午 1點30分~4點0分",
     "description": "提升大眾對流行音樂產業的了解及歌唱實力、拓展交際領域\n​提升民眾對台灣流行音樂的認識及唱歌技能\n課程QR CODE網址",
     "targetAudience": "喜歡聽唱華語流行音樂、想多了解歌曲製作、或是相關手機運用等民眾皆可參加",
@@ -21434,42 +21434,42 @@
       {
         "week": "第一週",
         "topic": "1",
-        "content": "9/6 社區園圃OPEN"
+        "content": "9/5 社區園圃OPEN"
       },
       {
         "week": "第二週",
         "topic": "2",
-        "content": "9/13 自然農法與種子保存介紹"
+        "content": "9/12 自然農法與種子保存介紹"
       },
       {
         "week": "第三週",
         "topic": "3",
-        "content": "9/13 校外教學：秀明自然農法農夫市集"
+        "content": "9/12 校外教學：秀明自然農法農夫市集"
       },
       {
         "week": "第四週",
         "topic": "4",
-        "content": "9/20 樸門永續生活設計倫理與原則"
+        "content": "9/19 樸門永續生活設計倫理與原則"
       },
       {
         "week": "第五週",
         "topic": "5",
-        "content": "9/20 秋季種植實作：扇形分析、菜畦設計"
+        "content": "9/19 秋季種植實作：扇形分析、菜畦設計"
       },
       {
         "week": "第六週",
         "topic": "6",
-        "content": "10/18 理水: 植物與水的關係"
+        "content": "10/17 理水: 植物與水的關係"
       },
       {
         "week": "第七週",
         "topic": "7",
-        "content": "10/18 秋季種植實作：植物繁殖技術練習"
+        "content": "10/17 秋季種植實作：植物繁殖技術練習"
       },
       {
         "week": "第八週",
         "topic": "8",
-        "content": "11/8 理土：土壤下的微生物世界"
+        "content": "11/7 理土：土壤下的微生物世界"
       },
       {
         "week": "第九週",
@@ -21479,47 +21479,47 @@
       {
         "week": "第十週",
         "topic": "10",
-        "content": "11/8 厚土種植實作：植物繁殖技術練習"
+        "content": "11/7 厚土種植實作：植物繁殖技術練習"
       },
       {
         "week": "第十一週",
         "topic": "11",
-        "content": "11/15 理生態：植物群落設計、生態圍籬、授粉昆蟲"
+        "content": "11/14 理生態：植物群落設計、生態圍籬、授粉昆蟲"
       },
       {
         "week": "第十二週",
         "topic": "12",
-        "content": "11/15 田間管理與種植實作：避忌伴植"
+        "content": "11/14 田間管理與種植實作：避忌伴植"
       },
       {
         "week": "第十三週",
         "topic": "13",
-        "content": "11/29 認識香草植物與陰陽乾濕"
+        "content": "11/28 認識香草植物與陰陽乾濕"
       },
       {
         "week": "第十四週",
         "topic": "14",
-        "content": "11/29 香草種植實作與應用"
+        "content": "11/28 香草種植實作與應用"
       },
       {
         "week": "第十五週",
         "topic": "15",
-        "content": "12/13 堆肥原理與應用"
+        "content": "12/12 堆肥原理與應用"
       },
       {
         "week": "第十六週",
         "topic": "16",
-        "content": "12/13 堆肥實作：芭蕉圈"
+        "content": "12/12 堆肥實作：芭蕉圈"
       },
       {
         "week": "第十七週",
         "topic": "17",
-        "content": "12/27 校外教學：CSA合作農場：內城里山基地"
+        "content": "12/26 校外教學：CSA合作農場：內城里山基地"
       },
       {
         "week": "第十八週",
         "topic": "18",
-        "content": "12/27 校外教學：CSA合作農場：內城里山基地"
+        "content": "12/26 校外教學：CSA合作農場：內城里山基地"
       }
     ],
     "teacherBio": "吳俊安 講師\n現職：\n2016~2017野蔓園野地教育基地實習生、北投野蔓園生態農業/水稻種植/多樣性蔬菜種植/自然建築/樸門設計；\n2018樟文里帶領仿生減廢菜箱分享會講師；\n2019內城里山教育基地課程規劃與執行、宜蘭縣內城里山教育基地帶領《湖。溪。里。山。》暑期生活體驗系列營隊。\n簡介：\n樸門永續生活設計相關之自由工作者\n濱江國中 山野童軍社團指導教師/文山運動中心特約攀岩教練/戶外教育指導員\nLeave No Trace無痕山林高階教師\n專長：\n樸門設計/生態農業/合作經濟/社區協力農業(CSA)\n擁有證照：\n西元2016年     Leave No Trace無痕山林高階教師認證\n西元2017年     樸門永續生活設計認證\n西元2020年     台灣綠化技術協會 樹木修剪知識認證\n臉書(Facebook)：\nhttps://www.facebook.com/mtschool/\n許大千 講師\n現職：\n台灣大學社會社工系館 療癒花園主理人\n簡介：\n透過療癒花園、樸門永續設計與綠色照顧，促進人們紓解壓力、照顧大地、照顧自己與自我覺察，邁向自我生命意義的實踐。\n專長：\n綠色照護、"
@@ -21653,7 +21653,7 @@
     "timeSlot": "morning",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/wenshan/thumb/69ccd91aa981a.jpg",
     "credits": 2,
     "fee": 2000,
@@ -22027,7 +22027,7 @@
     "timeSlot": "morning",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/wenshan/thumb/624127eb85414.JPG",
     "credits": 2,
     "fee": 2000,
@@ -22371,7 +22371,7 @@
     "timeSlot": "morning",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/wenshan/thumb/",
     "credits": 2,
     "fee": 2000,
