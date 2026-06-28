@@ -12,7 +12,7 @@
     "timeSlot": "afternoon",
     "hasVideo": false,
     "isMixed": true,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/nangang/thumb/614eec519f9fa.jpeg",
     "code": "1152A1001",
     "credits": 3,
@@ -1914,7 +1914,7 @@
     "timeSlot": "evening",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/nangang/thumb/67c5a164c0202.jpg",
     "code": "1152C6424",
     "credits": 3,
@@ -2686,7 +2686,7 @@
     "timeSlot": "evening",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/nangang/thumb/68775542899ff.png",
     "code": "1152A1807",
     "credits": 3,
@@ -4542,7 +4542,7 @@
     "timeSlot": "morning",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/nangang/thumb/68c262d9757f5.jpg",
     "code": "1152C6451",
     "credits": 3,
@@ -5346,7 +5346,7 @@
     "timeSlot": "morning",
     "hasVideo": true,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/nangang/thumb/5e6f6db13fe6b.png",
     "code": "1152C7006",
     "credits": 3,
@@ -5423,8 +5423,8 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 26,
-    "enrolled": 24,
-    "paid": 24,
+    "enrolled": 22,
+    "paid": 22,
     "schedule": "每星期一 下午 2點0分~5點0分"
   },
   {
@@ -5455,7 +5455,7 @@
     "id": "nangang_3daf0acfe07ec502c5906d5d18769ffe",
     "school": "nangang",
     "uHash": "3daf0acfe07ec502c5906d5d18769ffe",
-    "name": "城市速寫藝術",
+    "name": "城市速寫藝術-初階",
     "teacher": "鐘婉綺",
     "semester": "115-暑期班",
     "area": "數位",
@@ -5536,15 +5536,15 @@
     "timeSlot": "evening",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/nangang/thumb/69a9895e17cf4.jpg",
     "code": "1153C1005",
     "credits": 1,
     "fee": 1000,
     "weeks": 6,
     "quota": 25,
-    "enrolled": 23,
-    "paid": 23,
+    "enrolled": 20,
+    "paid": 20,
     "schedule": "每星期一 晚上 7點0分~10點0分"
   },
   {
@@ -5567,8 +5567,8 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 24,
-    "enrolled": 10,
-    "paid": 10,
+    "enrolled": 7,
+    "paid": 7,
     "schedule": "每星期一 晚上 7點0分~10點0分"
   },
   {
@@ -5591,8 +5591,8 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 24,
-    "enrolled": 7,
-    "paid": 7,
+    "enrolled": 5,
+    "paid": 5,
     "schedule": "每星期一 晚上 7點0分~10點0分"
   },
   {
@@ -5615,6 +5615,8 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 26,
+    "enrolled": 21,
+    "paid": 21,
     "schedule": "每星期一 晚上 7點0分~10點0分"
   },
   {
@@ -5637,8 +5639,8 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 20,
-    "enrolled": 13,
-    "paid": 13,
+    "enrolled": 11,
+    "paid": 11,
     "schedule": "每星期一 晚上 7點0分~10點0分"
   },
   {
@@ -5661,7 +5663,7 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 20,
-    "enrolled": 3,
+    "enrolled": 2,
     "paid": 2,
     "schedule": "每星期一 晚上 7點0分~10點0分"
   },
@@ -5685,8 +5687,8 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 22,
-    "enrolled": 13,
-    "paid": 12,
+    "enrolled": 10,
+    "paid": 10,
     "schedule": "每星期一 晚上 7點0分~10點0分"
   },
   {
@@ -5709,8 +5711,8 @@
     "fee": 500,
     "weeks": 6,
     "quota": 22,
-    "enrolled": 16,
-    "paid": 16,
+    "enrolled": 15,
+    "paid": 15,
     "schedule": "每星期一 晚上 6點50分~8點20分"
   },
   {
@@ -5733,8 +5735,8 @@
     "fee": 500,
     "weeks": 6,
     "quota": 22,
-    "enrolled": 19,
-    "paid": 19,
+    "enrolled": 17,
+    "paid": 16,
     "schedule": "每星期一 晚上 8點20分~9點50分"
   },
   {
@@ -5757,8 +5759,8 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 20,
-    "enrolled": 8,
-    "paid": 8,
+    "enrolled": 7,
+    "paid": 7,
     "schedule": "每星期一 晚上 7點0分~10點0分"
   },
   {
@@ -5802,8 +5804,8 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 21,
-    "enrolled": 13,
-    "paid": 13,
+    "enrolled": 12,
+    "paid": 12,
     "schedule": "每星期二 下午 2點0分~5點0分"
   },
   {
@@ -5826,8 +5828,8 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 20,
-    "enrolled": 7,
-    "paid": 7,
+    "enrolled": 6,
+    "paid": 6,
     "schedule": "每星期二 下午 2點0分~5點0分"
   },
   {
@@ -5850,8 +5852,8 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 25,
-    "enrolled": 5,
-    "paid": 5,
+    "enrolled": 3,
+    "paid": 3,
     "schedule": "每星期二 下午 2點0分~5點0分"
   },
   {
@@ -5874,8 +5876,8 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 20,
-    "enrolled": 16,
-    "paid": 16,
+    "enrolled": 15,
+    "paid": 15,
     "schedule": "每星期二 下午 2點0分~5點0分"
   },
   {
@@ -5991,13 +5993,15 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 23,
+    "enrolled": 21,
+    "paid": 20,
     "schedule": "每星期二 早上 9點30分~12點30分"
   },
   {
     "id": "nangang_e7aee8383292132667728818e7cfd486",
     "school": "nangang",
     "uHash": "e7aee8383292132667728818e7cfd486",
-    "name": "台北近郊輕鬆行",
+    "name": "台北近郊輕鬆行-打開故事的盒子",
     "teacher": "蘇平和",
     "semester": "115-暑期班",
     "area": "港工",
@@ -6013,6 +6017,8 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 25,
+    "enrolled": 3,
+    "paid": 3,
     "schedule": "每星期二 早上 9點30分~12點30分"
   },
   {
@@ -6035,8 +6041,8 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 26,
-    "enrolled": 15,
-    "paid": 15,
+    "enrolled": 13,
+    "paid": 13,
     "schedule": "每星期二 晚上 7點0分~10點0分"
   },
   {
@@ -6081,8 +6087,8 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 25,
-    "enrolled": 9,
-    "paid": 9,
+    "enrolled": 7,
+    "paid": 7,
     "schedule": "每星期二 晚上 7點0分~10點0分"
   },
   {
@@ -6105,8 +6111,8 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 24,
-    "enrolled": 9,
-    "paid": 9,
+    "enrolled": 7,
+    "paid": 6,
     "schedule": "每星期二 晚上 7點0分~10點0分"
   },
   {
@@ -6175,8 +6181,8 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 20,
-    "enrolled": 12,
-    "paid": 12,
+    "enrolled": 7,
+    "paid": 7,
     "schedule": "每星期二 晚上 7點0分~10點0分"
   },
   {
@@ -6199,8 +6205,8 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 20,
-    "enrolled": 14,
-    "paid": 14,
+    "enrolled": 9,
+    "paid": 9,
     "schedule": "每星期二 晚上 7點0分~10點0分"
   },
   {
@@ -6223,8 +6229,8 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 20,
-    "enrolled": 11,
-    "paid": 9,
+    "enrolled": 8,
+    "paid": 8,
     "schedule": "每星期二 晚上 7點0分~10點0分"
   },
   {
@@ -6247,8 +6253,8 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 23,
-    "enrolled": 11,
-    "paid": 10,
+    "enrolled": 8,
+    "paid": 8,
     "schedule": "每星期二 晚上 7點0分~10點0分"
   },
   {
@@ -6271,8 +6277,8 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 25,
-    "enrolled": 15,
-    "paid": 15,
+    "enrolled": 11,
+    "paid": 11,
     "schedule": "每星期二 晚上 7點0分~10點0分"
   },
   {
@@ -6295,8 +6301,8 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 22,
-    "enrolled": 10,
-    "paid": 10,
+    "enrolled": 8,
+    "paid": 8,
     "schedule": "每星期二 晚上 7點0分~10點0分"
   },
   {
@@ -6387,6 +6393,8 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 22,
+    "enrolled": 6,
+    "paid": 6,
     "schedule": "每星期二 晚上 7點0分~10點0分"
   },
   {
@@ -6409,15 +6417,15 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 20,
-    "enrolled": 12,
-    "paid": 12,
+    "enrolled": 10,
+    "paid": 10,
     "schedule": "每星期二 晚上 7點0分~10點0分"
   },
   {
     "id": "nangang_7c93447b72fe6abbb9a5915d1f9d0da6",
     "school": "nangang",
     "uHash": "7c93447b72fe6abbb9a5915d1f9d0da6",
-    "name": "青少年武術",
+    "name": "青少年武術-武當武術素質養成",
     "teacher": "葉珈妤",
     "semester": "115-暑期班",
     "area": "港工",
@@ -6457,8 +6465,8 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 20,
-    "enrolled": 9,
-    "paid": 9,
+    "enrolled": 8,
+    "paid": 8,
     "schedule": "每星期二 晚上 7點0分~10點0分"
   },
   {
@@ -6503,15 +6511,15 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 21,
-    "enrolled": 13,
-    "paid": 13,
+    "enrolled": 11,
+    "paid": 11,
     "schedule": "每星期三 下午 2點0分~5點0分"
   },
   {
     "id": "nangang_ddccfb0786e020f75d56c947682da6f2",
     "school": "nangang",
     "uHash": "ddccfb0786e020f75d56c947682da6f2",
-    "name": "踢踏進階舞曲",
+    "name": "踢踏進階舞曲-里昂柯林斯",
     "teacher": "張念祖",
     "semester": "115-暑期班",
     "area": "成德",
@@ -6527,8 +6535,8 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 35,
-    "enrolled": 13,
-    "paid": 13,
+    "enrolled": 12,
+    "paid": 12,
     "schedule": "每星期三 下午 2點0分~5點0分"
   },
   {
@@ -6551,8 +6559,8 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 20,
-    "enrolled": 7,
-    "paid": 7,
+    "enrolled": 6,
+    "paid": 5,
     "schedule": "每星期三 下午 2點0分~5點0分"
   },
   {
@@ -6645,15 +6653,15 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 20,
-    "enrolled": 13,
-    "paid": 13,
+    "enrolled": 9,
+    "paid": 9,
     "schedule": "每星期三 早上 8點30分~11點30分"
   },
   {
     "id": "nangang_4877a2dd3bc2d0e88d48fefc27c0a31f",
     "school": "nangang",
     "uHash": "4877a2dd3bc2d0e88d48fefc27c0a31f",
-    "name": "書法入門",
+    "name": "書法入門-隸書",
     "teacher": "藍立郎",
     "semester": "115-暑期班",
     "area": "成德",
@@ -6669,15 +6677,15 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 20,
-    "enrolled": 11,
-    "paid": 11,
+    "enrolled": 9,
+    "paid": 9,
     "schedule": "每星期三 晚上 7點0分~10點0分"
   },
   {
     "id": "nangang_4871c10a24332520fe9f87bba2b47935",
     "school": "nangang",
     "uHash": "4871c10a24332520fe9f87bba2b47935",
-    "name": "行路讀冊",
+    "name": "行路讀冊-文化史蹟漫遊趣-3",
     "teacher": "鄭勝吉",
     "semester": "115-暑期班",
     "area": "成德",
@@ -6693,8 +6701,8 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 30,
-    "enrolled": 24,
-    "paid": 24,
+    "enrolled": 23,
+    "paid": 23,
     "schedule": "每星期三 晚上 7點0分~10點0分"
   },
   {
@@ -6717,8 +6725,8 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 20,
-    "enrolled": 16,
-    "paid": 16,
+    "enrolled": 15,
+    "paid": 15,
     "schedule": "每星期三 晚上 7點0分~10點0分"
   },
   {
@@ -6741,8 +6749,8 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 24,
-    "enrolled": 18,
-    "paid": 18,
+    "enrolled": 17,
+    "paid": 17,
     "schedule": "每星期三 晚上 7點0分~10點0分"
   },
   {
@@ -6789,8 +6797,8 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 12,
-    "enrolled": 2,
-    "paid": 2,
+    "enrolled": 1,
+    "paid": 1,
     "schedule": "每星期三 晚上 7點0分~10點0分"
   },
   {
@@ -6813,15 +6821,15 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 20,
-    "enrolled": 10,
-    "paid": 9,
+    "enrolled": 7,
+    "paid": 7,
     "schedule": "每星期三 晚上 7點0分~10點0分"
   },
   {
     "id": "nangang_4af2b0a31ca1f2fc5408998381e1ff21",
     "school": "nangang",
     "uHash": "4af2b0a31ca1f2fc5408998381e1ff21",
-    "name": "小提琴",
+    "name": "小提琴-初階",
     "teacher": "許祖夷",
     "semester": "115-暑期班",
     "area": "成德",
@@ -6837,8 +6845,8 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 20,
-    "enrolled": 16,
-    "paid": 16,
+    "enrolled": 14,
+    "paid": 14,
     "schedule": "每星期三 晚上 7點0分~10點0分"
   },
   {
@@ -6861,8 +6869,8 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 30,
-    "enrolled": 5,
-    "paid": 5,
+    "enrolled": 2,
+    "paid": 2,
     "schedule": "每星期三 晚上 7點0分~10點0分"
   },
   {
@@ -6907,8 +6915,8 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 30,
-    "enrolled": 13,
-    "paid": 13,
+    "enrolled": 12,
+    "paid": 12,
     "schedule": "每星期三 晚上 7點0分~10點0分"
   },
   {
@@ -6955,7 +6963,7 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 26,
-    "enrolled": 19,
+    "enrolled": 20,
     "paid": 19,
     "schedule": "每星期三 晚上 7點0分~10點0分"
   },
@@ -7025,8 +7033,8 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 24,
-    "enrolled": 16,
-    "paid": 16,
+    "enrolled": 15,
+    "paid": 15,
     "schedule": "每星期三 晚上 7點0分~10點0分"
   },
   {
@@ -7057,7 +7065,7 @@
     "id": "nangang_7a66e1513bf48126b240a98b9217ca03",
     "school": "nangang",
     "uHash": "7a66e1513bf48126b240a98b9217ca03",
-    "name": "芳香療癒學",
+    "name": "芳香療癒學-香氣賦能",
     "teacher": "黃婷鈺",
     "semester": "115-暑期班",
     "area": "成德",
@@ -7073,8 +7081,8 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 25,
-    "enrolled": 16,
-    "paid": 16,
+    "enrolled": 12,
+    "paid": 12,
     "schedule": "每星期三 晚上 7點0分~10點0分"
   },
   {
@@ -7097,8 +7105,8 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 30,
-    "enrolled": 12,
-    "paid": 12,
+    "enrolled": 8,
+    "paid": 8,
     "schedule": "每星期四 下午 2點0分~5點0分"
   },
   {
@@ -7114,15 +7122,15 @@
     "timeSlot": "afternoon",
     "hasVideo": true,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/nangang/thumb/628eebd4834b6.jpeg",
     "code": "1153C4025",
     "credits": 1,
     "fee": 1000,
     "weeks": 6,
     "quota": 23,
-    "enrolled": 21,
-    "paid": 20,
+    "enrolled": 18,
+    "paid": 18,
     "schedule": "每星期四 下午 2點0分~5點0分"
   },
   {
@@ -7145,8 +7153,8 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 30,
-    "enrolled": 12,
-    "paid": 12,
+    "enrolled": 11,
+    "paid": 11,
     "schedule": "每星期四 下午 2點0分~5點0分"
   },
   {
@@ -7190,8 +7198,8 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 25,
-    "enrolled": 13,
-    "paid": 12,
+    "enrolled": 11,
+    "paid": 11,
     "schedule": "每星期四 早上 9點30分~12點30分"
   },
   {
@@ -7214,8 +7222,8 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 30,
-    "enrolled": 16,
-    "paid": 16,
+    "enrolled": 17,
+    "paid": 15,
     "schedule": "每星期四 早上 9點30分~12點30分"
   },
   {
@@ -7244,7 +7252,7 @@
     "id": "nangang_ade4f00b6a0c840ee9200111926401a4",
     "school": "nangang",
     "uHash": "ade4f00b6a0c840ee9200111926401a4",
-    "name": "AI助攻",
+    "name": "AI助攻-Canva魔法簡報設計攻略",
     "teacher": "侯玉彤",
     "semester": "115-暑期班",
     "area": "成德",
@@ -7261,7 +7269,7 @@
     "weeks": 6,
     "quota": 20,
     "enrolled": 6,
-    "paid": 6,
+    "paid": 5,
     "schedule": "每星期四 晚上 7點0分~10點0分"
   },
   {
@@ -7284,8 +7292,8 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 30,
-    "enrolled": 11,
-    "paid": 11,
+    "enrolled": 9,
+    "paid": 9,
     "schedule": "每星期四 晚上 7點0分~10點0分"
   },
   {
@@ -7308,8 +7316,8 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 30,
-    "enrolled": 6,
-    "paid": 6,
+    "enrolled": 3,
+    "paid": 3,
     "schedule": "每星期四 晚上 7點0分~10點0分"
   },
   {
@@ -7356,8 +7364,8 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 20,
-    "enrolled": 4,
-    "paid": 4,
+    "enrolled": 3,
+    "paid": 3,
     "schedule": "每星期四 晚上 7點0分~10點0分"
   },
   {
@@ -7380,8 +7388,8 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 25,
-    "enrolled": 17,
-    "paid": 17,
+    "enrolled": 16,
+    "paid": 15,
     "schedule": "每星期四 晚上 7點0分~10點0分"
   },
   {
@@ -7448,6 +7456,8 @@
     "fee": 500,
     "weeks": 6,
     "quota": 20,
+    "enrolled": 19,
+    "paid": 19,
     "schedule": "每星期四 晚上 7點0分~8點30分"
   },
   {
@@ -7470,15 +7480,15 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 22,
-    "enrolled": 16,
-    "paid": 16,
+    "enrolled": 13,
+    "paid": 13,
     "schedule": "每星期四 晚上 7點0分~10點0分"
   },
   {
     "id": "nangang_b9aead604b028f4797928c5066c9ebd0",
     "school": "nangang",
     "uHash": "b9aead604b028f4797928c5066c9ebd0",
-    "name": "拳瑜伽",
+    "name": "拳瑜伽-經絡拳打氣拉筋",
     "teacher": "曾小真",
     "semester": "115-暑期班",
     "area": "成德",
@@ -7494,8 +7504,8 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 26,
-    "enrolled": 25,
-    "paid": 25,
+    "enrolled": 23,
+    "paid": 23,
     "schedule": "每星期四 晚上 7點0分~10點0分"
   },
   {
@@ -7518,8 +7528,8 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 24,
-    "enrolled": 21,
-    "paid": 21,
+    "enrolled": 15,
+    "paid": 15,
     "schedule": "每星期四 晚上 7點0分~10點0分"
   },
   {
@@ -7542,8 +7552,8 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 20,
-    "enrolled": 11,
-    "paid": 11,
+    "enrolled": 10,
+    "paid": 10,
     "schedule": "每星期五 下午 2點0分~5點0分"
   },
   {
@@ -7566,8 +7576,8 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 30,
-    "enrolled": 18,
-    "paid": 18,
+    "enrolled": 17,
+    "paid": 17,
     "schedule": "每星期五 下午 2點0分~5點0分"
   },
   {
@@ -7614,8 +7624,8 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 24,
-    "enrolled": 13,
-    "paid": 13,
+    "enrolled": 11,
+    "paid": 11,
     "schedule": "每星期五 早上 9點30分~12點30分"
   },
   {
@@ -7662,15 +7672,15 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 30,
-    "enrolled": 17,
-    "paid": 17,
+    "enrolled": 16,
+    "paid": 16,
     "schedule": "每星期五 早上 9點30分~12點30分"
   },
   {
     "id": "nangang_dc7a1b60310e104fde7d8a2eb96f3f25",
     "school": "nangang",
     "uHash": "dc7a1b60310e104fde7d8a2eb96f3f25",
-    "name": "樂活核心肌力瑜伽提斯",
+    "name": "樂活核心肌力瑜伽提斯-基礎",
     "teacher": "賴明珠",
     "semester": "115-暑期班",
     "area": "成德",
@@ -7738,7 +7748,7 @@
     "id": "nangang_89f025836d28a99e5d60ca840d406935",
     "school": "nangang",
     "uHash": "89f025836d28a99e5d60ca840d406935",
-    "name": "旅遊韓語",
+    "name": "旅遊韓語-自遊行購物點餐篇",
     "teacher": "李淑敏",
     "semester": "115-暑期班",
     "area": "港工",
@@ -7754,8 +7764,8 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 20,
-    "enrolled": 9,
-    "paid": 8,
+    "enrolled": 6,
+    "paid": 5,
     "schedule": "每星期五 晚上 7點0分~10點0分"
   },
   {
@@ -7826,7 +7836,7 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 22,
-    "enrolled": 2,
+    "enrolled": 4,
     "paid": 2,
     "schedule": "每星期五 晚上 7點0分~10點0分"
   },
@@ -7850,13 +7860,15 @@
     "fee": 500,
     "weeks": 6,
     "quota": 25,
+    "enrolled": 24,
+    "paid": 24,
     "schedule": "每星期五 晚上 6點50分~8點20分"
   },
   {
     "id": "nangang_7880c7016a07b0f697701d4c6e5f69fc",
     "school": "nangang",
     "uHash": "7880c7016a07b0f697701d4c6e5f69fc",
-    "name": "熱血乒乓",
+    "name": "熱血乒乓-對戰實務競技",
     "teacher": "陳冠羽",
     "semester": "115-暑期班",
     "area": "港工",
@@ -7872,8 +7884,8 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 22,
-    "enrolled": 12,
-    "paid": 12,
+    "enrolled": 11,
+    "paid": 11,
     "schedule": "每星期五 晚上 7點0分~10點0分"
   },
   {
@@ -7896,8 +7908,8 @@
     "fee": 500,
     "weeks": 6,
     "quota": 25,
-    "enrolled": 24,
-    "paid": 24,
+    "enrolled": 23,
+    "paid": 23,
     "schedule": "每星期五 晚上 8點20分~9點50分"
   },
   {
@@ -7941,7 +7953,7 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 20,
-    "enrolled": 6,
+    "enrolled": 5,
     "paid": 5,
     "schedule": "每星期六 早上 9點30分~12點30分"
   },
@@ -7965,8 +7977,8 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 30,
-    "enrolled": 24,
-    "paid": 24,
+    "enrolled": 21,
+    "paid": 21,
     "schedule": "每星期六 早上 10點0分~13點0分"
   },
   {
@@ -7989,8 +8001,8 @@
     "fee": 1000,
     "weeks": 6,
     "quota": 22,
-    "enrolled": 12,
-    "paid": 12,
+    "enrolled": 9,
+    "paid": 9,
     "schedule": "每星期六 早上 9點30分~12點30分"
   }
 ]
