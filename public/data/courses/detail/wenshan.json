@@ -12,7 +12,7 @@
     "timeSlot": "afternoon",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/wenshan/thumb/68f0a1cbc0a27.JPEG",
     "credits": 3,
     "fee": 3000,
@@ -539,7 +539,7 @@
       {
         "week": "第十一週",
         "topic": "11",
-        "content": "文學 : 吳明益成名作"
+        "content": "文學：中文詩歌美學"
       },
       {
         "week": "第十二週",
@@ -2337,9 +2337,9 @@
     "credits": 3,
     "fee": 3000,
     "weeks": 18,
-    "quota": 28,
+    "quota": 25,
     "schedule": "每星期一 晚上 7點0分~9點30分",
-    "description": "一、基礎能力建立\n1.建立正確的發聲觀念，理解美聲唱法（Bel canto）的基本原則\n2.學習腹式呼吸與氣息控制技巧，提升聲音穩定度\n3.認識聲帶運作與共鳴原理，培養健康用聲習慣\n本課程以提升一般民眾歌唱興趣為出發，透過美聲唱法的基礎知識與原理，學習正確呼吸與發聲技巧，培養音準與表達能力；在輕鬆互動中建立自信與欣賞音樂的態度，並藉由團體歌唱促進人際交流，強化個人與社區之情感連結。\n課程QR CODE網址",
+    "description": "本課程以提升一般民眾歌唱興趣為出發，透過美聲唱法的基礎知識與原理，學習正確呼吸與發聲技巧，培養音準與表達能力；在輕鬆互動中建立自信與欣賞音樂的態度，並藉由團體歌唱促進人際交流，強化個人與社區之情感連結。\n一、基礎能力建立\n1.建立正確的發聲觀念，理解美聲唱法（Bel canto）的基本原則\n2.學習腹式呼吸與氣息控制技巧，提升聲音穩定度\n3.認識聲帶運作與共鳴原理，培養健康用聲習慣\n課程QR CODE網址",
     "targetAudience": "在輕鬆無壓力的環境中",
     "outline": [
       {
@@ -9061,7 +9061,7 @@
     "timeSlot": "morning",
     "hasVideo": true,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/wenshan/thumb/6503cf70a1d20.jpg",
     "credits": 3,
     "fee": 3000,
@@ -23111,7 +23111,7 @@
     "timeSlot": "evening",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/wenshan/thumb/560aa0ffdeb71.png",
     "credits": 1,
     "fee": 1000,
@@ -23895,7 +23895,7 @@
     "timeSlot": "evening",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/wenshan/thumb/6249a22767a05.jpg",
     "credits": 1,
     "fee": 1000,

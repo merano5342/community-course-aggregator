@@ -1293,64 +1293,6 @@
     "teacherBio": "陳荔琪(琵塔琪) 講師\n現職：\n物理治療師\n復健彼拉提斯老師\n彼拉提斯老師\n社區長照物理治療活動老師\n簡介：\n◇物理治療師\n14年任職於健保醫療院所復健科\n受訓於台北振興醫院、花蓮慈濟醫院\n◇加拿大STOTT PILATES復健彼拉提斯一級墊上&核心器械床師資\n◇加拿大STOTT PILATES彼拉提斯一級墊上師資\n◇中華民國物理治療師公會全國聯合會.社區長照物理治療活動種子師資\n◇（健康促進管理師，訂於2015.10月底取得證書）\n◇中華民國體適能協會.實用級體適能指導員\n專長：\n運動治療\n姿勢校正\n復健彼拉提斯/彼拉提斯\n核心肌群訓練\n肌力平衡訓練\n健康律動\n擁有證照：\n健康管理師證書\n物理治療師證書\n華民國體適能協會.實用級體適能指導員\n部落格(Blog)：\nhttp://tachihealth.pixnet.net/blog\n臉書(Facebook)：\nwww.facebook.com/tachihealth"
   },
   {
-    "id": "nangang_e44c22e3c3579ad393f4f256a7008a57",
-    "school": "nangang",
-    "uHash": "e44c22e3c3579ad393f4f256a7008a57",
-    "name": "輕鬆做金屬線輕珠寶",
-    "teacher": "李思岑",
-    "semester": "115-暑期班",
-    "area": "成德",
-    "startDate": "0000-00-00",
-    "dayOfWeek": 0,
-    "timeSlot": "afternoon",
-    "hasVideo": false,
-    "isMixed": true,
-    "status": "open",
-    "imageUrl": "images_course/nangang/thumb/69c0fa35ca21a.jpeg",
-    "credits": 1,
-    "fee": 1000,
-    "weeks": 6,
-    "quota": 25,
-    "enrolled": 0,
-    "paid": 0,
-    "schedule": "每 下午 2點0分~5點0分",
-    "description": "出門時，總是覺得身上總是少些什麼嗎？金屬線編飾品是歐美近來新興的飾品製作方式，製作起來好上手又快速，讓每位同學都能輕鬆掌握; 利用不同材料的組合應用以及技巧的變化，靈活又多元，親手創作出屬於自己的美麗飾品，將美美的飾品佩戴在自己身上或作為餽贈的禮物！代表著獨一無二的手感情誼，成就、質感一手掌握！\n金屬線編飾品最開始是從西方國家開始流行的，利用天然寶石與金屬線各式編織技法，讓同學可創作出獨一無二的精緻飾品，並期望學員透過手作過程增加自信心，同時培養藝術美學，透過分享，增進社區彼此間的互動情誼，並豐富學習體驗。\n課程QR CODE網址",
-    "targetAudience": "沒有能力限制，對課程有興趣的學員都歡迎，課程建議自備放大鏡或老花眼鏡。",
-    "outline": [
-      {
-        "week": "第一週",
-        "topic": "1",
-        "content": "飛舞花朵墜飾設計"
-      },
-      {
-        "week": "第二週",
-        "topic": "2",
-        "content": "爾語耳環設計"
-      },
-      {
-        "week": "第三週",
-        "topic": "3",
-        "content": "枝頭鳥兒手環設計"
-      },
-      {
-        "week": "第四週",
-        "topic": "4",
-        "content": "醉上心頭胸針設計"
-      },
-      {
-        "week": "第五週",
-        "topic": "5",
-        "content": "花綻吊飾/墜飾設計"
-      },
-      {
-        "week": "第六週",
-        "topic": "6",
-        "content": "玫瑰花戒指設計"
-      }
-    ],
-    "teacherBio": "李思岑 講師\n現職：\n永和社區大學教師\n中山社區大學教師\n文山社區大學教師\n新中和社區大學教師\n簡介：\n國立臺中科技大學 商業設計系 碩士\n吉福特英屬維京群島商 產品設計師\n台北職能發展學院 外聘講師\n產業人才投資計畫講師\n永和社區大學教師\n中山社區大學教師\n文山社區大學教師\n士林社區大學教師\n專長：\n金屬線珠寶飾品設計\n金工創作(蠟雕.敲花.琺瑯)\n擁有證照：\n西元2010年     ACA Adobe Flash CS3\n西元2010年     ACA Adobe Photoshop CS3\n得獎/擔任評審：\n西元2014年     金工與琺瑯藝術創作班/第二名\n部落格(Blog)：\nhttps://www.facebook.com/belala0524/\n臉書(Facebook)：\nhttps://www.facebook.com/belala0524"
-  },
-  {
     "id": "nangang_9c2d2f844fc0358a4e242b30233e46d6",
     "school": "nangang",
     "uHash": "9c2d2f844fc0358a4e242b30233e46d6",
@@ -2887,7 +2829,7 @@
     "timeSlot": "morning",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/nangang/thumb/69b7b433104fa.JPG",
     "code": "1153B2010",
     "credits": 1,
@@ -2946,7 +2888,7 @@
     "timeSlot": "morning",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/nangang/thumb/61a605da6dc3d.jpg",
     "code": "1153C6431",
     "credits": 1,
@@ -5203,7 +5145,7 @@
     "timeSlot": "evening",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/nangang/thumb/",
     "code": "1153C7008",
     "credits": 1,
@@ -5262,7 +5204,7 @@
     "timeSlot": "evening",
     "hasVideo": false,
     "isMixed": false,
-    "status": "full",
+    "status": "open",
     "imageUrl": "images_course/nangang/thumb/6419b6fd0704e.jpg",
     "code": "1153C9005",
     "credits": 1,
@@ -5321,7 +5263,7 @@
     "timeSlot": "afternoon",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/nangang/thumb/67ea9a984fb4a.jpg",
     "code": "1153C1003",
     "credits": 1,
@@ -16211,7 +16153,7 @@
     "timeSlot": "evening",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/nangang/thumb/67c5a164c0202.jpg",
     "code": "1152C6424",
     "credits": 3,
@@ -24918,7 +24860,7 @@
     "timeSlot": "morning",
     "hasVideo": true,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/nangang/thumb/60644faac3d90.jpg",
     "code": "1152C6442",
     "credits": 3,

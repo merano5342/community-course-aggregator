@@ -1,0 +1,24 @@
+[
+  {
+    "id": "zhongzheng_cb8ae6839fc50d13083c2a31225b8eb4",
+    "school": "zhongzheng",
+    "uHash": "cb8ae6839fc50d13083c2a31225b8eb4",
+    "name": "優雅東方美學-話旗袍舞旗袍",
+    "teacher": "孫夢平",
+    "semester": "115-秋季班",
+    "area": "開南",
+    "startDate": "2026-09-02",
+    "dayOfWeek": 3,
+    "timeSlot": "morning",
+    "hasVideo": false,
+    "isMixed": false,
+    "status": "full",
+    "imageUrl": "images_course/zzcc/thumb/",
+    "code": "2J301",
+    "credits": 3,
+    "fee": 3000,
+    "weeks": 18,
+    "quota": 25,
+    "schedule": "每星期三 早上 9點30分~12點30分"
+  }
+]
