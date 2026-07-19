@@ -2595,7 +2595,7 @@
     "timeSlot": "afternoon",
     "hasVideo": true,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/nangang/thumb/622db497703c5.jpeg",
     "code": "1153B2012",
     "credits": 1,
@@ -3004,7 +3004,7 @@
     "timeSlot": "morning",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/nangang/thumb/6a28cb8e59f4e.jpeg",
     "code": "1153C8431",
     "credits": 1,
@@ -5204,7 +5204,7 @@
     "timeSlot": "evening",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/nangang/thumb/6419b6fd0704e.jpg",
     "code": "1153C9005",
     "credits": 1,
@@ -6115,7 +6115,7 @@
     "timeSlot": "evening",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/nangang/thumb/66e96d93d79e7.jpg",
     "code": "1153C6453",
     "credits": 1,
@@ -13299,6 +13299,65 @@
     "teacherBio": "黃嘉裕 講師\n簡介：\n● 1989-07-01~2003-07-15 經濟日報 記者 台北市 採訪記者>>\n● 2003-08-01~2005-08-30 聯合晚報業務部 主任 台北市 業務主管>>\n● 2005-09-01~2007-08-30 經濟日報工商服務部 副主任 台北市 業務副主管>>\n● 2007-09-01~2010-07-31 聯合報金傳媒 經理 台北市 會議展覽處經理>>\n專長：\n日本時代下日本佛教的石觀音巡禮，日本神社在台灣，台灣民間信仰之寺廟石雕、石獅等研究。台灣鐵道旅行。淡蘭古道。\n擁有證照：\n西元2023年     華語導遊\n西元2023年     華語領隊\n得獎/擔任評審：\n西元1992年     獲頒李國鼎科技新聞報導獎佳作\n西元1995年     獲李國鼎科技新聞報導獎第二名。\n部落格(Blog)：\n建置中\n臉書(Facebook)：\n建置中"
   },
   {
+    "id": "nangang_811112af81c8bedae1a299621a06ada5",
+    "school": "nangang",
+    "uHash": "811112af81c8bedae1a299621a06ada5",
+    "name": "南港地方學工作坊",
+    "teacher": "特色計畫師資群",
+    "semester": "115-秋季班",
+    "area": "成德",
+    "startDate": "2026-09-15",
+    "dayOfWeek": 2,
+    "timeSlot": "evening",
+    "hasVideo": false,
+    "isMixed": false,
+    "status": "open",
+    "imageUrl": "images_course/nangang/thumb/6a563ecfb38da.jpg",
+    "code": "1152A1601",
+    "credits": 1,
+    "fee": 1000,
+    "weeks": 6,
+    "quota": 20,
+    "enrolled": 0,
+    "paid": 0,
+    "schedule": "每星期二 晚上 7點0分~9點40分",
+    "description": "本課程以「門戶、山水、人文、藝創、產業、宜居」六大軸線為核心，不僅全方位梳理南港的時空脈絡，更以此作為南港社大推動公共參與與社區經營的實踐基底。透過學習，我們將地方知識轉化為社區行動的動能，引導學習者從認識地方文史出發，共同關懷在地生態與防災韌性，激發大眾對公共議題的思辨與在地認同，並結合在地組織與社區據點推動鄰里互助，將南港形塑為一個兼具文化底蘊、生態永續與共生共榮的宜居社區。\n1.在知識與理論面：認識南港地理水文、茶山礦業與東區門戶的時空演變脈絡。2.在技能與連結面：學會老街考現調研，增進個人與社區的緊密連結，轉化為公共參與行動。3.在品德與態度面：培養對地方生態保育與黑鄉歷史的責任感，形塑共生社區的永續關懷。\n課程QR CODE網址",
+    "targetAudience": "無特殊限制。唯上課期間本校將會配合數位影音教學錄製作業全程錄影，如對此有疑慮的學員，建議請勿報名。",
+    "outline": [
+      {
+        "week": "第一週",
+        "topic": "1",
+        "content": "門戶南港(總篇)：李仁基老師主講(115-09-15)"
+      },
+      {
+        "week": "第二週",
+        "topic": "2",
+        "content": "藝創南港(文篇)：高燈立老師主講(115-09-22)"
+      },
+      {
+        "week": "第三週",
+        "topic": "3",
+        "content": "產業南港(產篇)：高燈立老師、李泰昌老師主講(115-09-29)"
+      },
+      {
+        "week": "第四週",
+        "topic": "4",
+        "content": "山水南港(地篇)：李麗玲老師、潘文彬老師主講(115-10-06)"
+      },
+      {
+        "week": "第五週",
+        "topic": "5",
+        "content": "人文南港(人篇)：陳奕峰老師主講(115-10-13)"
+      },
+      {
+        "week": "第六週",
+        "topic": "6",
+        "content": "宜居南港(景篇)：潘文彬老師、許國昌老師主講(115-10-20)"
+      }
+    ],
+    "teacherBio": "特色計畫師資群 講師"
+  },
+  {
     "id": "nangang_94e52eb9647523be44bc177e95bf801a",
     "school": "nangang",
     "uHash": "94e52eb9647523be44bc177e95bf801a",
@@ -15534,7 +15593,7 @@
     "timeSlot": "evening",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/nangang/thumb/",
     "code": "1152C6024",
     "credits": 3,
@@ -16153,7 +16212,7 @@
     "timeSlot": "evening",
     "hasVideo": false,
     "isMixed": false,
-    "status": "full",
+    "status": "open",
     "imageUrl": "images_course/nangang/thumb/67c5a164c0202.jpg",
     "code": "1152C6424",
     "credits": 3,
@@ -25215,7 +25274,7 @@
     "timeSlot": "evening",
     "hasVideo": true,
     "isMixed": true,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/nangang/thumb/5d6f83cd7d146.png",
     "code": "1152A2441",
     "credits": 3,
@@ -29915,95 +29974,6 @@
     "teacherBio": "林智謀 講師\n現職：\n。荒野保護協會 監事兼講師\n。臺北市儲備社區規劃師培訓 帶領老師\n。逢甲大學地理資訊系統研究中心 自然生態 顧問\n。雲南省高黎貢山國家級自然保護區 自然講解課程 開發與輔導\n。重慶市缙云山国家级自然保护区 自然資源與文化資源 開發與輔導\n。中國大陸全國大學生 綠色營 講師\n簡介：\n。台北市城市導覽人員培訓 自然之美 講師\n。台北市環保局 台北生態資源 講師\n。新北市溼地教育 人力資源 教師\n。台灣大學原住民研究中心 生態旅遊觀光產業訓練營 講師\n。逢甲大學地理資訊系統研究中心 自然生態 顧問\n。中國大陸啟行教育中心 自然風課程 教師\n。大愛電視 發現 導覽老師\n。中國電視 MIT台灣誌 導覽老師\n。三立電視 台灣全記錄 導覽\n。Discovery旅遊生活頻道 瘋台灣 導覽老師\n專長：\n1. 自然生態\n2. 環境與生態系\n3. 環境教育\n4. 文化與自然資源調查\n5. 社區營造\n擁有證照：\n2003-09-21  荒野保護協會 推廣講師\n2013-06-05\t行政院環境保護署 環境教育人員認證\n得獎/擔任評審：\n2005-04-23  社區大學全國促進會 社團類優等"
   },
   {
-    "id": "nangang_9c521a6944668f0a89ef41693e3114cd",
-    "school": "nangang",
-    "uHash": "9c521a6944668f0a89ef41693e3114cd",
-    "name": "GIS基礎建構與社區行動應用",
-    "teacher": "周聖民",
-    "semester": "115-秋季班",
-    "area": "成德",
-    "startDate": "2026-09-04",
-    "dayOfWeek": 5,
-    "timeSlot": "evening",
-    "hasVideo": false,
-    "isMixed": true,
-    "status": "open",
-    "imageUrl": "images_course/nangang/thumb/69ba1d559f26c.jpg",
-    "code": "1152B1008",
-    "credits": 2,
-    "fee": 2000,
-    "weeks": 12,
-    "quota": 20,
-    "enrolled": 2,
-    "paid": 2,
-    "schedule": "每星期五 晚上 7點0分~10點0分",
-    "description": "透過地理資訊系統(GIS)相關技術的數位學習，連結南港地方知識學資源，應用於在地文史的調查、記錄、整理與呈現，建立與展示南港區域GIS故事地圖，實踐在地方知識圖層建構工作推展。\n1.使學員能在社區GIS人才培力過程中，認識地理資訊系統概念，並能運用於社區行動。\n2.使學員學會建構以空間為基礎的故事地圖之技能。\n3.使學員藉系列學習，將地方知識空間資料數位化，持續累積與應用，強化在地認同及地方創生。\n課程QR CODE網址",
-    "targetAudience": "不限為公共性社團社員；工具操作主要以桌上型電腦或筆電為主，稍具電腦基礎操作能力為佳。",
-    "outline": [
-      {
-        "week": "第一週",
-        "topic": "1",
-        "content": "地理資訊系統(GIS)基本概念與空間資料運用介紹"
-      },
-      {
-        "week": "第二週",
-        "topic": "2",
-        "content": "網路地圖服務與QGIS基本功能實作"
-      },
-      {
-        "week": "第三週",
-        "topic": "3",
-        "content": "空間資料數位化與QGIS向量資料編修功能實作"
-      },
-      {
-        "week": "第四週",
-        "topic": "4",
-        "content": "空間資料共享化與QGIS屬性資料應用功能實作"
-      },
-      {
-        "week": "第五週",
-        "topic": "5",
-        "content": "QGIS工具與全球定位系統(GPS)結合運用"
-      },
-      {
-        "week": "第六週",
-        "topic": "6",
-        "content": "QGIS網格(影像)資料與空間資料視覺化應用功能實作"
-      },
-      {
-        "week": "第七週",
-        "topic": "7",
-        "content": "影像資料應用與QGIS地圖高程應用功能實作"
-      },
-      {
-        "week": "第八週",
-        "topic": "8",
-        "content": "Google協作平台 (Google Sites) 應用介紹"
-      },
-      {
-        "week": "第九週",
-        "topic": "9",
-        "content": "公民素養週"
-      },
-      {
-        "week": "第十週",
-        "topic": "10",
-        "content": "故事地圖平台功能應用與實作"
-      },
-      {
-        "week": "第十一週",
-        "topic": "11",
-        "content": "空間資料地圖化與QGIS地圖出圖功能實作"
-      },
-      {
-        "week": "第十二週",
-        "topic": "12",
-        "content": "GIS社區行動應用實作與成果分享"
-      }
-    ],
-    "teacherBio": "周聖民 講師\n現職：\n臺北市南港社區大學教學研究中心副主任、南港社大資訊類社團指導講師、\n社團法人中華產學發展協會理事\n簡介：\n1.雲端應用服務解決方案企劃。\n2.軟、韌體研發與資訊管理。\n3.具教育訓練講師資歷。\n4.「社區GIS人才培力」課程講師。\n專長：\n1.雲端服務開發、軟韌體程式設計、資訊管理、電腦硬體裝修\n2.數位滙流與創新管理\n3.非營利組織與社會企業經營管理\n擁有證照：\n西元1998年     電腦硬體裝修技術士丙級\n部落格(Blog)：\n建置中\n臉書(Facebook)：\n建置中"
-  },
-  {
     "id": "nangang_0d4ab4931298ace1831d5b31d82d42df",
     "school": "nangang",
     "uHash": "0d4ab4931298ace1831d5b31d82d42df",
@@ -30133,7 +30103,7 @@
     "timeSlot": "evening",
     "hasVideo": true,
     "isMixed": true,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/nangang/thumb/67ea9d9125afc.jpg",
     "code": "1152C1007",
     "credits": 3,
@@ -30460,7 +30430,7 @@
     "timeSlot": "evening",
     "hasVideo": false,
     "isMixed": true,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/nangang/thumb/676d167425038.jpg",
     "code": "1152C2452",
     "credits": 3,
