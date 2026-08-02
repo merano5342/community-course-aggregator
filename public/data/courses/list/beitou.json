@@ -143,7 +143,7 @@
     "credits": 3,
     "fee": 3000,
     "weeks": 18,
-    "quota": 40,
+    "quota": 30,
     "schedule": "每星期一 早上 9點0分~12點0分"
   },
   {
@@ -2133,7 +2133,7 @@
     "timeSlot": "afternoon",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "",
     "credits": 3,
     "fee": 3000,
@@ -5220,7 +5220,7 @@
     "timeSlot": "evening",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "",
     "credits": 3,
     "fee": 3000,
