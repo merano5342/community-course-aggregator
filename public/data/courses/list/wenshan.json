@@ -395,7 +395,7 @@
     "credits": 3,
     "fee": 3000,
     "weeks": 18,
-    "quota": 28,
+    "quota": 25,
     "schedule": "每星期一 晚上 7點0分~9點30分"
   },
   {
@@ -621,7 +621,7 @@
     "timeSlot": "evening",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/wenshan/thumb/5d87886c612c8.JPG",
     "credits": 3,
     "fee": 3000,
@@ -1356,7 +1356,7 @@
     "timeSlot": "evening",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/wenshan/thumb/68c0eba93bb2b.jpg",
     "credits": 3,
     "fee": 3000,
@@ -1503,7 +1503,7 @@
     "timeSlot": "evening",
     "hasVideo": true,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/wenshan/thumb/60584f82c9c15.png",
     "credits": 3,
     "fee": 3000,
@@ -2216,12 +2216,12 @@
     "timeSlot": "evening",
     "hasVideo": true,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/wenshan/thumb/6155e3a62ad2b.jpg",
     "credits": 3,
     "fee": 3000,
     "weeks": 18,
-    "quota": 28,
+    "quota": 27,
     "schedule": "每星期三 晚上 7點0分~9點30分"
   },
   {
@@ -3040,7 +3040,7 @@
     "credits": 3,
     "fee": 3000,
     "weeks": 18,
-    "quota": 30,
+    "quota": 28,
     "schedule": "每星期四 晚上 7點0分~9點30分"
   },
   {
@@ -3392,7 +3392,7 @@
     "timeSlot": "morning",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/wenshan/thumb/",
     "credits": 3,
     "fee": 3000,
@@ -3460,7 +3460,7 @@
     "credits": 3,
     "fee": 3000,
     "weeks": 18,
-    "quota": 29,
+    "quota": 28,
     "schedule": "每星期五 晚上 7點0分~9點30分"
   },
   {
@@ -3581,7 +3581,7 @@
     "timeSlot": "evening",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/wenshan/thumb/66ea6e4bdd2a0.JPG",
     "credits": 2,
     "fee": 2000,
@@ -3712,7 +3712,7 @@
     "credits": 3,
     "fee": 3000,
     "weeks": 18,
-    "quota": 26,
+    "quota": 25,
     "schedule": "每星期五 晚上 7點0分~9點30分"
   },
   {
@@ -3937,12 +3937,12 @@
     "timeSlot": "afternoon",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/wenshan/thumb/6a002dd7ed7aa.jpg",
     "credits": 2,
     "fee": 2000,
     "weeks": 12,
-    "quota": 28,
+    "quota": 25,
     "schedule": "每星期六 下午 1點30分~4點0分"
   },
   {
@@ -4320,7 +4320,7 @@
     "credits": 2,
     "fee": 2000,
     "weeks": 12,
-    "quota": 30,
+    "quota": 25,
     "schedule": "每星期六 早上 9點30分~12點0分"
   },
   {
