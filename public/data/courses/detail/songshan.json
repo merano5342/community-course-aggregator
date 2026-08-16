@@ -7414,7 +7414,7 @@
     "timeSlot": "evening",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "",
     "code": "1152A2001",
     "credits": 2,
@@ -19507,6 +19507,63 @@
     "teacherBio": "李美月 講師\n現職：\n職業選手\n簡介：\n星光舞蹈學院國際標準舞老師、美姿高格舞團負責人、松山社大講師、民生社區發展協會講師、中華民國舞蹈教師協會、中華民國行政院體委會裁判教練檢定合格\n專長：\n國際標準舞，美姿美儀\n得獎/擔任評審：\n西元2014年     2014WDC-AL世界盃舞王爭霸賽大會評審\n西元2014年     2014台北市青年盃國標舞錦標賽評審\n西元2014年     2014亞洲盃運動舞蹈台北國際公開賽大會評審\n西元2014年     2014全民盃全國國標舞大賽評審\n西元2014年     2014新北市星光盃全國舞蹈大賽評審\n部落格(Blog)：\n建置中\n臉書(Facebook)：\n建置中"
   },
   {
+    "id": "songshan_63992fb536fbe254f8c66b56708930d1",
+    "school": "songshan",
+    "uHash": "63992fb536fbe254f8c66b56708930d1",
+    "name": "犬貓老年疾病及緊急醫療",
+    "teacher": "臺北市動物保護處",
+    "semester": "115-秋季班",
+    "area": "松山",
+    "startDate": "2026-09-04",
+    "dayOfWeek": 5,
+    "timeSlot": "evening",
+    "hasVideo": false,
+    "isMixed": false,
+    "status": "open",
+    "imageUrl": "",
+    "code": "27f71373",
+    "credits": 1,
+    "fee": 1000,
+    "weeks": 6,
+    "quota": 25,
+    "schedule": "每星期五 晚上 7點0分~9點0分",
+    "description": "本課程以「預防勝於治療、及早發現、正確照護」為核心理念，將獸醫專業知識轉化為飼主日常生活中容易理解與實踐的健康照護方法。透過生活化案例與實務分享，引導學員從飲食、行為、生活習慣及身體變化等面向關心毛孩健康，不只是學習疾病知識，更建立負責任的飼養態度與陪伴觀念。期望讓學員在終身學習中提升照護能力，與毛孩共同維持健康、安心且有品質的生活。\n本課程旨在提升飼主對犬貓老年健康與常見疾病的認識，了解毛孩隨著年齡增長所產生的身體變化及健康需求。透過獸醫師專業講解，認識肝臟、腸胃、甲狀腺、關節等常見疾病及其早期警訊，培養學員日常觀察、健康管理與照護能力。同時建立正確的就醫觀念，學習在發現異常時適時尋求專業協助，降低疾病延誤的可能，提升毛孩晚年生活品質。\n課程QR CODE網址",
+    "targetAudience": "任何對課程有興趣的人都可以。",
+    "outline": [
+      {
+        "week": "第一週",
+        "topic": "1",
+        "content": "09/04｜ 陪毛孩子好好過一輩"
+      },
+      {
+        "week": "第二週",
+        "topic": "2",
+        "content": "09/11｜ 認識肝臟"
+      },
+      {
+        "week": "第三週",
+        "topic": "3",
+        "content": "10/02｜ 我目前在照顧"
+      },
+      {
+        "week": "第四週",
+        "topic": "4",
+        "content": "10/16｜天天一點點"
+      },
+      {
+        "week": "第五週",
+        "topic": "5",
+        "content": "10/23｜你沒想到的毛孩甲狀腺疾病"
+      },
+      {
+        "week": "第六週",
+        "topic": "6",
+        "content": "10/30｜ 關節時好不靈光"
+      }
+    ],
+    "teacherBio": "臺北市動物保護處 講師"
+  },
+  {
     "id": "songshan_cf51e0fa430108ff67618c321eba1aba",
     "school": "songshan",
     "uHash": "cf51e0fa430108ff67618c321eba1aba",
@@ -22381,7 +22438,7 @@
     "timeSlot": "evening",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "",
     "code": "69b35",
     "credits": 3,
@@ -25099,7 +25156,7 @@
     "timeSlot": "afternoon",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "",
     "code": "1152C8010",
     "credits": 3,
@@ -27294,7 +27351,7 @@
     "timeSlot": "morning",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "",
     "code": "1152C4022",
     "credits": 3,
@@ -28404,7 +28461,7 @@
     "timeSlot": "morning",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "",
     "code": "1152C8009",
     "credits": 3,

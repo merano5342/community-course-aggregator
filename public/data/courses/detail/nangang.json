@@ -8539,7 +8539,7 @@
     "timeSlot": "evening",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/nangang/thumb/69a98ba7c391a.jpg",
     "code": "1152C1005",
     "credits": 3,
@@ -11183,7 +11183,7 @@
     "timeSlot": "afternoon",
     "hasVideo": true,
     "isMixed": true,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/nangang/thumb/5f5d8570e6fea.jpg",
     "code": "1152A1011",
     "credits": 3,
@@ -13606,7 +13606,7 @@
     "timeSlot": "evening",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/nangang/thumb/",
     "code": "1152B1003",
     "credits": 2,
@@ -21634,7 +21634,7 @@
     "timeSlot": "evening",
     "hasVideo": false,
     "isMixed": true,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/nangang/thumb/68d10ac2c2db4.jpg",
     "code": "1152C4011",
     "credits": 3,
@@ -23499,7 +23499,7 @@
     "timeSlot": "evening",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/nangang/thumb/66f4f9f910ba8.jpg",
     "code": "1152C6435",
     "credits": 3,
@@ -25155,7 +25155,7 @@
     "timeSlot": "evening",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/nangang/thumb/676d124581f33.jpg",
     "code": "1152A1441",
     "credits": 3,
@@ -25274,7 +25274,7 @@
     "timeSlot": "evening",
     "hasVideo": true,
     "isMixed": true,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/nangang/thumb/5d6f83cd7d146.png",
     "code": "1152A2441",
     "credits": 3,
@@ -28001,7 +28001,7 @@
     "timeSlot": "afternoon",
     "hasVideo": true,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/nangang/thumb/62397c5af3f49.jpg",
     "code": "1152A1013",
     "credits": 3,
@@ -32283,6 +32283,93 @@
     "teacherBio": "林威妊 講師\n現職：\n艾馨公益慈善會.成德國中南港社區大學.萬華社區大學.佛光山台北社教館.文山長青大學.任教烹飪教學與實作\n簡介：\n龍山長青大學、艾馨公益慈善會、萬華社區大學、佛光山基隆極樂寺、佛光山台北社教館、成德國中南港社區大學\n專長：\n中餐烹飪研究教學\n擁有證照：\n西元2005年     中餐烹飪丙級\n西元2014年     中餐烹飪乙級\n臉書(Facebook)：\n建置中"
   },
   {
+    "id": "nangang_a7e85b0212b063d9109f25e0fe5ce910",
+    "school": "nangang",
+    "uHash": "a7e85b0212b063d9109f25e0fe5ce910",
+    "name": "南港城市更新公民學程I—認識城市．理解社區",
+    "teacher": "陳美華(魚籃)",
+    "semester": "115-秋季班",
+    "area": "專案",
+    "startDate": "0000-00-00",
+    "dayOfWeek": 0,
+    "timeSlot": "afternoon",
+    "hasVideo": false,
+    "isMixed": true,
+    "status": "open",
+    "imageUrl": "images_course/nangang/thumb/",
+    "code": "3f27",
+    "weeks": 12,
+    "quota": 20,
+    "enrolled": 0,
+    "paid": 0,
+    "schedule": "每 下午 2點0分~4點40分",
+    "description": "城市更新，不只是建築物的更新，更是城市治理、公民參與與社區共好的實踐歷程。\n本學程以南港地區為主要學習場域，結合都市更新制度、社區營造、公民參與及地方文化，透過知識學習、案例分析、社區踏查、工作坊及行動實踐，引導學員理解都市更新的制度精神，培養公共參與能力，並建立居民自主參與社區發展的行動力。\n學程採循序漸進設計，以三個學期逐步培養學員從「認識城市」、「參與社區」到「實踐行動」的能力，使都市更新不再只是專業人士的工作，而成為每一位公民都能理解、參與與共同創造的公共事務。\n本學程以都市更新為教材、社區為教室、公民參與為方法、共好城市為目標，期待培育具有公共思辨、協作溝通與社區實踐能力的新世代公民\n一、認識城市發展與都市更新的基本理念、制度架構及推動流程。\n二、理解社區歷史、空間環境、居民需求與地方文化之間的關聯性。\n三、建立公民意識，培養關心社區公共事務及公共利益的態度。\n四、培養社區觀察、資料蒐集、議題分析及公共討論的基本能力。\n五、透過南港富康街200地號案例，理解都市更新在真實社區中的挑戰與機會。\n六、為第二學期「公民參與」及第三學期「公民行動」建立知識基礎與公共參與能力。\n課程QR CODE網址",
+    "targetAudience": "本課程無須具備都市更新、建築、法律或不動產等專業背景，凡關心城市發展、社區生活及公共事務，願意參與討論與實作學習者皆歡迎選修。\n歡迎下列對象參加：\n•\t關心都市更新、危老重建及社區發展的居民。\n•\t希望了解自身居住環境及權益的社區民眾。\n•\t社區發展協會、里鄰幹部及社區工作者。\n•\t公民團體、志工及關心公共議題的市民。\n•\t建築、都市計畫、不動產、文化保存、社區營造及地方創生等相關領域的學習者。\n•\t對公民參與、公共治理及地方永續發展有興趣者。\n本課程重視互動討論與團隊合作，鼓勵學員參與社",
+    "outline": [
+      {
+        "week": "第一週",
+        "topic": "1",
+        "content": "我們為什麼需要城市更新？"
+      },
+      {
+        "week": "第二週",
+        "topic": "2",
+        "content": "認識我們生活的城市"
+      },
+      {
+        "week": "第三週",
+        "topic": "3",
+        "content": "認識我們的社區"
+      },
+      {
+        "week": "第四週",
+        "topic": "4",
+        "content": "都市更新制度初探"
+      },
+      {
+        "week": "第五週",
+        "topic": "5",
+        "content": "都更流程與居民參與"
+      },
+      {
+        "week": "第六週",
+        "topic": "6",
+        "content": "富康街200地號案例（一）"
+      },
+      {
+        "week": "第七週",
+        "topic": "7",
+        "content": "社區踏查（一）"
+      },
+      {
+        "week": "第八週",
+        "topic": "8",
+        "content": ".富康街200地號案例（二）"
+      },
+      {
+        "week": "第九週",
+        "topic": "9",
+        "content": "公民參與與社區共識"
+      },
+      {
+        "week": "第十週",
+        "topic": "10",
+        "content": "都市更新中的文化與永續"
+      },
+      {
+        "week": "第十一週",
+        "topic": "11",
+        "content": "社區願景工作坊"
+      },
+      {
+        "week": "第十二週",
+        "topic": "12",
+        "content": "成果發表與學習回顧"
+      }
+    ],
+    "teacherBio": "陳美華(魚籃) 講師\n現職：\n21世紀不動產機構CSR總監、台北永續影響力共融衛星社創社主席、財團法人陳源河文教基金會顧問、台灣宗教學會前理事長，並為魚籃文化有限公司負責人、魚籃書坊創辦人。\n簡介：\n長期致力於企業永續（ESG）、地方文化、公民教育、社區營造、公益服務及出版策劃等工作，擁有跨越企業、學術、文化與社區實踐的多元經驗，持續推動文化保存、公共參與及地方永續發展。\n近年積極關注並將投入南港地區都市更新與社區發展，以富康街200地號為實踐案例，推動居民溝通、公民參與及跨域合作，關注都市更新過程中的公共利益、社區共識、文化保存與永續發展，"
+  },
+  {
     "id": "nangang_ba0a031c0eb3dc5d6a49b2af9cb66757",
     "school": "nangang",
     "uHash": "ba0a031c0eb3dc5d6a49b2af9cb66757",
@@ -32860,7 +32947,7 @@
     "timeSlot": "morning",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/nangang/thumb/541bc1d37cb10.jpg",
     "code": "1152C6020",
     "credits": 3,
