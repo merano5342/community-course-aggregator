@@ -1,5 +1,27 @@
 [
   {
+    "id": "xinyi_f19238742ae1c3e1350db26cf8bcb2e9",
+    "school": "xinyi",
+    "uHash": "f19238742ae1c3e1350db26cf8bcb2e9",
+    "name": "Google AI助理Gemini輕鬆學",
+    "teacher": "何彥璋",
+    "semester": "115-秋季班",
+    "area": "",
+    "startDate": "2026-08-31",
+    "dayOfWeek": 1,
+    "timeSlot": "afternoon",
+    "hasVideo": false,
+    "isMixed": false,
+    "status": "open",
+    "imageUrl": "images_course/xy/thumb/6a892850e82fa.jpg",
+    "code": "1152C1011",
+    "credits": 3,
+    "fee": 3000,
+    "weeks": 18,
+    "quota": 25,
+    "schedule": "每星期一 下午 2點30分~5點0分"
+  },
+  {
     "id": "xinyi_6738d36bca40bdfe31fe1bfb3acc2355",
     "school": "xinyi",
     "uHash": "6738d36bca40bdfe31fe1bfb3acc2355",
