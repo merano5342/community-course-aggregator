@@ -6,7 +6,7 @@
     "name": "藝響天開快樂唱C",
     "teacher": "程偉珊",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "中心",
     "startDate": "2026-08-31",
     "dayOfWeek": 1,
     "timeSlot": "morning",
@@ -122,7 +122,7 @@
     "name": "北投故事小旅行-農業篇",
     "teacher": "施伊芳",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "戶外",
     "startDate": "2026-09-01",
     "dayOfWeek": 2,
     "timeSlot": "morning",
@@ -161,12 +161,12 @@
       {
         "week": "第五週",
         "topic": "5",
-        "content": "朝仔這-火龍果或時令蔬果農家"
+        "content": "朝仔這-火龍果或時令蔬果農家(戶外+室內課)"
       },
       {
         "week": "第六週",
         "topic": "6",
-        "content": "新北石門嵩山社區(一日課程)"
+        "content": "新北石門嵩山社區(一日課程)(戶外+室內課)"
       },
       {
         "week": "第七週",
@@ -176,7 +176,7 @@
       {
         "week": "第八週",
         "topic": "8",
-        "content": "七星推廣農作物温室"
+        "content": "七星推廣農作物温室(戶外+室內課)"
       },
       {
         "week": "第九週",
@@ -186,7 +186,7 @@
       {
         "week": "第十週",
         "topic": "10",
-        "content": "峰村農場"
+        "content": "峰村農場(戶外+室內課)"
       },
       {
         "week": "第十一週",
@@ -211,22 +211,22 @@
       {
         "week": "第十五週",
         "topic": "15",
-        "content": "食農料理/釀造課程(講座)\t料理與生活-食農課程"
+        "content": "食農料理/釀造課程(講座)料理與生活-食農課程(戶外+室內課)"
       },
       {
         "week": "第十六週",
         "topic": "16",
-        "content": "北投雲集食農教育合作社"
+        "content": "北投雲集食農教育合作社(戶外+室內課)"
       },
       {
         "week": "第十七週",
         "topic": "17",
-        "content": "元極有機蔬果耕學農場"
+        "content": "元極有機蔬果耕學農場(戶外+室內課)"
       },
       {
         "week": "第十八週",
         "topic": "18",
-        "content": "成果展準備週"
+        "content": "成果展準備週(室內課)"
       }
     ],
     "teacherBio": "施伊芳 講師\n簡介：\n● 2002-04-21~2020-04-23 北投故事屋社團 核心幹部參與戲劇表演/大地遊戲/雙語桌遊設計及規劃\n● 2000-07-22~2024-12-30 北投英文導覽社 導覽老師\n● 2020-09-01~2025-06-30 關渡國中 協同教學講師 七年級彈性課程 [自然生態英語行]共備及論壇分享\n專長：\n旅遊行程導覽規劃\n親子團康活動規劃\n瑜珈與體適能運動\n特色北投深度旅遊\n擁有證照：\n西元2011年     中華民國觀光導遊隊協會英語導遊人員\n西元2012年     中華民國觀光領導隊協會英語領隊人員\n西元2019年     教育部體育署國民體適能指導員\n臉書(Facebook)：\nhttps://www.facebook.com/profile.php?id=100068796992860&locale=zh_TW"
@@ -238,7 +238,7 @@
     "name": "藝響天開快樂唱B",
     "teacher": "程偉珊",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "中心",
     "startDate": "2026-09-02",
     "dayOfWeek": 3,
     "timeSlot": "morning",
@@ -354,7 +354,7 @@
     "name": "鍵盤彈世界經典C",
     "teacher": "吳天予",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "線上",
     "startDate": "2026-09-03",
     "dayOfWeek": 4,
     "timeSlot": "morning",
@@ -470,7 +470,7 @@
     "name": "藝響天開快樂唱A",
     "teacher": "程偉珊",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "中心",
     "startDate": "2026-09-04",
     "dayOfWeek": 5,
     "timeSlot": "morning",
@@ -934,7 +934,7 @@
     "name": "無齡樂活PAPAGO",
     "teacher": "陳亞寧",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "戶外",
     "startDate": "2026-09-02",
     "dayOfWeek": 3,
     "timeSlot": "morning",
@@ -1050,7 +1050,7 @@
     "name": "北投故事小旅行-女路篇",
     "teacher": "施伊芳",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "戶外",
     "startDate": "2026-09-03",
     "dayOfWeek": 4,
     "timeSlot": "morning",
@@ -1074,17 +1074,17 @@
       {
         "week": "第二週",
         "topic": "2",
-        "content": "北投女力-1"
+        "content": "北投女力-1(戶外+室內課)"
       },
       {
         "week": "第三週",
         "topic": "3",
-        "content": "北投女力-2"
+        "content": "北投女力-2(戶外+室內課)"
       },
       {
         "week": "第四週",
         "topic": "4",
-        "content": "北投女力-3"
+        "content": "北投女力-3(戶外+室內課)"
       },
       {
         "week": "第五週",
@@ -1104,7 +1104,7 @@
       {
         "week": "第八週",
         "topic": "8",
-        "content": "女路地景-3"
+        "content": "女路地景-3(戶外+室內課)"
       },
       {
         "week": "第九週",
@@ -1129,7 +1129,7 @@
       {
         "week": "第十三週",
         "topic": "13",
-        "content": "北投女力-4"
+        "content": "北投女力-4(戶外+室內課)"
       },
       {
         "week": "第十四週",
@@ -1144,17 +1144,17 @@
       {
         "week": "第十六週",
         "topic": "16",
-        "content": "北投女力-5"
+        "content": "北投女力-5（室內課）"
       },
       {
         "week": "第十七週",
         "topic": "17",
-        "content": "北投女力-6"
+        "content": "北投女力-6(戶外+室內課)"
       },
       {
         "week": "第十八週",
         "topic": "18",
-        "content": "成果展準備週"
+        "content": "成果展準備週（室內課）"
       }
     ],
     "teacherBio": "施伊芳 講師\n簡介：\n● 2002-04-21~2020-04-23 北投故事屋社團 核心幹部參與戲劇表演/大地遊戲/雙語桌遊設計及規劃\n● 2000-07-22~2024-12-30 北投英文導覽社 導覽老師\n● 2020-09-01~2025-06-30 關渡國中 協同教學講師 七年級彈性課程 [自然生態英語行]共備及論壇分享\n專長：\n旅遊行程導覽規劃\n親子團康活動規劃\n瑜珈與體適能運動\n特色北投深度旅遊\n擁有證照：\n西元2011年     中華民國觀光導遊隊協會英語導遊人員\n西元2012年     中華民國觀光領導隊協會英語領隊人員\n西元2019年     教育部體育署國民體適能指導員\n臉書(Facebook)：\nhttps://www.facebook.com/profile.php?id=100068796992860&locale=zh_TW"
@@ -1166,7 +1166,7 @@
     "name": "鍵盤彈世界經典A",
     "teacher": "吳天予",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "線上",
     "startDate": "2026-09-04",
     "dayOfWeek": 5,
     "timeSlot": "morning",
@@ -1282,7 +1282,7 @@
     "name": "輕鬆學書法A",
     "teacher": "葉錫棟",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "北小",
     "startDate": "2026-09-05",
     "dayOfWeek": 6,
     "timeSlot": "morning",
@@ -1514,7 +1514,7 @@
     "name": "走讀詐騙追追追",
     "teacher": "張天財",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "戶外",
     "startDate": "2026-09-01",
     "dayOfWeek": 2,
     "timeSlot": "morning",
@@ -1630,7 +1630,7 @@
     "name": "聽讀説寫學英文- 中級",
     "teacher": "陳秀環",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "北小",
     "startDate": "2026-09-02",
     "dayOfWeek": 3,
     "timeSlot": "morning",
@@ -1862,7 +1862,7 @@
     "name": "法語趴趴走",
     "teacher": "陳慧萍",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "北小",
     "startDate": "2026-09-04",
     "dayOfWeek": 5,
     "timeSlot": "morning",
@@ -1978,7 +1978,7 @@
     "name": "跟唭投郎趣旅行",
     "teacher": "林雅婷",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "戶外",
     "startDate": "2026-09-05",
     "dayOfWeek": 6,
     "timeSlot": "morning",
@@ -1997,42 +1997,42 @@
       {
         "week": "第一週",
         "topic": "1",
-        "content": "相見歡"
+        "content": "9/5相見歡 (室內講師介紹與課程介紹)"
       },
       {
         "week": "第二週",
         "topic": "2",
-        "content": "私房遊程規劃自己來(一) 露營趣"
+        "content": "9/12私房遊程規劃自己來(一) 露營趣 (室內討論課程)"
       },
       {
         "week": "第三週",
         "topic": "3",
-        "content": "桃園學：地下宮殿與航空城(一)"
+        "content": "9/19桃園學：地下宮殿與航空城(一)"
       },
       {
         "week": "第四週",
         "topic": "4",
-        "content": "桃園學：地下宮殿與航空城(二)"
+        "content": "9/26桃園學：地下宮殿與航空城(二)"
       },
       {
         "week": "第五週",
         "topic": "5",
-        "content": "地方文化的青年參與(一) 三芝"
+        "content": "10/3地方文化的青年參與(一) 三芝"
       },
       {
         "week": "第六週",
         "topic": "6",
-        "content": "地方文化的青年參與(一) 三芝"
+        "content": "10/10地方文化的青年參與(一) 三芝"
       },
       {
         "week": "第七週",
         "topic": "7",
-        "content": "北投學：日本妖怪來北投(一)"
+        "content": "10/17北投學：日本妖怪來北投(一)(室內館所參訪與導覽)"
       },
       {
         "week": "第八週",
         "topic": "8",
-        "content": "北投學：日本妖怪來北投(二)"
+        "content": "10/24北投學：日本妖怪來北投(二)"
       },
       {
         "week": "第九週",
@@ -2042,47 +2042,47 @@
       {
         "week": "第十週",
         "topic": "10",
-        "content": "私房遊程規劃自己來(二) 露營趣"
+        "content": "10/17私房遊程規劃自己來(二) 露營趣"
       },
       {
         "week": "第十一週",
         "topic": "11",
-        "content": "北投學：在關渡平原種雞蛋"
+        "content": "11/14北投學：在關渡平原種雞蛋"
       },
       {
         "week": "第十二週",
         "topic": "12",
-        "content": "北投學：北士科的前世今生"
+        "content": "11/21北投學：北士科的前世今生"
       },
       {
         "week": "第十三週",
         "topic": "13",
-        "content": "私房遊程規劃自己來(三) 露營趣"
+        "content": "11/28私房遊程規劃自己來(三) 露營趣"
       },
       {
         "week": "第十四週",
         "topic": "14",
-        "content": "新北學：雙溪不只是老街(一)"
+        "content": "12/5新北學：雙溪不只是老街(一)"
       },
       {
         "week": "第十五週",
         "topic": "15",
-        "content": "新北學：雙溪不只是老街(二)"
+        "content": "12/12新北學：雙溪不只是老街(二) (室內手作與社區交流)"
       },
       {
         "week": "第十六週",
         "topic": "16",
-        "content": "北投學：大自然農學體驗(一)"
+        "content": "12/19北投學：大自然農學體驗(一) (室內手作與農友交流)"
       },
       {
         "week": "第十七週",
         "topic": "17",
-        "content": "北投學：大自然農學體驗(一)"
+        "content": "12/26北投學：大自然農學體驗(一) (室內手作與農友交流)"
       },
       {
         "week": "第十八週",
         "topic": "18",
-        "content": "期末成果分享與驗收"
+        "content": "1/2期末成果分享與驗收 (室內成果製作與分享)"
       }
     ],
     "teacherBio": "李庚霖 講師\n現職：\n唭哩岸文化工作室｜創辦人\n社團法人台北市八頭里仁協會｜總幹事\n雲林故事館｜專案人員\n北投雲集食農教育勞動合作社｜社群經營\n東吳大學USR計畫｜協同計畫主持人\n台北市社會局-社區共好操作陪伴計畫｜社區顧問\n簡介：\n社團法人臺灣兒少玩心教育協會｜理事\n臺北市立復興高中 山城事件偵探社｜社團導師\n臺北市都市再生行動育成實驗｜陪伴員\n國中國文資優區域衛星方案｜地方人物、報導、旅遊文學 講師\n優達創意教育中心 ｜課外社團 講師\n千碩創新教育｜學藝班 / 課外社團 / 營隊 講師\n中心新村保溫計畫初期推動勞務委外｜專案管理師\n優亞實業有限公司藝文部｜公共藝術藝術專員\n社團法人雲林縣雲林故事人協會｜專員\n國立臺灣藝術教育館展覽演出組｜組員\n實似文化事業有限公司｜設計企劃\n專長：\n地方知識、文化轉譯、藝文策展、社會設計、社區營造、議題引導\n部落格(Blog)：\nhttp://kilriganculture.wix.com/ki-lrigan\n臉書(Facebook)：\nhttps://www.facebook.com/KilriganCulture/\n林雅婷 講師\n現職：\n斜槓走"
@@ -2094,7 +2094,7 @@
     "name": "一滴墨的旅行-早安北投",
     "teacher": "何淑貞",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "戶外",
     "startDate": "2026-08-31",
     "dayOfWeek": 1,
     "timeSlot": "morning",
@@ -2113,42 +2113,42 @@
       {
         "week": "第一週",
         "topic": "1",
-        "content": "超現實主義的聯想-秋日浪漫寫生日記："
+        "content": "8/31(北投圖書館週邊小景)(圖書館室內)集合：北投圖書館入口"
       },
       {
         "week": "第二週",
         "topic": "2",
-        "content": "文人畫風格的寫生構圖筆記：構圖與畫面布局"
+        "content": "9/7(奇岩公園寫生)集合：奇岩站1"
       },
       {
         "week": "第三週",
         "topic": "3",
-        "content": "斑駁的牆面：色、面與光影的比例"
+        "content": "9/14(北投復興公園寫生)集合：新北投站2"
       },
       {
         "week": "第四週",
         "topic": "4",
-        "content": "渾然天成的溫泉意象-北投復興公園 (戶外1-寫生)：示範與實作"
+        "content": "9/21(貴子坑親山步道/情人湖取景寫生)集合：復興崗站"
       },
       {
         "week": "第五週",
         "topic": "5",
-        "content": "臨摹與創新（上）：藝術家的生命故事ppt與實作"
+        "content": "9/28放假(9/18下午師大美術館導覽-補課)(室內-安排導覽)"
       },
       {
         "week": "第六週",
         "topic": "6",
-        "content": "特寫鏡頭文青行旅-關渡自然公園(戶外2-寫生)：寫生實作"
+        "content": "10/5(圓山玫瑰園/典藏植物園)(室內植物描繪)圓山站1"
       },
       {
         "week": "第七週",
         "topic": "7",
-        "content": "水墨寫生與色彩之美(上)：仛寂風的色彩管理"
+        "content": "1012(士林官邸公園)水墨寫生與色彩之美(上)士林站2"
       },
       {
         "week": "第八週",
         "topic": "8",
-        "content": "臨摹與創新（下）-鳳甲美術館或當期展覽主題研究(戶外3-參訪課程)："
+        "content": "1019(北藝大校園寫生)集合：關渡站1轉公車紅35/紅55或北藝大接駁車關渡站2經關渡國小，中油加油站沿著學園路步行10-15分"
       },
       {
         "week": "第九週",
@@ -2210,7 +2210,7 @@
     "name": "零基礎運動傷害防護及恢復",
     "teacher": "邱翊展",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "北小",
     "startDate": "2026-09-01",
     "dayOfWeek": 2,
     "timeSlot": "morning",
@@ -2326,7 +2326,7 @@
     "name": "智慧手機FUN心學_進階",
     "teacher": "李世芬",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "北小",
     "startDate": "2026-09-02",
     "dayOfWeek": 3,
     "timeSlot": "morning",
@@ -2442,7 +2442,7 @@
     "name": "走入山林，看見台灣之美B",
     "teacher": "曾翰文",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "戶外",
     "startDate": "2026-09-03",
     "dayOfWeek": 4,
     "timeSlot": "morning",
@@ -2790,13 +2790,13 @@
     "name": "生成式AI北投學趣味應用",
     "teacher": "楊偉君",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "北小",
     "startDate": "2026-08-31",
     "dayOfWeek": 1,
     "timeSlot": "morning",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "",
     "credits": 3,
     "fee": 3000,
@@ -2906,7 +2906,7 @@
     "name": "識鳥二三四",
     "teacher": "社團法人台北市野鳥學會",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "北小",
     "startDate": "2026-09-01",
     "dayOfWeek": 2,
     "timeSlot": "morning",
@@ -3022,7 +3022,7 @@
     "name": "鐵道水道步道趴趴走",
     "teacher": "羅文德",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "北小",
     "startDate": "2026-09-02",
     "dayOfWeek": 3,
     "timeSlot": "morning",
@@ -3138,7 +3138,7 @@
     "name": "融入自然，享受人生",
     "teacher": "施宏明",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "戶外",
     "startDate": "2026-09-03",
     "dayOfWeek": 4,
     "timeSlot": "morning",
@@ -3254,7 +3254,7 @@
     "name": "野訪生態攝影遊",
     "teacher": "林柏昌",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "戶外",
     "startDate": "2026-09-04",
     "dayOfWeek": 5,
     "timeSlot": "morning",
@@ -3340,7 +3340,7 @@
     "name": "島嶼與燈塔",
     "teacher": "羅文德",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "戶外",
     "startDate": "2026-09-05",
     "dayOfWeek": 6,
     "timeSlot": "morning",
@@ -3456,7 +3456,7 @@
     "name": "走入山林，看見台灣之美D",
     "teacher": "曾翰文",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "戶外",
     "startDate": "2026-08-31",
     "dayOfWeek": 1,
     "timeSlot": "morning",
@@ -3572,7 +3572,7 @@
     "name": "闖蕩山林，探索古道趣健行",
     "teacher": "吳子政",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "戶外",
     "startDate": "2026-09-01",
     "dayOfWeek": 2,
     "timeSlot": "morning",
@@ -3804,7 +3804,7 @@
     "name": "可愛毛線鉤針娃娃-A",
     "teacher": "陳宛伶",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "北小",
     "startDate": "2026-09-03",
     "dayOfWeek": 4,
     "timeSlot": "morning",
@@ -3920,7 +3920,7 @@
     "name": "走入山林，看見台灣之美C",
     "teacher": "曾翰文",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "戶外",
     "startDate": "2026-09-04",
     "dayOfWeek": 5,
     "timeSlot": "morning",
@@ -4036,7 +4036,7 @@
     "name": "原生植物之美-散步看好花",
     "teacher": "原植會",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "戶外",
     "startDate": "2026-09-05",
     "dayOfWeek": 6,
     "timeSlot": "morning",
@@ -4152,7 +4152,7 @@
     "name": "綠色草本手工皂的渲染世界",
     "teacher": "林語騰",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "北小",
     "startDate": "2026-08-31",
     "dayOfWeek": 1,
     "timeSlot": "morning",
@@ -4268,7 +4268,7 @@
     "name": "水彩很好學C",
     "teacher": "黃嵐嵐",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "線上",
     "startDate": "2026-09-01",
     "dayOfWeek": 2,
     "timeSlot": "morning",
@@ -4390,7 +4390,7 @@
     "timeSlot": "morning",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "",
     "credits": 3,
     "fee": 3000,
@@ -4500,7 +4500,7 @@
     "name": "就愛畫水彩A",
     "teacher": "溫牧",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "線上",
     "startDate": "2026-09-03",
     "dayOfWeek": 4,
     "timeSlot": "morning",
@@ -4616,7 +4616,7 @@
     "name": "大屯火山群與山腳斷層",
     "teacher": "吳子政",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "戶外",
     "startDate": "2026-09-04",
     "dayOfWeek": 5,
     "timeSlot": "morning",
@@ -4732,7 +4732,7 @@
     "name": "彩墨生香-輕鬆畫花鳥",
     "teacher": "呂玉亭",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "北小",
     "startDate": "2026-09-05",
     "dayOfWeek": 6,
     "timeSlot": "morning",
@@ -4848,7 +4848,7 @@
     "name": "筆尖下的北投．輕鬆畫速寫",
     "teacher": "張瓊文",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "北小",
     "startDate": "2026-08-31",
     "dayOfWeek": 1,
     "timeSlot": "morning",
@@ -4964,7 +4964,7 @@
     "name": "輕鬆學電子琴",
     "teacher": "江侑陵",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "北小",
     "startDate": "2026-09-01",
     "dayOfWeek": 2,
     "timeSlot": "morning",
@@ -5196,7 +5196,7 @@
     "name": "日常花卉-水墨工筆療癒天地",
     "teacher": "陳紀安",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "北小",
     "startDate": "2026-09-03",
     "dayOfWeek": 4,
     "timeSlot": "morning",
@@ -5544,7 +5544,7 @@
     "name": "日常書寫-書法的空間藝術A",
     "teacher": "陳紀安",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "北小",
     "startDate": "2026-08-31",
     "dayOfWeek": 1,
     "timeSlot": "morning",
@@ -5660,7 +5660,7 @@
     "name": "流行鋼琴快樂學A",
     "teacher": "陳孝慈",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "線上",
     "startDate": "2026-09-01",
     "dayOfWeek": 2,
     "timeSlot": "morning",
@@ -5776,7 +5776,7 @@
     "name": "揹著畫架北投油畫寫生趣",
     "teacher": "柯雅冠",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "戶外",
     "startDate": "2026-09-02",
     "dayOfWeek": 3,
     "timeSlot": "morning",
@@ -6008,7 +6008,7 @@
     "name": "黑白相間-書法藝術",
     "teacher": "徐源瓔",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "北小",
     "startDate": "2026-09-04",
     "dayOfWeek": 5,
     "timeSlot": "morning",
@@ -6121,7 +6121,7 @@
     "id": "beitou_8c420ae55c26a2391364897de29c3b67",
     "school": "beitou",
     "uHash": "8c420ae55c26a2391364897de29c3b67",
-    "name": "美麗禪繞畫線上班",
+    "name": "美麗禪繞畫線上",
     "teacher": "闕美麗",
     "semester": "115-秋季班",
     "area": "線上",
@@ -6241,7 +6241,7 @@
     "teacher": "鍾文淵",
     "semester": "115-秋季班",
     "area": "校本",
-    "startDate": "2026-08-31",
+    "startDate": "2026-11-23",
     "dayOfWeek": 1,
     "timeSlot": "morning",
     "hasVideo": false,
@@ -6259,92 +6259,32 @@
       {
         "week": "第一週",
         "topic": "1",
-        "content": "認識水彩 ~彩虹樹"
+        "content": "1認識水彩~彩虹樹"
       },
       {
         "week": "第二週",
         "topic": "2",
-        "content": "水彩基本技法綜合練習"
+        "content": "2. 水彩基本技法~綜合練習~美麗的瓶花"
       },
       {
         "week": "第三週",
         "topic": "3",
-        "content": "寂靜樹林"
+        "content": "3寂靜樹林"
       },
       {
         "week": "第四週",
         "topic": "4",
-        "content": "光影小屋"
+        "content": "4光影小屋"
       },
       {
         "week": "第五週",
         "topic": "5",
-        "content": "野地風光"
+        "content": "5野地風光"
       },
       {
         "week": "第六週",
         "topic": "6",
-        "content": "天空與雲彩"
-      },
-      {
-        "week": "第七週",
-        "topic": "7",
-        "content": "托斯卡尼山谷"
-      },
-      {
-        "week": "第八週",
-        "topic": "8",
-        "content": "托斯卡尼山谷"
-      },
-      {
-        "week": "第九週",
-        "topic": "9",
-        "content": "北投公民週"
-      },
-      {
-        "week": "第十週",
-        "topic": "10",
-        "content": "暮色帆影"
-      },
-      {
-        "week": "第十一週",
-        "topic": "11",
-        "content": "暮色帆影"
-      },
-      {
-        "week": "第十二週",
-        "topic": "12",
-        "content": "湖光山色"
-      },
-      {
-        "week": "第十三週",
-        "topic": "13",
-        "content": "湖光山色"
-      },
-      {
-        "week": "第十四週",
-        "topic": "14",
-        "content": "老宅光影"
-      },
-      {
-        "week": "第十五週",
-        "topic": "15",
-        "content": "老宅光影"
-      },
-      {
-        "week": "第十六週",
-        "topic": "16",
-        "content": "北投溫泉博物館"
-      },
-      {
-        "week": "第十七週",
-        "topic": "17",
-        "content": "北投溫泉博物館"
-      },
-      {
-        "week": "第十八週",
-        "topic": "18",
-        "content": "成果展準備週"
+        "content": "6天空與雲彩"
       }
     ],
     "teacherBio": "鍾文淵 講師\n現職：\n專職水彩畫藝術創作及教授成人水彩畫課程\n簡介：\n●義方國小、天母國小 藝術與人文老師>>\n專長：\n素描、水彩、油畫、攝影\n得獎/擔任評審：\n西元2011年     油畫作品「平淡·生活」全國中小學美術教育家聯展入選\n西元2013年     油畫作品「凝視」獲全國公教美展油畫類優選\n西元2022年     第四十五屆光華青年水彩-大湖公園寫生比賽入選\n部落格(Blog)：\n建置中\n臉書(Facebook)：\nhttps://www.facebook.com/zhong.wen.yuan.289929"
@@ -6356,7 +6296,7 @@
     "name": "樂齡郊遊趣",
     "teacher": "賴麗明",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "戶外",
     "startDate": "2026-09-08",
     "dayOfWeek": 2,
     "timeSlot": "morning",
@@ -6472,7 +6412,7 @@
     "name": "家的攝影日記，珍藏北投記憶",
     "teacher": "陳科文",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "戶外",
     "startDate": "2026-09-02",
     "dayOfWeek": 3,
     "timeSlot": "morning",
@@ -6936,7 +6876,7 @@
     "name": "手機輕鬆拍",
     "teacher": "陳高錞",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "戶外",
     "startDate": "2026-08-31",
     "dayOfWeek": 1,
     "timeSlot": "morning",
@@ -7284,7 +7224,7 @@
     "name": "太極拳與詠春拳C",
     "teacher": "邱翊展",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "北小",
     "startDate": "2026-09-03",
     "dayOfWeek": 4,
     "timeSlot": "morning",
@@ -7400,7 +7340,7 @@
     "name": "拿起筆就能畫-速寫",
     "teacher": "溫牧",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "線上",
     "startDate": "2026-09-04",
     "dayOfWeek": 5,
     "timeSlot": "morning",
@@ -7516,7 +7456,7 @@
     "name": "晨曦合唱團",
     "teacher": "溫淑玲",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "北小",
     "startDate": "2026-09-05",
     "dayOfWeek": 6,
     "timeSlot": "morning",
@@ -7632,7 +7572,7 @@
     "name": "太極拳與詠春拳A",
     "teacher": "邱翊展",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "北小",
     "startDate": "2026-08-31",
     "dayOfWeek": 1,
     "timeSlot": "morning",
@@ -7748,7 +7688,7 @@
     "name": "全方位瑜珈提斯",
     "teacher": "賴秀炫",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "北小",
     "startDate": "2026-09-01",
     "dayOfWeek": 2,
     "timeSlot": "morning",
@@ -7864,7 +7804,7 @@
     "name": "成人芭蕾A",
     "teacher": "洪儷今",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "北小",
     "startDate": "2026-09-02",
     "dayOfWeek": 3,
     "timeSlot": "morning",
@@ -7980,7 +7920,7 @@
     "name": "瑜珈提斯",
     "teacher": "蘇梨月",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "北小",
     "startDate": "2026-09-03",
     "dayOfWeek": 4,
     "timeSlot": "morning",
@@ -8094,7 +8034,7 @@
     "school": "beitou",
     "uHash": "cc1bf61eb27b237bb5559ff7a50eb5bf",
     "name": "那卡西伴奏唱經典曲B",
-    "teacher": "賴錦華",
+    "teacher": "周健龍",
     "semester": "115-秋季班",
     "area": "校本",
     "startDate": "2026-09-04",
@@ -8212,7 +8152,7 @@
     "name": "流行爵士鋼琴輕鬆學A",
     "teacher": "黃昭蓉",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "北小",
     "startDate": "2026-09-05",
     "dayOfWeek": 6,
     "timeSlot": "morning",
@@ -8560,7 +8500,7 @@
     "name": "漫步台灣歷史-凱達格蘭",
     "teacher": "吳子政",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "戶外",
     "startDate": "2026-09-02",
     "dayOfWeek": 3,
     "timeSlot": "morning",
@@ -8792,7 +8732,7 @@
     "name": "體適能有氧暨墊上核心運動",
     "teacher": "鍾孟修",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "北小",
     "startDate": "2026-09-04",
     "dayOfWeek": 5,
     "timeSlot": "morning",
@@ -8908,7 +8848,7 @@
     "name": "哈達瑜伽-初階",
     "teacher": "江秀芳",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "北小",
     "startDate": "2026-09-05",
     "dayOfWeek": 6,
     "timeSlot": "morning",
@@ -9141,7 +9081,7 @@
     "teacher": "許家玲",
     "semester": "115-秋季班",
     "area": "校本",
-    "startDate": "2026-09-01",
+    "startDate": "2026-11-24",
     "dayOfWeek": 2,
     "timeSlot": "morning",
     "hasVideo": false,
@@ -9257,7 +9197,7 @@
     "teacher": "吳小黛",
     "semester": "115-秋季班",
     "area": "校本",
-    "startDate": "2026-09-02",
+    "startDate": "2026-11-25",
     "dayOfWeek": 3,
     "timeSlot": "morning",
     "hasVideo": false,
@@ -9290,77 +9230,17 @@
       {
         "week": "第四週",
         "topic": "4",
-        "content": "課程 : 紅豆年糕"
+        "content": "課程 : 糖醋排骨"
       },
       {
         "week": "第五週",
         "topic": "5",
-        "content": "課程 : 蔥燒鯽魚"
+        "content": "課程 : 蟹黃豆腐煲"
       },
       {
         "week": "第六週",
         "topic": "6",
-        "content": "課程 : 高麗菜捲+關東煮"
-      },
-      {
-        "week": "第七週",
-        "topic": "7",
-        "content": "課程 : 青椒香肉套餐"
-      },
-      {
-        "week": "第八週",
-        "topic": "8",
-        "content": "課程 : 腸粉"
-      },
-      {
-        "week": "第九週",
-        "topic": "9",
-        "content": "公民週"
-      },
-      {
-        "week": "第十週",
-        "topic": "10",
-        "content": "課程 :小籠包+湯品"
-      },
-      {
-        "week": "第十一週",
-        "topic": "11",
-        "content": "課程 : 清蒸肉圓"
-      },
-      {
-        "week": "第十二週",
-        "topic": "12",
-        "content": "課程 : 泰式檸檬魚"
-      },
-      {
-        "week": "第十三週",
-        "topic": "13",
-        "content": "課程 : 糖醋排骨套餐"
-      },
-      {
-        "week": "第十四週",
-        "topic": "14",
-        "content": "課程 : 蟹黃豆腐煲"
-      },
-      {
-        "week": "第十五週",
-        "topic": "15",
         "content": "課程 : 豆酥鱈魚"
-      },
-      {
-        "week": "第十六週",
-        "topic": "16",
-        "content": "課程 : 素食"
-      },
-      {
-        "week": "第十七週",
-        "topic": "17",
-        "content": "課程 : 豆腐飯獅子頭"
-      },
-      {
-        "week": "第十八週",
-        "topic": "18",
-        "content": "成果展準備週"
       }
     ],
     "teacherBio": "吳小黛 講師\n現職：\n新莊社大-烘焙班教師\n北投社大-烘焙班教師\n簡介：\n真理大學推廣部-烘焙課程/\n婦女展業協會-小菜教學-兒童夏令營/\n新民國中-才藝班/\n瓜媽才藝教室/\n新莊社大-烘焙課程/北投社大-烘焙課程\n專長：\n小菜教學/西點烘焙\n擁有證照：\n取照日期 : 2009-02-27\n證照名稱 : 烘焙食品 - 西點蛋糕\n西元2009年     烘焙食品-西點蛋糕\n部落格(Blog)：\n小金魚\n臉書(Facebook)：\nwww.facebook.com/sophiacake1234"
@@ -9721,7 +9601,7 @@
     "teacher": "吳小黛",
     "semester": "115-秋季班",
     "area": "校本",
-    "startDate": "2026-08-31",
+    "startDate": "2026-11-23",
     "dayOfWeek": 1,
     "timeSlot": "morning",
     "hasVideo": false,
@@ -9749,82 +9629,22 @@
       {
         "week": "第三週",
         "topic": "3",
-        "content": "課程 :麵包蛋糕捲"
+        "content": "課程 :牛角麵包"
       },
       {
         "week": "第四週",
         "topic": "4",
-        "content": "課程 :牛角麵包"
+        "content": "課程 : 維也納麵包"
       },
       {
         "week": "第五週",
         "topic": "5",
-        "content": "課程 : 芋香蛋糕"
+        "content": "課程 : 免煮貝果型麵包"
       },
       {
         "week": "第六週",
         "topic": "6",
-        "content": "課程 :  巧克力奶油蛋糕"
-      },
-      {
-        "week": "第七週",
-        "topic": "7",
-        "content": "課程 : 維也納麵包"
-      },
-      {
-        "week": "第八週",
-        "topic": "8",
-        "content": "課程 : 小法國麵包"
-      },
-      {
-        "week": "第九週",
-        "topic": "9",
-        "content": "公民週"
-      },
-      {
-        "week": "第十週",
-        "topic": "10",
-        "content": "課程 :百頁豆腐蛋糕"
-      },
-      {
-        "week": "第十一週",
-        "topic": "11",
-        "content": "課程 :蘋果翻轉蛋糕"
-      },
-      {
-        "week": "第十二週",
-        "topic": "12",
-        "content": "課程 : 免煮貝果型麵包"
-      },
-      {
-        "week": "第十三週",
-        "topic": "13",
-        "content": "課程 : 巧克力甘納許蛋糕"
-      },
-      {
-        "week": "第十四週",
-        "topic": "14",
-        "content": "課程 :酒釀桂圓麵包"
-      },
-      {
-        "week": "第十五週",
-        "topic": "15",
-        "content": "課程 :夏威夷果仁蛋糕"
-      },
-      {
-        "week": "第十六週",
-        "topic": "16",
-        "content": "課程 :美式蛋達"
-      },
-      {
-        "week": "第十七週",
-        "topic": "17",
-        "content": "課程 :日是地瓜小蛋糕"
-      },
-      {
-        "week": "第十八週",
-        "topic": "18",
-        "content": "成果展準備週"
+        "content": "課程 : 酒釀桂圓麵包"
       }
     ],
     "teacherBio": "吳小黛 講師\n現職：\n新莊社大-烘焙班教師\n北投社大-烘焙班教師\n簡介：\n真理大學推廣部-烘焙課程/\n婦女展業協會-小菜教學-兒童夏令營/\n新民國中-才藝班/\n瓜媽才藝教室/\n新莊社大-烘焙課程/北投社大-烘焙課程\n專長：\n小菜教學/西點烘焙\n擁有證照：\n取照日期 : 2009-02-27\n證照名稱 : 烘焙食品 - 西點蛋糕\n西元2009年     烘焙食品-西點蛋糕\n部落格(Blog)：\n小金魚\n臉書(Facebook)：\nwww.facebook.com/sophiacake1234"
@@ -9836,7 +9656,7 @@
     "name": "哇-路邊野草都是寶",
     "teacher": "吳怡蒨",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "戶外",
     "startDate": "2026-09-02",
     "dayOfWeek": 3,
     "timeSlot": "morning",
@@ -10185,7 +10005,7 @@
     "teacher": "周承俊",
     "semester": "115-秋季班",
     "area": "校本",
-    "startDate": "2026-09-05",
+    "startDate": "2026-11-28",
     "dayOfWeek": 6,
     "timeSlot": "morning",
     "hasVideo": false,
@@ -10203,92 +10023,32 @@
       {
         "week": "第一週",
         "topic": "1",
-        "content": "相見歡、分組、節令甜品"
+        "content": "精選餐桌上幸福好味道"
       },
       {
         "week": "第二週",
         "topic": "2",
-        "content": "精選餐桌上幸福好味道(1)"
+        "content": "經典幸福下飯好滋味"
       },
       {
         "week": "第三週",
         "topic": "3",
-        "content": "精選餐桌上幸福好味道(2)"
+        "content": "南洋風味好滋味"
       },
       {
         "week": "第四週",
         "topic": "4",
-        "content": "經典幸福下飯好滋味(1)"
+        "content": "精選吮指消魂好滋味"
       },
       {
         "week": "第五週",
         "topic": "5",
-        "content": "經典幸福下飯好滋味(2)"
+        "content": "酒家進階菜(1)"
       },
       {
         "week": "第六週",
         "topic": "6",
-        "content": "經典幸福下飯好滋味(3)"
-      },
-      {
-        "week": "第七週",
-        "topic": "7",
-        "content": "精選吮指消魂好滋味(1)"
-      },
-      {
-        "week": "第八週",
-        "topic": "8",
-        "content": "經典養顏甜品"
-      },
-      {
-        "week": "第九週",
-        "topic": "9",
-        "content": "公民週"
-      },
-      {
-        "week": "第十週",
-        "topic": "10",
-        "content": "南洋風味好滋味"
-      },
-      {
-        "week": "第十一週",
-        "topic": "11",
-        "content": "精選吮指消魂好滋味(2)"
-      },
-      {
-        "week": "第十二週",
-        "topic": "12",
-        "content": "垂涎三尺好滋味(1)"
-      },
-      {
-        "week": "第十三週",
-        "topic": "13",
-        "content": "垂涎三尺好滋味(2)"
-      },
-      {
-        "week": "第十四週",
-        "topic": "14",
-        "content": "幸福滋味&迷人甜點"
-      },
-      {
-        "week": "第十五週",
-        "topic": "15",
-        "content": "懷念好滋味-酒家菜(1)"
-      },
-      {
-        "week": "第十六週",
-        "topic": "16",
-        "content": "懷念好滋味-酒家菜(2)"
-      },
-      {
-        "week": "第十七週",
-        "topic": "17",
-        "content": "懷念好滋味-酒家菜(3)"
-      },
-      {
-        "week": "第十八週",
-        "topic": "18",
-        "content": "課程總複習、期末成果展"
+        "content": "酒家進階菜(2)"
       }
     ],
     "teacherBio": "周承俊 講師\n現職：\n文化大學海青班講師、中華科大餐飲系講師；北投社大、松山社大、信義社大、中山社大、中正社大、士林社大講師；愛月嫂國際公司顧問兼講師；桃園縣托育家事管理發展協會講師；新北市幼兒托育職業工會講師；\n簡介：\n文化大學海青班講師、中華科大講師；勞委會職訓局產業人才投資方案。2007年亞洲國際廚皇熱菜〈藥膳〉特金牌獎；2006年北京國際〈熱菜〉金牌獎；2005年第七屆HFC銅牌獎、2005年第七屆HFC上海國際烹飪藝術比賽-優秀廚師；中莘民國-中餐〈葷〉乙級技術士\n專長：\n養生美食烹製教學\n月子餐飲烹製教學\n中餐烹飪製作教學\n臺灣小吃美食教學\n異國料理美食烹製教學\n擁有證照：\n2002-12-08\t中餐烹調(葷素)丙級\n2004-11-18\t中式烹調師-特三級\n2010-02-09\t中餐烹煮(葷)-乙級\n西元2019年     丙餐烹調 丙級\n得獎/擔任評審：\n2007年亞洲國際廚皇熱菜(藥膳)特金牌獎\n2006年北京國際食神爭霸賽-個人賽(熱菜)金牌獎\n2005年第七屆HFC上海國際烹飪藝術比賽-中式熱菜銅牌獎、優秀廚師獎\n部落格(Blog)：\nhttp://blog.xu"
@@ -10416,7 +10176,7 @@
     "name": "觀光美語-帶著美語去旅行",
     "teacher": "涂孟君",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "北小",
     "startDate": "2026-09-01",
     "dayOfWeek": 2,
     "timeSlot": "afternoon",
@@ -10532,7 +10292,7 @@
     "name": "互動美語聽講EZGO",
     "teacher": "簡秀珍",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "北小",
     "startDate": "2026-09-02",
     "dayOfWeek": 3,
     "timeSlot": "afternoon",
@@ -10648,7 +10408,7 @@
     "name": "輕鬆學粉彩水粉風景畫A",
     "teacher": "陳俊佑",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "中心",
     "startDate": "2026-09-03",
     "dayOfWeek": 4,
     "timeSlot": "afternoon",
@@ -10764,7 +10524,7 @@
     "name": "北投文化英文導覽培訓",
     "teacher": "郭仲琦",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "中心",
     "startDate": "2026-09-04",
     "dayOfWeek": 5,
     "timeSlot": "afternoon",
@@ -10881,7 +10641,7 @@
     "teacher": "朱孝慈",
     "semester": "115-秋季班",
     "area": "校本",
-    "startDate": "2026-08-31",
+    "startDate": "2026-11-23",
     "dayOfWeek": 1,
     "timeSlot": "afternoon",
     "hasVideo": false,
@@ -10899,92 +10659,32 @@
       {
         "week": "第一週",
         "topic": "1",
-        "content": "•\t相見歡•\t課程介紹•\t北投藍染歷史"
+        "content": "相見歡藍染歷史建藍"
       },
       {
         "week": "第二週",
         "topic": "2",
-        "content": "•\t縫染技法教學"
+        "content": "夾、綁、絞染技法介紹示範"
       },
       {
         "week": "第三週",
         "topic": "3",
-        "content": "•\t縫染:平針縫、捲針縫、軍隊縫技法教授"
+        "content": "縫染:平針縫、捲針縫、軍隊縫技法教授"
       },
       {
         "week": "第四週",
         "topic": "4",
-        "content": "縫染構圖教授"
+        "content": "防染糊調製教學型染技法拔染糊調製教學拔染技法"
       },
       {
         "week": "第五週",
         "topic": "5",
-        "content": "縫染作品染製技巧教授"
+        "content": "型染染製教學"
       },
       {
         "week": "第六週",
         "topic": "6",
         "content": "植物敲拓染尋找適合植物示範操作"
-      },
-      {
-        "week": "第七週",
-        "topic": "7",
-        "content": "•\t建藍"
-      },
-      {
-        "week": "第八週",
-        "topic": "8",
-        "content": "如何選購染製材料"
-      },
-      {
-        "week": "第九週",
-        "topic": "9",
-        "content": "北投公民週"
-      },
-      {
-        "week": "第十週",
-        "topic": "10",
-        "content": "夾染、綁染技法介紹"
-      },
-      {
-        "week": "第十一週",
-        "topic": "11",
-        "content": "夾染、綁染如何染製"
-      },
-      {
-        "week": "第十二週",
-        "topic": "12",
-        "content": "拔染拔染劑調製教學拔染教學"
-      },
-      {
-        "week": "第十三週",
-        "topic": "13",
-        "content": "北投學課程增進學員對北投認識"
-      },
-      {
-        "week": "第十四週",
-        "topic": "14",
-        "content": "植物熱染"
-      },
-      {
-        "week": "第十五週",
-        "topic": "15",
-        "content": "型染技法操作澀柿紙板型設計刀刻版型示範"
-      },
-      {
-        "week": "第十六週",
-        "topic": "16",
-        "content": "防染湖調製型染技法教授"
-      },
-      {
-        "week": "第十七週",
-        "topic": "17",
-        "content": "型染成果"
-      },
-      {
-        "week": "第十八週",
-        "topic": "18",
-        "content": "成果展準備週"
       }
     ],
     "teacherBio": "朱孝慈 講師\n現職：\n北投文化基金會社區專員\n簡介：\n北投文化金會社區專員\n北投文化基金會資深解說員\n北投社大講師\n專長：\n北投文史解說、活動帶領、遊程規劃\n部落格(Blog)：\n建置中\n臉書(Facebook)：\n建置中"
@@ -11112,7 +10812,7 @@
     "name": "聽讀説寫學英文-中高級",
     "teacher": "陳秀環",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "北小",
     "startDate": "2026-09-02",
     "dayOfWeek": 3,
     "timeSlot": "afternoon",
@@ -11344,7 +11044,7 @@
     "name": "鍵盤彈世界經典B",
     "teacher": "吳天予",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "線上",
     "startDate": "2026-09-04",
     "dayOfWeek": 5,
     "timeSlot": "afternoon",
@@ -11924,7 +11624,7 @@
     "name": "西洋歌曲歡唱EZGO",
     "teacher": "簡秀珍",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "中心",
     "startDate": "2026-09-04",
     "dayOfWeek": 5,
     "timeSlot": "afternoon",
@@ -12040,7 +11740,7 @@
     "name": "創意插畫-多媒材輕鬆畫",
     "teacher": "奚遠緣",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "北小",
     "startDate": "2026-08-31",
     "dayOfWeek": 1,
     "timeSlot": "afternoon",
@@ -12156,7 +11856,7 @@
     "name": "鐵道訪古探今自由行-B",
     "teacher": "劉莉娟",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "戶外",
     "startDate": "2026-09-01",
     "dayOfWeek": 2,
     "timeSlot": "afternoon",
@@ -12620,7 +12320,7 @@
     "name": "水彩很好學B",
     "teacher": "黃嵐嵐",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "線上",
     "startDate": "2026-08-31",
     "dayOfWeek": 1,
     "timeSlot": "afternoon",
@@ -12736,7 +12436,7 @@
     "name": "有趣的電氣修復DIY",
     "teacher": "洪進生",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "北小",
     "startDate": "2026-09-01",
     "dayOfWeek": 2,
     "timeSlot": "afternoon",
@@ -12968,7 +12668,7 @@
     "name": "可愛毛線鉤針娃娃-B",
     "teacher": "陳宛伶",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "北小",
     "startDate": "2026-09-03",
     "dayOfWeek": 4,
     "timeSlot": "afternoon",
@@ -13084,7 +12784,7 @@
     "name": "鐵道訪古探今自由行-A",
     "teacher": "劉莉娟",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "戶外",
     "startDate": "2026-09-04",
     "dayOfWeek": 5,
     "timeSlot": "afternoon",
@@ -13200,7 +12900,7 @@
     "name": "快樂學基礎素描",
     "teacher": "施翠峰",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "北小",
     "startDate": "2026-08-31",
     "dayOfWeek": 1,
     "timeSlot": "afternoon",
@@ -13432,7 +13132,7 @@
     "name": "油畫風景花卉B-零基礎可",
     "teacher": "陳彩鳳",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "中心",
     "startDate": "2026-09-02",
     "dayOfWeek": 3,
     "timeSlot": "afternoon",
@@ -13780,7 +13480,7 @@
     "name": "半音階口琴來吹歌",
     "teacher": "陳俊豪",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "北小",
     "startDate": "2026-08-31",
     "dayOfWeek": 1,
     "timeSlot": "afternoon",
@@ -13896,7 +13596,7 @@
     "name": "毛筆字與硬筆字書寫法",
     "teacher": "朱樂民",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "北小",
     "startDate": "2026-09-01",
     "dayOfWeek": 2,
     "timeSlot": "afternoon",
@@ -14012,8 +13712,8 @@
     "name": "嶺南彩墨國畫",
     "teacher": "朱樂民",
     "semester": "115-秋季班",
-    "area": "校本",
-    "startDate": "2026-09-02",
+    "area": "中心",
+    "startDate": "2026-11-25",
     "dayOfWeek": 3,
     "timeSlot": "afternoon",
     "hasVideo": false,
@@ -14031,92 +13731,32 @@
       {
         "week": "第一週",
         "topic": "1",
-        "content": "國畫用具介紹"
+        "content": "秋葉筆墨與基礎寫生"
       },
       {
         "week": "第二週",
         "topic": "2",
-        "content": "國畫鹿角枝幹與北投生態之美"
+        "content": "秋竹與奇石空間構圖"
       },
       {
         "week": "第三週",
         "topic": "3",
-        "content": "國畫鹿角枝幹與北投生態之美～梅花"
+        "content": "名花彩墨與秋日佳景"
       },
       {
         "week": "第四週",
         "topic": "4",
-        "content": "國畫鹿角枝幹與北投生態之美～梅花（沒骨粉紅梅）"
+        "content": "北投老榕與紫藤蔓生"
       },
       {
         "week": "第五週",
         "topic": "5",
-        "content": "國畫鹿角枝幹與北投生態之美～梅花（有骨粉白梅）"
+        "content": "秋林樹景"
       },
       {
         "week": "第六週",
         "topic": "6",
-        "content": "墨色蕙蘭蘭草"
-      },
-      {
-        "week": "第七週",
-        "topic": "7",
-        "content": "彩色蕙蘭蘭草"
-      },
-      {
-        "week": "第八週",
-        "topic": "8",
-        "content": "愛情花"
-      },
-      {
-        "week": "第九週",
-        "topic": "9",
-        "content": "公民週"
-      },
-      {
-        "week": "第十週",
-        "topic": "10",
-        "content": "兔子圖"
-      },
-      {
-        "week": "第十一週",
-        "topic": "11",
-        "content": "兔子圖"
-      },
-      {
-        "week": "第十二週",
-        "topic": "12",
-        "content": "駿馬圖"
-      },
-      {
-        "week": "第十三週",
-        "topic": "13",
-        "content": "台灣藍鵲與北投1"
-      },
-      {
-        "week": "第十四週",
-        "topic": "14",
-        "content": "台灣藍鵲與北投2"
-      },
-      {
-        "week": "第十五週",
-        "topic": "15",
-        "content": "神仙魚1"
-      },
-      {
-        "week": "第十六週",
-        "topic": "16",
-        "content": "神仙魚2"
-      },
-      {
-        "week": "第十七週",
-        "topic": "17",
-        "content": "鯉魚與牡丹1"
-      },
-      {
-        "week": "第十八週",
-        "topic": "18",
-        "content": "鯉魚與牡丹2"
+        "content": "神仙魚"
       }
     ],
     "teacherBio": "楊筱千 講師\n現職：\n個展數次，2013曾與恩師朱樂民老師舉辦《懷念黃磊生教授彩墨畫聯展》\n中華藝術經紀國際交流協會會員\n現任景美救國團終身學習中心-彩墨國畫花鳥班 講師\n現任忠孝救國團終身學習中心-彩墨國畫花鳥班 講師\n現任館前救國團終身學習中心-基礎書法 講師\n現任千石畫苑彩墨國畫講師\n曾任中和德行里彩墨國畫才藝老師\n曾任北投老人中心長青學苑彩墨國畫講師\n曾任古亭救國團終身學習中心彩墨國畫-花鳥班 講師、基礎書法 講師\n簡介：\n本人志趣繪畫藝術多年，曾在西畫上多次獲獎，且對插畫繪畫與平面設計印刷有所經歷，近幾年多研究嶺南彩墨繪畫藝術，並隨恩師勤習書畫，盼能將中西繪畫藝術之長融合，以創造出更貼近生活的繪畫藝術與美的價值。\nhttps://reurl.cc/n1y2ad\n專長：\n嶺南彩墨花鳥蟲魚國畫繪畫藝術，課程除介紹歲寒三友松、竹、梅配蟲與鳥之畫法，另有紫藤花、葡萄、楓葉、金魚等各具特色之題材做不同發揮。\n得獎/擔任評審：\n2023參加第六屆古漕新韵，千秋傳承兩岸青年畫展獲二等獎\n2023兩岸台北厦門百家邀请展\n2023加入中國美術協會\n2000年全國美展西畫類特優\n2014懷念黃磊"
@@ -14128,7 +13768,7 @@
     "name": "油畫風景花卉C-初階入門",
     "teacher": "陳彩鳳",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "北小",
     "startDate": "2026-09-03",
     "dayOfWeek": 4,
     "timeSlot": "afternoon",
@@ -14244,7 +13884,7 @@
     "name": "畫山水、瀑布、畫駿馬奔馳",
     "teacher": "朱樂民",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "北小",
     "startDate": "2026-09-04",
     "dayOfWeek": 5,
     "timeSlot": "afternoon",
@@ -14360,7 +14000,7 @@
     "name": "國台語金曲歡唱C",
     "teacher": "劉台蘭",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "中心",
     "startDate": "2026-08-31",
     "dayOfWeek": 1,
     "timeSlot": "afternoon",
@@ -14477,7 +14117,7 @@
     "teacher": "楊筱千",
     "semester": "115-秋季班",
     "area": "校本",
-    "startDate": "2026-09-01",
+    "startDate": "2026-11-24",
     "dayOfWeek": 2,
     "timeSlot": "afternoon",
     "hasVideo": false,
@@ -14495,92 +14135,32 @@
       {
         "week": "第一週",
         "topic": "1",
-        "content": "國畫用具介紹"
+        "content": "花鳥彩墨基礎與自然觀察"
       },
       {
         "week": "第二週",
         "topic": "2",
-        "content": "國畫葉子與枝幹"
+        "content": "紫藤與麻雀：花鳥生態意境"
       },
       {
         "week": "第三週",
         "topic": "3",
-        "content": "國畫葉子與枝幹"
+        "content": "南瓜與小雞：生活中的趣味意境"
       },
       {
         "week": "第四週",
         "topic": "4",
-        "content": "秋季楓樹與楓香"
+        "content": "桃花與燕子：春日花鳥創作"
       },
       {
         "week": "第五週",
         "topic": "5",
-        "content": "秋季楓樹與楓香"
+        "content": "梅花與鳥：筆墨與意境的表現"
       },
       {
         "week": "第六週",
         "topic": "6",
-        "content": "老樹圍牆與牽牛花"
-      },
-      {
-        "week": "第七週",
-        "topic": "7",
-        "content": "老樹圍牆與牽牛花"
-      },
-      {
-        "week": "第八週",
-        "topic": "8",
-        "content": "山雀與竹"
-      },
-      {
-        "week": "第九週",
-        "topic": "9",
-        "content": "北投社大公民週"
-      },
-      {
-        "week": "第十週",
-        "topic": "10",
-        "content": "白頭翁與他的鳥巢"
-      },
-      {
-        "week": "第十一週",
-        "topic": "11",
-        "content": "白頭翁與他的鳥巢"
-      },
-      {
-        "week": "第十二週",
-        "topic": "12",
-        "content": "單瓣木本芙蓉花"
-      },
-      {
-        "week": "第十三週",
-        "topic": "13",
-        "content": "複瓣木本芙蓉花"
-      },
-      {
-        "week": "第十四週",
-        "topic": "14",
-        "content": "畫兔子1"
-      },
-      {
-        "week": "第十五週",
-        "topic": "15",
-        "content": "畫兔子2"
-      },
-      {
-        "week": "第十六週",
-        "topic": "16",
-        "content": "錦鯉"
-      },
-      {
-        "week": "第十七週",
-        "topic": "17",
-        "content": "松與錦鯉"
-      },
-      {
-        "week": "第十八週",
-        "topic": "18",
-        "content": "松與錦鯉"
+        "content": "花鳥小品創作與作品完成"
       }
     ],
     "teacherBio": "楊筱千 講師\n現職：\n個展數次，2013曾與恩師朱樂民老師舉辦《懷念黃磊生教授彩墨畫聯展》\n中華藝術經紀國際交流協會會員\n現任景美救國團終身學習中心-彩墨國畫花鳥班 講師\n現任忠孝救國團終身學習中心-彩墨國畫花鳥班 講師\n現任館前救國團終身學習中心-基礎書法 講師\n現任千石畫苑彩墨國畫講師\n曾任中和德行里彩墨國畫才藝老師\n曾任北投老人中心長青學苑彩墨國畫講師\n曾任古亭救國團終身學習中心彩墨國畫-花鳥班 講師、基礎書法 講師\n簡介：\n本人志趣繪畫藝術多年，曾在西畫上多次獲獎，且對插畫繪畫與平面設計印刷有所經歷，近幾年多研究嶺南彩墨繪畫藝術，並隨恩師勤習書畫，盼能將中西繪畫藝術之長融合，以創造出更貼近生活的繪畫藝術與美的價值。\nhttps://reurl.cc/n1y2ad\n專長：\n嶺南彩墨花鳥蟲魚國畫繪畫藝術，課程除介紹歲寒三友松、竹、梅配蟲與鳥之畫法，另有紫藤花、葡萄、楓葉、金魚等各具特色之題材做不同發揮。\n得獎/擔任評審：\n2023參加第六屆古漕新韵，千秋傳承兩岸青年畫展獲二等獎\n2023兩岸台北厦門百家邀请展\n2023加入中國美術協會\n2000年全國美展西畫類特優\n2014懷念黃磊"
@@ -14593,7 +14173,7 @@
     "teacher": "劉宇涵",
     "semester": "115-秋季班",
     "area": "校本",
-    "startDate": "2026-09-02",
+    "startDate": "2026-11-25",
     "dayOfWeek": 3,
     "timeSlot": "afternoon",
     "hasVideo": false,
@@ -14611,92 +14191,32 @@
       {
         "week": "第一週",
         "topic": "1",
-        "content": "認識北投代表性植物,芒草,蓬萊米原種田,北投區區花櫻花,學員相見歡,小品創作"
+        "content": "提籃花"
       },
       {
         "week": "第二週",
         "topic": "2",
-        "content": "古典花型-俾德麥爾應用"
+        "content": "平行線桌花"
       },
       {
         "week": "第三週",
         "topic": "3",
-        "content": "古典花型-三角桌花"
+        "content": "聖誕樹製作"
       },
       {
         "week": "第四週",
         "topic": "4",
-        "content": "古典花型-月眉花型"
+        "content": "聖誕花圈製作"
       },
       {
         "week": "第五週",
         "topic": "5",
-        "content": "中秋節花禮設計(採用北投當地花卉)"
+        "content": "聖誕桌花設計"
       },
       {
         "week": "第六週",
         "topic": "6",
-        "content": "圓型手綁花束"
-      },
-      {
-        "week": "第七週",
-        "topic": "7",
-        "content": "法式手綁花束"
-      },
-      {
-        "week": "第八週",
-        "topic": "8",
-        "content": "探訪北投竹子湖花卉產地"
-      },
-      {
-        "week": "第九週",
-        "topic": "9",
-        "content": "公民週"
-      },
-      {
-        "week": "第十週",
-        "topic": "10",
-        "content": "餐桌花設計"
-      },
-      {
-        "week": "第十一週",
-        "topic": "11",
-        "content": "花束練習"
-      },
-      {
-        "week": "第十二週",
-        "topic": "12",
-        "content": "提籃花"
-      },
-      {
-        "week": "第十三週",
-        "topic": "13",
-        "content": "平行線桌花"
-      },
-      {
-        "week": "第十四週",
-        "topic": "14",
-        "content": "聖誕樹製作"
-      },
-      {
-        "week": "第十五週",
-        "topic": "15",
-        "content": "聖誕花圈製作"
-      },
-      {
-        "week": "第十六週",
-        "topic": "16",
-        "content": "聖誕桌花設計"
-      },
-      {
-        "week": "第十七週",
-        "topic": "17",
         "content": "花藝自由創作(採用北投當地花卉)"
-      },
-      {
-        "week": "第十八週",
-        "topic": "18",
-        "content": "成果展準備週"
       }
     ],
     "teacherBio": "劉宇涵 講師\n現職：\n社大歐式花藝講師\n簡介：\n美國AIFD認證CFD (Certified Floral Designer)\nADFA國際證照荷蘭進階花藝設計師\n中華花藝研究推廣基金會 歐式花藝教授\n專長：\n花藝,植物設計教學與創作\n擁有證照：\n西元2014年     ADFA國際證照荷蘭進階花藝設計師\n西元2016年     中華花藝研究推廣基金會 歐式花藝教授\n西元2020年     經濟部iPAS 色彩規劃管理師(色彩計畫)\n西元2024年     美國AIFD認證CFD (Certified Floral Designer)\n部落格(Blog)：\n建置中\n臉書(Facebook)：\n建置中"
@@ -14708,7 +14228,7 @@
     "name": "療癒紓壓空靈鼓(B班)",
     "teacher": "吳錦雯",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "北小",
     "startDate": "2026-09-03",
     "dayOfWeek": 4,
     "timeSlot": "afternoon",
@@ -14824,7 +14344,7 @@
     "name": "就愛畫水彩B",
     "teacher": "溫牧",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "線上",
     "startDate": "2026-09-04",
     "dayOfWeek": 5,
     "timeSlot": "afternoon",
@@ -14941,7 +14461,7 @@
     "teacher": "李育航",
     "semester": "115-秋季班",
     "area": "校本",
-    "startDate": "2026-08-31",
+    "startDate": "2026-11-23",
     "dayOfWeek": 1,
     "timeSlot": "afternoon",
     "hasVideo": false,
@@ -15056,7 +14576,7 @@
     "name": "禪繞繪生活A",
     "teacher": "彭毓涵",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "北小",
     "startDate": "2026-09-01",
     "dayOfWeek": 2,
     "timeSlot": "afternoon",
@@ -15172,7 +14692,7 @@
     "name": "流行爵士鋼琴輕鬆學B",
     "teacher": "黃昭蓉",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "北小",
     "startDate": "2026-09-02",
     "dayOfWeek": 3,
     "timeSlot": "afternoon",
@@ -15404,7 +14924,7 @@
     "name": "金工鍛敲多元創作-動態篇",
     "teacher": "周勻甄",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "北小",
     "startDate": "2026-09-04",
     "dayOfWeek": 5,
     "timeSlot": "afternoon",
@@ -15520,7 +15040,7 @@
     "name": "永續農法-香草與時蔬共榮",
     "teacher": "侯務葵",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "戶外",
     "startDate": "2026-08-31",
     "dayOfWeek": 1,
     "timeSlot": "afternoon",
@@ -15554,7 +15074,7 @@
       {
         "week": "第四週",
         "topic": "4",
-        "content": "社大基地維護和種植1"
+        "content": "社大基地維護和種植1（戶外農場）"
       },
       {
         "week": "第五週",
@@ -15574,7 +15094,7 @@
       {
         "week": "第八週",
         "topic": "8",
-        "content": "反轉學習:學習心得和提問整理"
+        "content": "反轉學習:學習心得和提問整理（戶外農場）"
       },
       {
         "week": "第九週",
@@ -15594,7 +15114,7 @@
       {
         "week": "第十二週",
         "topic": "12",
-        "content": "家庭種植:草莓為例"
+        "content": "家庭種植:草莓為例（戶外農場）"
       },
       {
         "week": "第十三週",
@@ -15609,7 +15129,7 @@
       {
         "week": "第十五週",
         "topic": "15",
-        "content": "社大基地維護與養土:二樓天井的左手香與姑婆芋為例例"
+        "content": "社大基地維護與養土:二樓天井的左手香與姑婆芋為例例（戶外農場）"
       },
       {
         "week": "第十六週",
@@ -15624,7 +15144,7 @@
       {
         "week": "第十八週",
         "topic": "18",
-        "content": "成果展準備週"
+        "content": "成果展準備週（戶外農場）"
       }
     ],
     "teacherBio": "侯務葵 講師\n現職：\n1.桃源國中108第一學期田園社團指導教師\n簡介：\n2014,2015田園城市種子師資培訓初階，進階結業、法鼓山心靈環保農法、北投農會農業推廣教育講座等。\n基地實作:清江幸福開心農場、北投自然農法研習社(18份基地)、奇岩76開心農場、桃源國中小田園等。\n專長：\n1.2017年芳香療法乙級講師證照，對於身心靈統整，非常關心，結合種植，喜歡用香草植物，泡茶與人分享。\n2.持續研究和實作，生態種植。\n部落格(Blog)：\n建置中\n臉書(Facebook)：\n侯務葵"
@@ -15868,7 +15388,7 @@
     "name": "唱流行歌曲學音樂A",
     "teacher": "高豪佑",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "中心",
     "startDate": "2026-09-03",
     "dayOfWeek": 4,
     "timeSlot": "afternoon",
@@ -16332,7 +15852,7 @@
     "name": "手機創意拍照玩影像",
     "teacher": "方金線",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "北小",
     "startDate": "2026-09-02",
     "dayOfWeek": 3,
     "timeSlot": "afternoon",
@@ -16448,7 +15968,7 @@
     "name": "古琴彈唱樂趣",
     "teacher": "石羽彤",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "北小",
     "startDate": "2026-09-03",
     "dayOfWeek": 4,
     "timeSlot": "afternoon",
@@ -16564,7 +16084,7 @@
     "name": "向日葵國台客語親子合唱團",
     "teacher": "溫淑玲",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "北小",
     "startDate": "2026-09-04",
     "dayOfWeek": 5,
     "timeSlot": "afternoon",
@@ -16680,7 +16200,7 @@
     "name": "悠遊北台灣",
     "teacher": "林錦燁",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "戶外",
     "startDate": "2026-08-31",
     "dayOfWeek": 1,
     "timeSlot": "afternoon",
@@ -16699,7 +16219,7 @@
       {
         "week": "第一週",
         "topic": "1",
-        "content": "相見歡 課程介紹  ( 室內)"
+        "content": "史蹟走讀部分室內"
       },
       {
         "week": "第二週",
@@ -16796,7 +16316,7 @@
     "name": "快樂唱演歌學日本文化",
     "teacher": "游美媛",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "中心",
     "startDate": "2026-09-01",
     "dayOfWeek": 2,
     "timeSlot": "afternoon",
@@ -16913,7 +16433,7 @@
     "teacher": "洪儷今",
     "semester": "115-秋季班",
     "area": "校本",
-    "startDate": "2026-09-02",
+    "startDate": "2026-11-25",
     "dayOfWeek": 3,
     "timeSlot": "afternoon",
     "hasVideo": false,
@@ -17028,7 +16548,7 @@
     "name": "快樂學唱卡拉OK-C",
     "teacher": "陳郁婷",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "線上",
     "startDate": "2026-09-03",
     "dayOfWeek": 4,
     "timeSlot": "afternoon",
@@ -17260,7 +16780,7 @@
     "name": "料理萌學園-餐桌好食光",
     "teacher": "陳亮萌",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "Mo",
     "startDate": "2026-08-31",
     "dayOfWeek": 1,
     "timeSlot": "afternoon",
@@ -17376,7 +16896,7 @@
     "name": "北歐式健走",
     "teacher": "林秋琴",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "戶外",
     "startDate": "2026-09-01",
     "dayOfWeek": 2,
     "timeSlot": "afternoon",
@@ -17492,7 +17012,7 @@
     "name": "觀光自遊行日語會話2",
     "teacher": "曹淑女",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "線上",
     "startDate": "2026-09-02",
     "dayOfWeek": 3,
     "timeSlot": "afternoon",
@@ -17724,7 +17244,7 @@
     "name": "成人芭蕾D",
     "teacher": "洪儷今",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "北小",
     "startDate": "2026-09-04",
     "dayOfWeek": 5,
     "timeSlot": "afternoon",
@@ -17840,7 +17360,7 @@
     "name": "北台灣旅遊去",
     "teacher": "林錦燁",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "戶外",
     "startDate": "2026-09-01",
     "dayOfWeek": 2,
     "timeSlot": "afternoon",
@@ -17859,7 +17379,7 @@
       {
         "week": "第一週",
         "topic": "1",
-        "content": "相見歡 (室內課)"
+        "content": "史蹟走讀部分室內"
       },
       {
         "week": "第二週",
@@ -17956,7 +17476,7 @@
     "name": "樂遊北台灣",
     "teacher": "林錦燁",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "戶外",
     "startDate": "2026-09-02",
     "dayOfWeek": 3,
     "timeSlot": "afternoon",
@@ -17975,7 +17495,7 @@
       {
         "week": "第一週",
         "topic": "1",
-        "content": "相見歡 課程介紹   室內"
+        "content": "史蹟走讀部分室內"
       },
       {
         "week": "第二週",
@@ -18072,7 +17592,7 @@
     "name": "擁有健康好肌手工皂",
     "teacher": "吳羚禎",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "北小",
     "startDate": "2026-09-03",
     "dayOfWeek": 4,
     "timeSlot": "afternoon",
@@ -18305,7 +17825,7 @@
     "teacher": "林瓊華",
     "semester": "115-秋季班",
     "area": "校本",
-    "startDate": "2026-09-01",
+    "startDate": "2026-11-24",
     "dayOfWeek": 2,
     "timeSlot": "afternoon",
     "hasVideo": false,
@@ -18333,7 +17853,7 @@
       {
         "week": "第三週",
         "topic": "3",
-        "content": "菠蘿麵包"
+        "content": "黃金乳酪起士蛋糕"
       },
       {
         "week": "第四週",
@@ -18349,66 +17869,6 @@
         "week": "第六週",
         "topic": "6",
         "content": "全麥無花果吐司"
-      },
-      {
-        "week": "第七週",
-        "topic": "7",
-        "content": "黃金乳酪起士蛋糕"
-      },
-      {
-        "week": "第八週",
-        "topic": "8",
-        "content": "黑芝麻醬貝果"
-      },
-      {
-        "week": "第九週",
-        "topic": "9",
-        "content": "公民週"
-      },
-      {
-        "week": "第十週",
-        "topic": "10",
-        "content": "杏仁酥"
-      },
-      {
-        "week": "第十一週",
-        "topic": "11",
-        "content": "椒麻黑芝麻酥餅"
-      },
-      {
-        "week": "第十二週",
-        "topic": "12",
-        "content": "帕瑪森起士條"
-      },
-      {
-        "week": "第十三週",
-        "topic": "13",
-        "content": "青蔥麵包"
-      },
-      {
-        "week": "第十四週",
-        "topic": "14",
-        "content": "戚風水果蛋糕"
-      },
-      {
-        "week": "第十五週",
-        "topic": "15",
-        "content": "長形卡士達麵包"
-      },
-      {
-        "week": "第十六週",
-        "topic": "16",
-        "content": "可頌"
-      },
-      {
-        "week": "第十七週",
-        "topic": "17",
-        "content": "杏仁蔓越莓堅果塔"
-      },
-      {
-        "week": "第十八週",
-        "topic": "18",
-        "content": "成果展準備週"
       }
     ],
     "teacherBio": "林瓊華 講師\n現職：\n中山社大生活藝能類-西點與麵包烘焙課程講師。北投社區大學-時尚烘焙創作、時尚烘焙創作-最佳人氣\n簡介：\n● 0097-02-01~0103-07-01 稻江護家 餐飲科烘焙兼任老師\n● 0103-03-01~0110-04-06 中山社大 烘焙課程講師\n中山社大 生活藝能類-西點麵包烘焙課程講師>>麵包、蛋糕初階、進階檢定課程。儲備老闆班教學。非正規教育認證課程.\n● 0108-07-01~0109-07-01 士林社大 西點烘焙課程講師 、儲備老闆班講師\n專長：\n西點、麵包烘焙課程教學.各項產品延伸開發設計與創作。\n烘焙丙級檢定-蛋糕、麵包教學。\n烘焙乙級檢定-蛋糕、麵包、慕斯教學。\n中式點心丙級檢定-糕漿酥皮類教學。\n擁有證照：\n西元2001年     烘焙食品-西點蛋糕丙級\n西元2003年     調酒-丙級\n西元2003年     烘焙食品-麵包西點蛋糕乙級\n西元2003年     中餐烹調-葷食丙級\n西元2007年     中餐烹調-葷食乙級\n西元2015年     中式麵食加工-酥油皮、糕漿皮類 丙級\n得獎/擔任評審：\n西元2015年     2015"
@@ -18420,7 +17880,7 @@
     "name": "電器修復輕鬆學",
     "teacher": "洪進生",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "中心",
     "startDate": "2026-09-03",
     "dayOfWeek": 4,
     "timeSlot": "afternoon",
@@ -19116,7 +18576,7 @@
     "name": "輕鬆學篆刻",
     "teacher": "葉錫棟",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "北小",
     "startDate": "2026-09-03",
     "dayOfWeek": 4,
     "timeSlot": "evening",
@@ -19232,7 +18692,7 @@
     "name": "笛簫的演奏方法及史觀",
     "teacher": "李錫奇",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "凱達",
     "startDate": "2026-09-04",
     "dayOfWeek": 5,
     "timeSlot": "evening",
@@ -19348,7 +18808,7 @@
     "name": "好花好心情-中華花藝",
     "teacher": "何淑娥",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "北小",
     "startDate": "2026-08-31",
     "dayOfWeek": 1,
     "timeSlot": "evening",
@@ -19464,7 +18924,7 @@
     "name": "影片賞析與基礎製片",
     "teacher": "朱增有",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "凱達",
     "startDate": "2026-09-01",
     "dayOfWeek": 2,
     "timeSlot": "evening",
@@ -19696,7 +19156,7 @@
     "name": "全方位日語會話社-高階",
     "teacher": "曾琬鈴",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "關中",
     "startDate": "2026-09-03",
     "dayOfWeek": 4,
     "timeSlot": "evening",
@@ -20044,7 +19504,7 @@
     "name": "輕鬆學西語-初級",
     "teacher": "楊威武",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "凱達",
     "startDate": "2026-09-01",
     "dayOfWeek": 2,
     "timeSlot": "evening",
@@ -20276,7 +19736,7 @@
     "name": "輕鬆學粉彩水粉風景畫B",
     "teacher": "陳俊佑",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "清江",
     "startDate": "2026-09-03",
     "dayOfWeek": 4,
     "timeSlot": "evening",
@@ -20856,7 +20316,7 @@
     "name": "陶笛認真玩-高級",
     "teacher": "陳若儀",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "凱達",
     "startDate": "2026-09-03",
     "dayOfWeek": 4,
     "timeSlot": "evening",
@@ -21320,7 +20780,7 @@
     "name": "全方位日語會話-中階",
     "teacher": "曾琬鈴",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "北小",
     "startDate": "2026-09-02",
     "dayOfWeek": 3,
     "timeSlot": "evening",
@@ -22248,7 +21708,7 @@
     "name": "水彩很好學A",
     "teacher": "黃嵐嵐",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "線上",
     "startDate": "2026-08-31",
     "dayOfWeek": 1,
     "timeSlot": "evening",
@@ -22480,7 +21940,7 @@
     "name": "輕鬆學西語-進階",
     "teacher": "楊威武",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "北小",
     "startDate": "2026-09-02",
     "dayOfWeek": 3,
     "timeSlot": "evening",
@@ -23176,7 +22636,7 @@
     "name": "想像力插畫",
     "teacher": "邱嘉怡",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "關中",
     "startDate": "2026-09-03",
     "dayOfWeek": 4,
     "timeSlot": "evening",
@@ -23408,7 +22868,7 @@
     "name": "日常書寫-書法的空間藝術B",
     "teacher": "陳紀安",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "北小",
     "startDate": "2026-08-31",
     "dayOfWeek": 1,
     "timeSlot": "evening",
@@ -23988,7 +23448,7 @@
     "name": "國台語金曲歡唱A",
     "teacher": "劉台蘭",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "中心",
     "startDate": "2026-08-31",
     "dayOfWeek": 1,
     "timeSlot": "evening",
@@ -24104,7 +23564,7 @@
     "name": "快樂演奏小提琴",
     "teacher": "黃聖彥",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "凱達",
     "startDate": "2026-09-01",
     "dayOfWeek": 2,
     "timeSlot": "evening",
@@ -24336,7 +23796,7 @@
     "name": "快樂學二胡-基礎",
     "teacher": "林世凡",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "凱達",
     "startDate": "2026-09-03",
     "dayOfWeek": 4,
     "timeSlot": "evening",
@@ -24452,7 +23912,7 @@
     "name": "悠揚大提琴",
     "teacher": "黃韻萱",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "凱達",
     "startDate": "2026-09-04",
     "dayOfWeek": 5,
     "timeSlot": "evening",
@@ -24684,7 +24144,7 @@
     "name": "烏克麗麗好好玩",
     "teacher": "張凱棠",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "中心",
     "startDate": "2026-09-01",
     "dayOfWeek": 2,
     "timeSlot": "evening",
@@ -25032,7 +24492,7 @@
     "name": "輕鬆快樂口琴入門",
     "teacher": "張淑貞",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "中心",
     "startDate": "2026-09-04",
     "dayOfWeek": 5,
     "timeSlot": "evening",
@@ -25501,7 +24961,7 @@
     "name": "快樂學唱卡拉OK-B",
     "teacher": "陳郁婷",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "中心",
     "startDate": "2026-09-03",
     "dayOfWeek": 4,
     "timeSlot": "evening",
@@ -25617,7 +25077,7 @@
     "name": "琵琶演奏美學",
     "teacher": "陳薇如",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "北小",
     "startDate": "2026-09-04",
     "dayOfWeek": 5,
     "timeSlot": "evening",
@@ -25724,7 +25184,7 @@
         "content": "成果展準備週"
       }
     ],
-    "teacherBio": "陳薇如 講師\n現職：\n萬華社區大學琵琶演奏美學講師\n臺北市立永春高中國樂團琵琶分部老師\n新北市北峰國小國樂團琵琶分部老師\n康寧國小烏克麗麗社團老師\n亮吟琵琶樂坊創辦人\n各大音樂教室特約老師\n簡介：\n自幼學習琵琶，國立台北藝術大學傳統音樂學系畢業；主修琵琶，副修鋼琴。曾赴北京中國音樂學院進修，多次於國家音樂廳擔任獨奏、協奏演出。並於國立台北藝術大學舞蹈廳、維多利亞酒店舉辦個人專場獨奏會。現為萬華社區大學琵琶演奏美學講師、新北市北峰國小國樂團琵琶分部老師、亮吟琵琶樂坊創辦人。積極推廣傳統文化、傳統古典音樂之美。\n演出經歷\n2019年1月 隨中華國樂團於國家音樂廳演出2019新年音樂會。\n2018年6月 於國立台北藝術大學舉辦<如歌>陳薇如琵琶獨奏會。\n專長：\n琵琶演奏、彈撥樂器基礎訓練、傳統器樂教學法、成人音樂教育、分齡音樂教學設計、音樂學習動機培養、傳統器樂教學系統化、跨領域藝術教育活動設計\n得獎/擔任評審：\n西元2015年     中華國樂學會器樂大賽成人組第一名。\n西元2017年     全國學生音樂比賽獲大專A組優等獎。\n西元2017年     台北市學生音樂比賽，大專A組優等第一"
+    "teacherBio": "陳薇如 講師\n現職：\n萬華/北投/南港社區大學琵琶演奏美學講師\n新北市北峰國小國樂團琵琶分部老師\n康寧國小烏克麗麗社團老師\n亮吟琵琶樂坊創辦人\n各大音樂教室特約老師\n簡介：\n自幼學習琵琶，國立台北藝術大學傳統音樂學系畢業；主修琵琶，副修鋼琴。曾赴北京中國音樂學院進修，多次於國家音樂廳擔任獨奏、協奏演出。並於國立台北藝術大學舞蹈廳、維多利亞酒店舉辦個人專場獨奏會。現為萬華社區大學琵琶演奏美學講師、新北市北峰國小國樂團琵琶分部老師、亮吟琵琶樂坊創辦人。積極推廣傳統文化、傳統古典音樂之美。\n演出經歷\n2019年1月 隨中華國樂團於國家音樂廳演出2019新年音樂會。\n2018年6月 於國立台北藝術大學舉辦<如歌>陳薇如琵琶獨奏會。\n專長：\n琵琶演奏、彈撥樂器基礎訓練、傳統器樂教學法、成人音樂教育、分齡音樂教學設計、音樂學習動機培養、傳統器樂教學系統化、跨領域藝術教育活動設計\n得獎/擔任評審：\n西元2015年     中華國樂學會器樂大賽成人組第一名。\n西元2017年     全國學生音樂比賽獲大專A組優等獎。\n西元2017年     台北市學生音樂比賽，大專A組優等第一名。\n部落格(Blog)"
   },
   {
     "id": "beitou_f3abaf63a24fa0e468a0d791389fa1bd",
@@ -26661,7 +26121,7 @@
     "name": "敦煌樂舞",
     "teacher": "閻仲玲",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "凱達",
     "startDate": "2026-09-03",
     "dayOfWeek": 4,
     "timeSlot": "evening",
@@ -27125,7 +26585,7 @@
     "name": "五燈國標",
     "teacher": "陳美安",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "凱達",
     "startDate": "2026-09-02",
     "dayOfWeek": 3,
     "timeSlot": "evening",
@@ -27357,7 +26817,7 @@
     "name": "從零基礎學太極拳",
     "teacher": "林義淵",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "凱達",
     "startDate": "2026-09-04",
     "dayOfWeek": 5,
     "timeSlot": "evening",
@@ -27705,13 +27165,13 @@
     "name": "快樂學唱卡拉OK-A",
     "teacher": "陳郁婷",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "中心",
     "startDate": "2026-09-02",
     "dayOfWeek": 3,
     "timeSlot": "evening",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "",
     "credits": 3,
     "fee": 3000,
@@ -27937,7 +27397,7 @@
     "name": "陳氏太極拳",
     "teacher": "林義淵",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "北中",
     "startDate": "2026-08-31",
     "dayOfWeek": 1,
     "timeSlot": "evening",
@@ -28866,7 +28326,7 @@
     "teacher": "鄭淵均",
     "semester": "115-秋季班",
     "area": "校本",
-    "startDate": "2026-08-31",
+    "startDate": "2026-11-23",
     "dayOfWeek": 1,
     "timeSlot": "evening",
     "hasVideo": false,
@@ -28981,7 +28441,7 @@
     "name": "時尚帽子-快樂編織A",
     "teacher": "黃瓊瑩",
     "semester": "115-秋季班",
-    "area": "校本",
+    "area": "凱達",
     "startDate": "2026-09-01",
     "dayOfWeek": 2,
     "timeSlot": "evening",

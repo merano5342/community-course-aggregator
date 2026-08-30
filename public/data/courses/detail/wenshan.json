@@ -1752,7 +1752,7 @@
     "timeSlot": "evening",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/wenshan/thumb/614359193206a.jpg",
     "credits": 3,
     "fee": 3000,
@@ -3578,7 +3578,7 @@
     "timeSlot": "evening",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/wenshan/thumb/",
     "credits": 3,
     "fee": 3000,
@@ -4158,7 +4158,7 @@
     "timeSlot": "afternoon",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/wenshan/thumb/6606f36e49853.jpg",
     "credits": 3,
     "fee": 3000,
@@ -4259,7 +4259,7 @@
         "content": "課程期末分享"
       }
     ],
-    "teacherBio": "李欣融 講師\n現職：\n新中和社區大學文史社 顧問\n萬華社區大學 講師\n艋舺龍山寺 導覽志工\n新北市雙和文史協會 理事長\n簡介：\n台科大建築學碩士\n新中和社大、萬華社大文史教師\n雙和文史導覽員培訓師資\n專長：\n文化資產、台灣歷史、日本深度旅行"
+    "teacherBio": "李欣融 講師\n現職：\n新中和社區大學文史社 顧問\n萬華社區大學 講師\n艋舺龍山寺 導覽志工\n新北市雙和文史協會 理事長\n簡介：\n台科大建築學碩士\n中正社大、萬華社大文史教師\n雙和文史導覽員培訓師資\n專長：\n文化資產、台灣歷史、日本深度旅行"
   },
   {
     "id": "wenshan_866e5df3878933633bfc96f9d5345684",
@@ -4968,7 +4968,7 @@
       {
         "week": "第四週",
         "topic": "4",
-        "content": "09/19(六)戶外課程：白色恐怖景美紀念園區走讀"
+        "content": "09/20(日)戶外課程：白色恐怖景美紀念園區走讀"
       },
       {
         "week": "第五週",
@@ -8930,7 +8930,7 @@
         "content": "課程期末分享"
       }
     ],
-    "teacherBio": "李欣融 講師\n現職：\n新中和社區大學文史社 顧問\n萬華社區大學 講師\n艋舺龍山寺 導覽志工\n新北市雙和文史協會 理事長\n簡介：\n台科大建築學碩士\n新中和社大、萬華社大文史教師\n雙和文史導覽員培訓師資\n專長：\n文化資產、台灣歷史、日本深度旅行"
+    "teacherBio": "李欣融 講師\n現職：\n新中和社區大學文史社 顧問\n萬華社區大學 講師\n艋舺龍山寺 導覽志工\n新北市雙和文史協會 理事長\n簡介：\n台科大建築學碩士\n中正社大、萬華社大文史教師\n雙和文史導覽員培訓師資\n專長：\n文化資產、台灣歷史、日本深度旅行"
   },
   {
     "id": "wenshan_49eb3e41b5220cb026d15106ccf0e802",
@@ -9928,7 +9928,7 @@
     "timeSlot": "evening",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/wenshan/thumb/5617f9f6a0215.jpg",
     "credits": 3,
     "fee": 3000,
@@ -13981,7 +13981,7 @@
       {
         "week": "第三週",
         "topic": "3",
-        "content": "9/17【尋秘圓山，密境之光】圓山西密道的故事（全天課)"
+        "content": "9/17【台灣文學基地：語言的奇妙碰撞，文學的世紀對話（全日課）"
       },
       {
         "week": "第四週",
@@ -14001,17 +14001,17 @@
       {
         "week": "第七週",
         "topic": "7",
-        "content": "10/22  (與第二週合併)"
+        "content": "10/15  (與第二週合併)"
       },
       {
         "week": "第八週",
         "topic": "8",
-        "content": "10/29 (與第三週合併)"
+        "content": "10/22 (與第三週合併)"
       },
       {
         "week": "第九週",
         "topic": "9",
-        "content": "11/5 公民參與週"
+        "content": "10/29 公民參與週"
       },
       {
         "week": "第十週",
@@ -14026,7 +14026,7 @@
       {
         "week": "第十二週",
         "topic": "12",
-        "content": "11/19 期末歡樂派對：一路走來多歡喜，因為有你同行 （全天課)"
+        "content": "11/19 期末歡樂輕軌之旅——淡江大橋夕陽派對：一路走來多歡喜，因為有你同行（全日課／下午至晚上）"
       },
       {
         "week": "第十三週",
@@ -14291,7 +14291,7 @@
         "content": "期末分享與回饋"
       }
     ],
-    "teacherBio": "李欣融 講師\n現職：\n新中和社區大學文史社 顧問\n萬華社區大學 講師\n艋舺龍山寺 導覽志工\n新北市雙和文史協會 理事長\n簡介：\n台科大建築學碩士\n新中和社大、萬華社大文史教師\n雙和文史導覽員培訓師資\n專長：\n文化資產、台灣歷史、日本深度旅行"
+    "teacherBio": "李欣融 講師\n現職：\n新中和社區大學文史社 顧問\n萬華社區大學 講師\n艋舺龍山寺 導覽志工\n新北市雙和文史協會 理事長\n簡介：\n台科大建築學碩士\n中正社大、萬華社大文史教師\n雙和文史導覽員培訓師資\n專長：\n文化資產、台灣歷史、日本深度旅行"
   },
   {
     "id": "wenshan_1381650eefebfa6de47c3d95d8894530",
@@ -16364,7 +16364,7 @@
     "timeSlot": "evening",
     "hasVideo": true,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/wenshan/thumb/66f820c99d982.png",
     "credits": 3,
     "fee": 3000,
@@ -16712,7 +16712,7 @@
     "timeSlot": "evening",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/wenshan/thumb/68c84b736dd92.jpeg",
     "credits": 3,
     "fee": 3000,
@@ -18763,12 +18763,12 @@
       {
         "week": "第三週",
         "topic": "3",
-        "content": "9/20 (日) 棲地維護"
+        "content": "9/18 (五) 淺山生態之美"
       },
       {
         "week": "第四週",
         "topic": "4",
-        "content": "9/25 (五) 淺山生態之美"
+        "content": "9/20 (日) 棲地維護"
       },
       {
         "week": "第五週",
@@ -19982,7 +19982,7 @@
     "timeSlot": "evening",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/wenshan/thumb/",
     "credits": 3,
     "fee": 3000,
@@ -20496,7 +20496,7 @@
     "name": "AI助攻–Excel職場應用",
     "teacher": "侯玉彤",
     "semester": "115-秋季班",
-    "area": "景美",
+    "area": "混成",
     "startDate": "2026-09-04",
     "dayOfWeek": 5,
     "timeSlot": "evening",
