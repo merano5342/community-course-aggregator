@@ -1280,7 +1280,7 @@
     "school": "wenshan",
     "uHash": "6e48a50c62d6bd20a8d7819a46706fdd",
     "name": "人體速寫輕鬆畫",
-    "teacher": "陳美心",
+    "teacher": "蔣蓮霓",
     "semester": "115-秋季班",
     "area": "景美",
     "startDate": "2026-08-31",
@@ -1389,7 +1389,7 @@
         "content": "作品講解及作畫示範人體的肌肉與關節的分析"
       }
     ],
-    "teacherBio": "陳美心 講師\n現職：\n復興設計學院 動漫老師、新中和社區大學 講師\n簡介：\n宏廣卡通 原畫師、文瀾資訊 原畫師\n專長：\n2D動畫原畫師 專業20餘年\n部落格(Blog)：\n建置中\n臉書(Facebook)：\nhttps://www.facebook.com/profile.php?id=100017664315433"
+    "teacherBio": "陳美心 講師\n現職：\n復興設計學院 動漫老師、新中和社區大學 講師\n簡介：\n宏廣卡通 原畫師、文瀾資訊 原畫師\n專長：\n2D動畫原畫師 專業20餘年\n部落格(Blog)：\n建置中\n臉書(Facebook)：\nhttps://www.facebook.com/profile.php?id=100017664315433\n蔣蓮霓 講師\n現職：\n台北市人體畫學會理事長\n簡介：\n● 2010-01-04~2026--------台北市人體畫學會 美術老師 繪畫教室 人體畫速寫>>\n● 2015-06-01~2017-12-29 台北市大安教會 美術老師 松年大學 西畫油畫水彩教學>>\n● 2016-01-01~2026------- 台北市建築師公會 美術老師 繪畫教室 人體畫速寫>>\n專長：\n人體畫及人體速寫及抽象藝術\n臉書(Facebook)：\nhttps://www.facebook.com/anny.chiang.189955/about?locale=zh_TW"
   },
   {
     "id": "wenshan_be9a764153bc7596ba567395205345cb",
@@ -2216,12 +2216,12 @@
     "timeSlot": "evening",
     "hasVideo": true,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/wenshan/thumb/670dd7773f0fc.png",
     "credits": 3,
     "fee": 3000,
     "weeks": 18,
-    "quota": 28,
+    "quota": 26,
     "schedule": "每星期一 晚上 7點0分~9點30分",
     "description": "讓沒有音樂基礎的學員透過簡單易學好攜帶，音色豐富多變的半音階口琴輕鬆來吹流行歌，開心地進入音樂世界!\n1.建立節拍與讀譜能力，往後看到任何歌曲都能自行吹奏\n2.透過吹奏民歌老歌、流行歌、世界名曲，多元的音樂風格，自娛娛人，不再害怕上台表演\n課程QR CODE網址",
     "targetAudience": "適合沒有音樂基礎，只要對半音階口琴有興趣，都歡迎來體驗吹歌的樂趣與成就感",
@@ -2564,7 +2564,7 @@
     "timeSlot": "evening",
     "hasVideo": false,
     "isMixed": false,
-    "status": "full",
+    "status": "open",
     "imageUrl": "images_course/wenshan/thumb/560aa0ffdeb71.png",
     "credits": 3,
     "fee": 3000,
@@ -2796,7 +2796,7 @@
     "timeSlot": "evening",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/wenshan/thumb/",
     "credits": 3,
     "fee": 3000,
@@ -3707,17 +3707,17 @@
       {
         "week": "第一週",
         "topic": "1",
-        "content": "9/2（二）相見歡"
+        "content": "9/1（二）相見歡"
       },
       {
         "week": "第二週",
         "topic": "2",
-        "content": "9/9（二）內湖雙湖一溪走讀"
+        "content": "9/8（二）內湖雙湖一溪走讀"
       },
       {
         "week": "第三週",
         "topic": "3",
-        "content": "9/23(二）基隆河平溪溯源、中游基隆水資源及八斗子海濱生態與海科館走讀（全天課）"
+        "content": "9/22(二）基隆河平溪溯源、中游基隆水資源及八斗子海濱生態與海科館走讀（全天課）"
       },
       {
         "week": "第四週",
@@ -3727,17 +3727,17 @@
       {
         "week": "第五週",
         "topic": "5",
-        "content": "9/30（二）文山仙跡岩山水家園與手作步道"
+        "content": "9/29（二）文山仙跡岩山水家園與手作步道"
       },
       {
         "week": "第六週",
         "topic": "6",
-        "content": "10/7（二）水水基北（七堵/五堵兩溪一河）走讀"
+        "content": "10/6（二）水水基北（七堵/五堵兩溪一河）走讀"
       },
       {
         "week": "第七週",
         "topic": "7",
-        "content": "10/21（二）新竹頭前溪與鳳山溪生態人文產業及桃園大漢溪生態人文水資源走讀（全天課）"
+        "content": "10/20（二）新竹頭前溪與鳳山溪生態人文產業及桃園大漢溪生態人文水資源走讀（全天課）"
       },
       {
         "week": "第八週",
@@ -3752,17 +3752,17 @@
       {
         "week": "第十週",
         "topic": "10",
-        "content": "11/4（二）汐止四股埤+茄苳溪瀑布群生態人文走讀"
+        "content": "11/3（二）汐止四股埤+茄苳溪瀑布群生態人文走讀"
       },
       {
         "week": "第十一週",
         "topic": "11",
-        "content": "11/11（二）北藝大水牛與關渡平原金黃稻浪時"
+        "content": "11/10（二）北藝大水牛與關渡平原金黃稻浪時"
       },
       {
         "week": "第十二週",
         "topic": "12",
-        "content": "11/25（二）水水宜蘭員山三星三生有幸水家園走讀（全天課）"
+        "content": "11/24（二）水水宜蘭員山三星三生有幸水家園走讀（全天課）"
       },
       {
         "week": "第十三週",
@@ -3772,27 +3772,27 @@
       {
         "week": "第十四週",
         "topic": "14",
-        "content": "12/2(二）新店溪碧潭+灣潭山水人文巡禮"
+        "content": "12/1(二）新店溪碧潭+灣潭山水人文巡禮"
       },
       {
         "week": "第十五週",
         "topic": "15",
-        "content": "12/9（二）雙北新店溪下游生態賞鳥暨人文走讀"
+        "content": "12/8（二）雙北新店溪下游生態賞鳥暨人文走讀"
       },
       {
         "week": "第十六週",
         "topic": "16",
-        "content": "12/16（二）雙社兩河士林北投兩區流域觀蟹賞鳥生態人文巡禮"
+        "content": "12/15（二）雙社兩河士林北投兩區流域觀蟹賞鳥生態人文巡禮"
       },
       {
         "week": "第十七週",
         "topic": "17",
-        "content": "12/23（二）雙北汐湖水家園（三溪一湖一埤一大河）+走訪藝術造鎮：夢想社區"
+        "content": "12/22（二）雙北汐湖水家園（三溪一湖一埤一大河）+走訪藝術造鎮：夢想社區"
       },
       {
         "week": "第十八週",
         "topic": "18",
-        "content": "12/30（二）磺港溪與新北投生態人文暨北投溫泉文化路徑"
+        "content": "12/29（二）磺港溪與新北投生態人文暨北投溫泉文化路徑"
       }
     ],
     "teacherBio": "陳建志 講師\n現職：\n現任台灣永續聯盟秘書長、文山社區大學 環境生態學程 學程召集人，台灣永續聯盟理事長/台灣綠色公民行動聯盟理事/河川與單車旅行社大講師\n簡介：\n台灣永續聯盟理事長/台灣綠色公民行動聯盟理事/河川與單車旅行社大講師"
@@ -4968,7 +4968,7 @@
       {
         "week": "第四週",
         "topic": "4",
-        "content": "09/20(日)戶外課程：白色恐怖景美紀念園區走讀"
+        "content": "09/19(六)戶外課程：白色恐怖景美紀念園區走讀"
       },
       {
         "week": "第五週",
@@ -5008,7 +5008,7 @@
       {
         "week": "第十二週",
         "topic": "12",
-        "content": "11/14(六)戶外課程：走入歷史現場：六張犁墓區走讀"
+        "content": "11/15(日)戶外課程：走入歷史現場：六張犁墓區走讀"
       }
     ],
     "teacherBio": "游婷雯 講師\n現職：\n曾任國家人權博物館白色恐怖景美紀念園區 導覽員\n簡介：\n● 2014-03-01~2024-02-29 國家人權博物館白色恐怖景美紀念園區 導覽員 新北市新店區 擔任導覽辦公室主任，負責辦公室管理、各項導覽服務、導覽員培訓、博物館現場管理及教育推廣活動規劃執行，擁有豐富的導覽及授課經驗。>>\n●2024-03-01~2025-08-30 東路文化創意有限公司 負責人 台北市 東路文化創意有限公司 負責人 台北市 自己開設公司接內政部補助案，規劃執行威權象徵移除相關教育推廣活動，並在東吳大學政治學系、西蓮淨苑、國史館、桃園文學館等單位主講導覽經驗分享。\n專長：\n白色恐怖歷史、導覽員培訓、教育推廣活動規劃、博物館學、藝文機構現場管理\n臉書(Facebook)：\nhttps://www.facebook.com/profile.php?id=61565452302899"
@@ -5258,7 +5258,7 @@
     "timeSlot": "evening",
     "hasVideo": true,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/wenshan/thumb/6252ae0eedef4.jpg",
     "credits": 3,
     "fee": 3000,
@@ -7003,7 +7003,7 @@
     "timeSlot": "evening",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/wenshan/thumb/58de114c968fa.jpg",
     "credits": 3,
     "fee": 3000,
@@ -9177,7 +9177,7 @@
     "timeSlot": "morning",
     "hasVideo": false,
     "isMixed": false,
-    "status": "full",
+    "status": "open",
     "imageUrl": "images_course/wenshan/thumb/",
     "credits": 3,
     "fee": 3000,
@@ -9933,7 +9933,7 @@
     "credits": 3,
     "fee": 3000,
     "weeks": 18,
-    "quota": 26,
+    "quota": 25,
     "schedule": "每星期三 晚上 7點0分~9點30分",
     "description": "一般人視為困難與危險的登山運動，其實是非常正面陽光的休閒活動，若能藉著對台灣山岳與生態的了解，山野技巧、登山知識與山難事件的探討，我們不但有更多的信心進入台灣本土美麗的大自然，更能因此學習到人在大自然中的相處之道，進而領略出自己的人生哲學。\n本學期老師將數年間在全國各地演講、開課課程的精華，融合廿年登山經驗的精華，彙整出這系列豐富精要的登山入門課程，並有戶外登山課程部分。無論是登山初學者、關心這片土地的人與有登山經驗想更深入了解登山與文化內涵的朋友，都將會非常有收穫與啟發。\n課程QR CODE網址",
     "targetAudience": "對登山、戶外運動或台灣土地有熱情和企圖心者，有基礎運動能力者。※為避免學習進度的落差，本課程不接受學期中途報名！\n※注意事項：本課程雖為較入門及登山課程，但因仍屬山野戶外團體活動，有一定風險，適合和有基礎體能和基礎登山經驗者參加。",
@@ -12485,7 +12485,7 @@
     "credits": 3,
     "fee": 3000,
     "weeks": 18,
-    "quota": 31,
+    "quota": 30,
     "schedule": "每星期三 晚上 7點0分~9點30分",
     "description": "1.\t本課程以「生活即學習、科技能樂活」為核心理念，透過手機與電腦的應用操作，結合網路與人工智慧最新發展，讓學員能在日常生活中靈活運用科技，提升資訊判斷力與媒體素養。\n2.\t課程設計強調「看得懂、用得上、敢應用」，從數位安全、社群互動、影音創作到 AI 工具應用，循序漸進帶領學員體驗科技如何貼近生活，並學會防詐騙、查證資訊、健康使用網路。課程不僅幫助上班族提升工作效率，也協助退休長輩享受智慧生活，達到「樂齡 × 科技 × 安全」的數位生活新境界。\n1.\t學員能熟悉手機與電腦操作，理解網路應用與資訊安全，並學會辨識詐騙與查證工具\n2.\t同時能應用 AI 工具於生活、學習與娛樂中，提升媒體素養與數位力，成為AI數位時代的聰明公民。\n課程QR CODE網址",
     "targetAudience": "1.\t本課程適合一般成人學員，包含上班族與退休長輩，需具備基本閱讀能力與日常生活使用手機之經驗。\n2.\t學員不需AI基礎，但需能操作智慧型手機（如LINE、拍照、下載App）與基本電腦作業系統操作基礎，並具備學習新科技的興趣與意願。",
@@ -12717,7 +12717,7 @@
     "credits": 2,
     "fee": 2000,
     "weeks": 12,
-    "quota": 30,
+    "quota": 31,
     "schedule": "每星期三 晚上 7點0分~9點30分",
     "description": "本系列授課內容，會運用各種實例協助學員立基本的投資知識，透過共讀，共學，學生一起閱讀投資書籍，學習投資大師的投資心法，汲取技資達人技資上會遵循的SOP，透過團體討論，期昐上課學員可以成為具有判讀力的投資人。\n個人在社大教學多年，發現即使在投資市場已經有五年到八年的投資人，仍對投資的基本規範或是交易制度完全不了解。例如，興櫃市場如何下單／CB與現貨股價的關係／MSCI成份股與被動型基金關係 。針對投資新手，本課程設計共讀，共學的課程，增長投資知識\n課程QR CODE網址",
     "targetAudience": "本課程為進階課程，需有財務報表或者是初級會計的基本財務知識。課程採取團體討論或作遊戲方式進行，參加的學生必須要具備主動表達與發言的積極心態，老師及學生一起進步，共同營造團體成果。",
@@ -13030,12 +13030,12 @@
     "timeSlot": "afternoon",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/wenshan/thumb/",
     "credits": 3,
     "fee": 3000,
     "weeks": 18,
-    "quota": 28,
+    "quota": 26,
     "schedule": "每星期四 下午 1點30分~4點0分",
     "description": "由甲骨文及金文重新探討詩經文字的運用及各篇的意義\n從古文字認識詩經以及春秋時代的人文氛圍\n課程QR CODE網址",
     "targetAudience": "無任何條件",
@@ -15088,7 +15088,7 @@
     "timeSlot": "evening",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/wenshan/thumb/",
     "credits": 3,
     "fee": 3000,
@@ -15885,7 +15885,7 @@
         "content": "完成扇面期末學員作品展示，講師講評，裱褙說明成果展籌備"
       }
     ],
-    "teacherBio": "李婉慈 講師\n現職：\n藝術創作、油畫修復助手\n簡介：\n畫室 美術老師\n專長：\n工筆畫，水墨畫，中國藝術史，中國畫論\n得獎/擔任評審：\n台南地方美術展覽會東方媒材類入選\n府城美展東方媒材類入選\n部落格(Blog)：\n建置中\n臉書(Facebook)：\nhttps://www.facebook.com/share/1BKC6qrxoU/"
+    "teacherBio": "李婉慈 講師\n現職：\n藝術創作、油畫修復助手\n簡介：\n畫室 美術老師\n● 2026-03-02~2026-09-05 台北市藝文推廣處 講師 台北市藝文推廣處文化藝術研習班 工筆畫教學>>\n專長：\n工筆畫，水墨畫，中國藝術史，中國畫論\n得獎/擔任評審：\n台南地方美術展覽會東方媒材類入選\n府城美展東方媒材類入選\n部落格(Blog)：\n建置中\n臉書(Facebook)：\nhttps://www.facebook.com/share/1BKC6qrxoU/"
   },
   {
     "id": "wenshan_5f067e3c5e98cd27d58682f2e59c99d1",
@@ -16364,7 +16364,7 @@
     "timeSlot": "evening",
     "hasVideo": true,
     "isMixed": false,
-    "status": "full",
+    "status": "open",
     "imageUrl": "images_course/wenshan/thumb/66f820c99d982.png",
     "credits": 3,
     "fee": 3000,
@@ -18306,7 +18306,7 @@
     "timeSlot": "morning",
     "hasVideo": false,
     "isMixed": false,
-    "status": "full",
+    "status": "open",
     "imageUrl": "images_course/wenshan/thumb/6a34159b3d3bf.jpg",
     "credits": 3,
     "fee": 3000,
@@ -18778,7 +18778,7 @@
       {
         "week": "第六週",
         "topic": "6",
-        "content": "10/9 (五) 自然觀察與紀錄"
+        "content": "10/16 (五) 自然觀察與紀錄"
       },
       {
         "week": "第七週",
@@ -19290,7 +19290,7 @@
     "timeSlot": "evening",
     "hasVideo": false,
     "isMixed": false,
-    "status": "full",
+    "status": "open",
     "imageUrl": "images_course/wenshan/thumb/6a2fc59c58e7d.jpg",
     "credits": 2,
     "fee": 2000,
@@ -19381,7 +19381,7 @@
     "credits": 2,
     "fee": 2000,
     "weeks": 12,
-    "quota": 28,
+    "quota": 30,
     "schedule": "每星期五 晚上 7點0分~9點30分",
     "description": "想傳遞給大家「陶」其實沒有想像的如此生硬遙遠，它既溫柔又誠實，搓太久會乾裂；黏著沒刷泥漿會掉落...每個細節都需要我們用心與呵護，才會燒出理想中的樣子。\n想邀請大家在繁忙的日程中，留給自己兩個半小時的時間。課程會以生活器皿帶入大家的日常當中，經由雙手慢慢捏製成型，讓這些器皿變得跟你一樣獨一無二。\n課程QR CODE網址",
     "targetAudience": "適合國小以上～成人，只要對陶有興趣的成人即可參加呦！",
@@ -19447,7 +19447,7 @@
         "content": "灌蠟燭製作"
       }
     ],
-    "teacherBio": "黃采濰 講師\n現職：\n-Kuwado陶藝工作室:成人手捏、手拉坏老師\n-Round Round陶藝工作室:成人手捏、手拉坏老師\n-轉角美學畫室:幼兒、兒美、大兒 繪畫老師\n-Hunimal畫室:兒美 繪畫老師\n簡介：\n工作內容主要以拉坏、手捏常態授課，因小工作室關係，會以每位學員的個性、進度客製化授課，從中也學會了與人溝通的技巧，如何清楚分解教案、示範，例如每個新人理解消化新事物的時間皆不相同，所以我會以他能接受的步調一步步耐心的將事情說明清楚，而非使用囫圇吞棗的方式\n專長：\n陶藝（手拉坏、手捏、成人教案設計）\n塊根、植栽盆器設計\n部落格(Blog)：\n建置中\n臉書(Facebook)：\n建置中"
+    "teacherBio": "黃采濰 講師\n現職：\n-順時陶藝工作室:成人手捏、手拉坏老師\n-景新國小、忠孝國小高年級美術老師\n-轉角美學畫室:幼兒、兒美、大兒 繪畫老師\n簡介：\n工作內容主要以拉坏、手捏常態授課，因小工作室關係，會以每位學員的個性、進度客製化授課，從中也學會了與人溝通的技巧，如何清楚分解教案、示範，例如每個新人理解消化新事物的時間皆不相同，所以我會以他能接受的步調一步步耐心的將事情說明清楚，而非使用囫圇吞棗的方式\n專長：\n陶藝（手拉坏、手捏、成人教案設計）\n塊根、植栽盆器設計\n部落格(Blog)：\nhttps://www.instagram.com/w_weiwei18/\n臉書(Facebook)：\n建置中"
   },
   {
     "id": "wenshan_5b50f038c44c50fba563861b3d644773",
@@ -20905,7 +20905,7 @@
     "timeSlot": "afternoon",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/wenshan/thumb/5e6dfdfdc30af.jpg",
     "credits": 2,
     "fee": 2000,
@@ -22199,7 +22199,7 @@
     "timeSlot": "morning",
     "hasVideo": true,
     "isMixed": false,
-    "status": "full",
+    "status": "open",
     "imageUrl": "images_course/wenshan/thumb/645122db47134.jpg",
     "credits": 2,
     "fee": 2000,
