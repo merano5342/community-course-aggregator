@@ -6,7 +6,7 @@
     "name": "Google AI助理Gemini輕鬆學",
     "teacher": "何彥璋",
     "semester": "115-秋季班",
-    "area": "",
+    "area": "信義",
     "startDate": "2026-08-31",
     "dayOfWeek": 1,
     "timeSlot": "afternoon",
@@ -948,7 +948,7 @@
     "timeSlot": "evening",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/xy/thumb/621e08394e794.jpg",
     "code": "1152A1001",
     "credits": 3,
@@ -2455,123 +2455,6 @@
       }
     ],
     "teacherBio": "楊培潔 講師\n現職：\n個人工作室 美術工藝教學講師\n社區大學水彩畫班講師\n簡介：\n● 2018-09-05~2023-07-03社區大學 講師 大同社大 、信義社大、美術工藝、水彩畫教學講師>>\n※目前任教信義社大水彩畫班講師\n專長：\n品牌創意服裝設計與經營管理\n刺繡工藝\n素描、服飾彩繪、服裝畫、水彩畫\n部落格(Blog)：\n建置中\n臉書(Facebook)：\n建置中"
-  },
-  {
-    "id": "xinyi_a175175d21b6886adf1e1a8372feadb5",
-    "school": "xinyi",
-    "uHash": "a175175d21b6886adf1e1a8372feadb5",
-    "name": "蝶古巴特藝術拼貼",
-    "teacher": "施㚥綺",
-    "semester": "115-秋季班",
-    "area": "信義",
-    "startDate": "2026-08-31",
-    "dayOfWeek": 1,
-    "timeSlot": "evening",
-    "hasVideo": false,
-    "isMixed": false,
-    "status": "open",
-    "imageUrl": "images_course/xy/thumb/69c0c5c202f85.jpeg",
-    "code": "1152C3011",
-    "credits": 3,
-    "fee": 3000,
-    "weeks": 18,
-    "quota": 30,
-    "schedule": "每星期一 晚上 7點0分~9點30分",
-    "description": "讓彩繪拼貼豐富你的日常，透過手作的溫度消除壓力增進個人生活美學，在歐美的學校會利用拼貼藝術（collage）來訓練學生的構圖與創意。\n藉由拼貼平面或立體的作品，應用於生活中實用家飾與舊物改造，與日常生活緊密連結，也在手作的過程同時療育了自我。\n課程QR CODE網址",
-    "targetAudience": "彩繪拼貼是很容易入門的手作，藉由簡易且生活化的方式，認識拼貼的世界，加入自我的創意感，一起加深、加廣拼貼的應用，無邊的進行延伸。",
-    "outline": [
-      {
-        "week": "第一週",
-        "topic": "1",
-        "content": "開業式 課程目標 各項說明"
-      },
-      {
-        "week": "第二週",
-        "topic": "2",
-        "content": "浪漫立體相框~1"
-      },
-      {
-        "week": "第三週",
-        "topic": "3",
-        "content": "浪漫立體相框~2"
-      },
-      {
-        "week": "第四週",
-        "topic": "4",
-        "content": "實用三層櫃~1"
-      },
-      {
-        "week": "第五週",
-        "topic": "5",
-        "content": "實用三層櫃~2"
-      },
-      {
-        "week": "第六週",
-        "topic": "6",
-        "content": "實用三層櫃~3"
-      },
-      {
-        "week": "第七週",
-        "topic": "7",
-        "content": "掐絲杯墊~1"
-      },
-      {
-        "week": "第八週",
-        "topic": "8",
-        "content": "掐絲杯墊~2"
-      },
-      {
-        "week": "第九週",
-        "topic": "9",
-        "content": "公民學程週"
-      },
-      {
-        "week": "第十週",
-        "topic": "10",
-        "content": "愛心硬紙收納盒~1"
-      },
-      {
-        "week": "第十一週",
-        "topic": "11",
-        "content": "愛心硬紙收納盒~2"
-      },
-      {
-        "week": "第十二週",
-        "topic": "12",
-        "content": "金箔木質珠寶盒~1"
-      },
-      {
-        "week": "第十三週",
-        "topic": "13",
-        "content": "金箔木質珠寶盒~2"
-      },
-      {
-        "week": "第十四週",
-        "topic": "14",
-        "content": "金箔木質珠寶盒~3"
-      },
-      {
-        "week": "第十五週",
-        "topic": "15",
-        "content": "鑲嵌胸針~1"
-      },
-      {
-        "week": "第十六週",
-        "topic": "16",
-        "content": "鑲嵌胸針~2"
-      },
-      {
-        "week": "第十七週",
-        "topic": "17",
-        "content": "春聯+紅包袋"
-      },
-      {
-        "week": "第十八週",
-        "topic": "18",
-        "content": "作品集準備週"
-      }
-    ],
-    "teacherBio": "施㚥綺 講師\n現職：\n手作之坵講師\n簡介：\n● 2019-12-01~2023-03-07 手作之坵 手作教學 臺北市 手作教學>>\n專長：\n蝶古巴特教學 韓式香氛精油蠟燭\n擁有證照：\n西元2020年     韓國CERTIFICATE蠟燭證書\n西元2022年     蝶古巴特國際拼貼藝術\n部落格(Blog)：\n建置中\n臉書(Facebook)：\n手作之坵"
   },
   {
     "id": "xinyi_8364a87a00d42e55497eb3583e951d1f",
@@ -15864,7 +15747,7 @@
     "timeSlot": "morning",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/xy/thumb/650ba1aa5a9e4.jpg",
     "code": "1152B2033",
     "credits": 3,
@@ -16873,6 +16756,123 @@
       }
     ],
     "teacherBio": "蕭佩均 講師\n簡介：\n【工作經歷】\n1.韓商電子(股)公司 韓籍董事長祕書\n2.LCD設備業務專員\n3.LCD廠韓國線業務\n4.LCD廠品質客服(韓日客戶)\n5. 致理科技大學韓語講師\n專長：\n韓語初/中/高級課程"
+  },
+  {
+    "id": "xinyi_a175175d21b6886adf1e1a8372feadb5",
+    "school": "xinyi",
+    "uHash": "a175175d21b6886adf1e1a8372feadb5",
+    "name": "蝶古巴特藝術拼貼",
+    "teacher": "施㚥綺",
+    "semester": "115-秋季班",
+    "area": "信義",
+    "startDate": "2026-09-03",
+    "dayOfWeek": 4,
+    "timeSlot": "evening",
+    "hasVideo": false,
+    "isMixed": false,
+    "status": "open",
+    "imageUrl": "images_course/xy/thumb/69c0c5c202f85.jpeg",
+    "code": "1152C3011",
+    "credits": 3,
+    "fee": 3000,
+    "weeks": 18,
+    "quota": 30,
+    "schedule": "每星期一 晚上 7點0分~9點30分",
+    "description": "讓彩繪拼貼豐富你的日常，透過手作的溫度消除壓力增進個人生活美學，在歐美的學校會利用拼貼藝術（collage）來訓練學生的構圖與創意。\n藉由拼貼平面或立體的作品，應用於生活中實用家飾與舊物改造，與日常生活緊密連結，也在手作的過程同時療育了自我。\n課程QR CODE網址",
+    "targetAudience": "彩繪拼貼是很容易入門的手作，藉由簡易且生活化的方式，認識拼貼的世界，加入自我的創意感，一起加深、加廣拼貼的應用，無邊的進行延伸。",
+    "outline": [
+      {
+        "week": "第一週",
+        "topic": "1",
+        "content": "開業式 課程目標 各項說明"
+      },
+      {
+        "week": "第二週",
+        "topic": "2",
+        "content": "浪漫立體相框~1"
+      },
+      {
+        "week": "第三週",
+        "topic": "3",
+        "content": "浪漫立體相框~2"
+      },
+      {
+        "week": "第四週",
+        "topic": "4",
+        "content": "實用三層櫃~1"
+      },
+      {
+        "week": "第五週",
+        "topic": "5",
+        "content": "實用三層櫃~2"
+      },
+      {
+        "week": "第六週",
+        "topic": "6",
+        "content": "實用三層櫃~3"
+      },
+      {
+        "week": "第七週",
+        "topic": "7",
+        "content": "掐絲杯墊~1"
+      },
+      {
+        "week": "第八週",
+        "topic": "8",
+        "content": "掐絲杯墊~2"
+      },
+      {
+        "week": "第九週",
+        "topic": "9",
+        "content": "公民學程週"
+      },
+      {
+        "week": "第十週",
+        "topic": "10",
+        "content": "愛心硬紙收納盒~1"
+      },
+      {
+        "week": "第十一週",
+        "topic": "11",
+        "content": "愛心硬紙收納盒~2"
+      },
+      {
+        "week": "第十二週",
+        "topic": "12",
+        "content": "金箔木質珠寶盒~1"
+      },
+      {
+        "week": "第十三週",
+        "topic": "13",
+        "content": "金箔木質珠寶盒~2"
+      },
+      {
+        "week": "第十四週",
+        "topic": "14",
+        "content": "金箔木質珠寶盒~3"
+      },
+      {
+        "week": "第十五週",
+        "topic": "15",
+        "content": "鑲嵌胸針~1"
+      },
+      {
+        "week": "第十六週",
+        "topic": "16",
+        "content": "鑲嵌胸針~2"
+      },
+      {
+        "week": "第十七週",
+        "topic": "17",
+        "content": "春聯+紅包袋"
+      },
+      {
+        "week": "第十八週",
+        "topic": "18",
+        "content": "作品集準備週"
+      }
+    ],
+    "teacherBio": "施㚥綺 講師\n現職：\n手作之坵講師\n簡介：\n● 2019-12-01~2023-03-07 手作之坵 手作教學 臺北市 手作教學>>\n專長：\n蝶古巴特教學 韓式香氛精油蠟燭\n擁有證照：\n西元2020年     韓國CERTIFICATE蠟燭證書\n西元2022年     蝶古巴特國際拼貼藝術\n部落格(Blog)：\n建置中\n臉書(Facebook)：\n手作之坵"
   },
   {
     "id": "xinyi_b7ff26334076288da0de43781cb538bc",
@@ -23526,7 +23526,7 @@
     "timeSlot": "afternoon",
     "hasVideo": false,
     "isMixed": false,
-    "status": "full",
+    "status": "open",
     "imageUrl": "images_course/xy/thumb/69c34cda06942.jpg",
     "code": "1152B2036",
     "credits": 3,
@@ -23964,7 +23964,7 @@
     "timeSlot": "morning",
     "hasVideo": false,
     "isMixed": false,
-    "status": "full",
+    "status": "open",
     "imageUrl": "images_course/xy/thumb/",
     "code": "1152B2025",
     "credits": 3,
