@@ -1164,7 +1164,7 @@
     "school": "wenshan",
     "uHash": "6e9d3ad5d49db03e031635b71f47540d",
     "name": "零基礎色鉛筆畫植物",
-    "teacher": "余佳諭",
+    "teacher": "leechiayu1",
     "semester": "115-秋季班",
     "area": "景美",
     "startDate": "2026-08-31",
@@ -1273,7 +1273,7 @@
         "content": "課程總結"
       }
     ],
-    "teacherBio": "余佳諭 講師\n現職：\n自由業，中正社大講師\n簡介：\n中正社大講師\n專長：\n景觀規劃、社區營造、平面設計、插畫、色鉛筆植物繪教學\n部落格(Blog)：\nhttps://linktr.ee/chiayuillustration\n臉書(Facebook)：\nhttps://linktr.ee/chiayuillustration"
+    "teacherBio": "leechiayu1 講師\n現職：\n自由業，中正社大講師\n簡介：\n中正社大講師\n專長：\n景觀規劃、社區營造、平面設計、插畫、色鉛筆植物繪教學\n部落格(Blog)：\nhttps://linktr.ee/chiayuillustration\n臉書(Facebook)：\nhttps://linktr.ee/chiayuillustration"
   },
   {
     "id": "wenshan_6e48a50c62d6bd20a8d7819a46706fdd",
@@ -2332,7 +2332,7 @@
     "timeSlot": "evening",
     "hasVideo": false,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/wenshan/thumb/69cbd92d5a2f8.JPG",
     "credits": 3,
     "fee": 3000,
@@ -8945,7 +8945,7 @@
     "timeSlot": "morning",
     "hasVideo": true,
     "isMixed": false,
-    "status": "open",
+    "status": "full",
     "imageUrl": "images_course/wenshan/thumb/67ea71ac2ff4d.jpeg",
     "credits": 3,
     "fee": 3000,
