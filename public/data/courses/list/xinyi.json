@@ -2641,28 +2641,6 @@
     "schedule": "每星期三 晚上 7點0分~9點30分"
   },
   {
-    "id": "xinyi_1cf540f900af669e92921cfb159342b9",
-    "school": "xinyi",
-    "uHash": "1cf540f900af669e92921cfb159342b9",
-    "name": "野菜料理-野菜廚娘來上菜",
-    "teacher": "王貝絲",
-    "semester": "115-秋季班",
-    "area": "信義",
-    "startDate": "2026-09-02",
-    "dayOfWeek": 3,
-    "timeSlot": "evening",
-    "hasVideo": false,
-    "isMixed": false,
-    "status": "open",
-    "imageUrl": "images_course/xy/thumb/66ebdcdb6293e.jpeg",
-    "code": "1152C9004",
-    "credits": 3,
-    "fee": 3000,
-    "weeks": 18,
-    "quota": 30,
-    "schedule": "每星期三 晚上 7點0分~9點30分"
-  },
-  {
     "id": "xinyi_4a44f4439d9cea09cf8894a53d5ab206",
     "school": "xinyi",
     "uHash": "4a44f4439d9cea09cf8894a53d5ab206",
